@@ -1,0 +1,30 @@
+---
+Test
+---
+
+!1 001-GetClosureReasonsListAsync
+!***> get-Closure-Reasons-List-Async
+##########################################################################################
+
+!2 exec request
+!**> request
+!|script             |json http test                                                                                                 |
+|methodeGetWithApiKey|https://${domaine}/EXTERNUSERORCHESTRATOR.API/Closure/ReasonsList|key|$token|map|""|status|status|result|result|
+**!
+
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+
+!2 register result
+!**> register
+!|script|file fixture                                                                               |
+|create |${path}EXTERNUSERORCHESTRATOR.API\GetClosureReasonsListAsync\RESULT.json|Containing|$result|
+**!
+***!
+
+

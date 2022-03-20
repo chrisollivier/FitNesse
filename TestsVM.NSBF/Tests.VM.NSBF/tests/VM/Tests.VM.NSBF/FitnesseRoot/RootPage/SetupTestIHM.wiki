@@ -1,0 +1,25 @@
+---
+Static
+---
+Attention de vérifier les prérequis nécessaire dans la documentation d'installation.
+
+!|Import                          |
+|fitnesse.slim.test               |
+|nl.hsac.fitnesse.fixture         |
+|nl.hsac.fitnesse.fixture.slim    |
+|nl.hsac.fitnesse.fixture.slim.web|
+
+#Démarage du driver firefox:
+#!|script     |selenium driver setup                                                               |
+#|set property|webdriver.gecko.driver|value|..\..\..\tools\webdrivers\geckodriver-windows-64bit.exe|
+#|start driver|!-org.openqa.selenium.firefox.FirefoxDriver-!                                       |
+
+
+Démarage du driver Chrome:
+!|script     |selenium driver setup                                                               |
+|set property|webdriver.chrome.driver|value|..\..\..\tools\webdrivers\chromedriver-windows-32bit.exe|
+|start driver|!-org.openqa.selenium.chrome.ChromeDriver-!                                       |
+
+!|library    |
+|echo script |
+|browser test|

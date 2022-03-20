@@ -1,0 +1,25 @@
+---
+Test
+---
+!1 Configuration
+Cette page répresente toutes les configurations appliqué aux différents tests présent sur ce serveur FitNesse.
+
+!2 Lien des différentes Apis et Ihms regroupé par application
+
+
+!4 WS_VAD_AUTH
+!define link_WS_VAD_AUTH {https://sbil-api-t.klb21.dev/WS_VAD_AUTH/}
+
+!4 WS_VAD
+!define link_WS_VAD {https://sbil-api-t.klb21.dev/WS_VAD/}
+
+!4 WS_VAD_DATA
+!define link_WS_VAD_DATA {https://sbil-api-t.klb21.dev/WS_VAD_DATA/}
+
+!4 blank Object
+!define data {!-{"data":{}} -!}
+
+!4 API Key
+!define ApiKey {ApiKey-42988533d95d019203b7f68fd49b3962769f6a00bce1523ea0}
+
+

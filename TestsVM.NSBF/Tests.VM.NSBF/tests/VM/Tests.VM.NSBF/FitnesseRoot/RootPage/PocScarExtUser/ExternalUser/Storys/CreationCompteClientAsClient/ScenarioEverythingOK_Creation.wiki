@@ -1,0 +1,332 @@
+---
+Test
+---
+
+!1 001-AUTH-ExterneUser
+!***> auth-ExterneUser
+##########################################################################################
+
+!2 get data
+!**> data
+!|script   |json fixture                                                  |
+|load file |${path}FRAMEWORK.AUTHENTICATION.API\AUTH_WEB_USER\REQUEST.json|
+|$jsonFile=|json path|$                                                   |
+
+**!
+
+!2 exec request
+!**> request
+!|script       |json http test                                                                       |
+|methodePost   |https://${domaine}/AUTH.API/v2/webuserauth|json|$jsonFile|status|status|result|result|
+|$webUserToken=|json path                                 |data.token                                |
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                    |
+|create |${path}FRAMEWORK.AUTHENTICATION.API\AUTH_WEB_USER\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 002-UpdateMeansOfContact
+!***> update-Means-Of-Contact
+##########################################################################################
+
+!2 get data
+!**> data
+!|script          |json fixture                                                                 |
+|load file        |${path}EXTERNUSERORCHESTRATOR.API\CreateCustomerAccountByCustomer\RESULT.json|
+|$userAccountCode=|json path|data                                                               |
+
+!|script   |json fixture                                           |
+|load file |${path}EXTERNUSER.API\UpdateMeansOfContact\REQUEST.json|
+|$jsonFile=|json path|$                                            |
+**!
+
+!2 exec request
+!**> request
+!|script    |json http test                                                                                                                  |
+|methodePost|https://${domaine}/EXTERNUSER.API/PersonalInformation/$userAccountCode/MeansOfContact|json|$jsonFile|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                             |
+|create |${path}EXTERNUSER.API\UpdateMeansOfContact\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 003-GetWebUserInfo
+!***> get-Web-User-Info
+##########################################################################################
+
+!2 get data
+!**> data
+!|script          |json fixture                                                                 |
+|load file        |${path}EXTERNUSERORCHESTRATOR.API\CreateCustomerAccountByCustomer\RESULT.json|
+|$userAccountCode=|json path|data                                                               |
+
+!|script            |json fixture                                                                  |
+|load file          |${path}EXTERNUSERORCHESTRATOR.API\CreateCustomerAccountByCustomer\REQUEST.json|
+|$firstNameExpected=|json path|firstName                                                           |
+|$lastNameExpected= |json path|lastName                                                            |
+**!
+
+!2 exec request
+!**> request
+!|script             |json http test                                                                                                                                                        |
+|methodeGetWithApiKey|https://${domaine}/EXTERNUSER.API/Search/Customer?getCustomerAccountsCriteriaDto.userAccountCode=$userAccountCode|key|$webUserToken|map|""|status|status|result|result|
+|$firstName=         |json path                                                                                                        |data.firstName                                      |
+|$lastName=          |json path                                                                                                        |data.lastName                                       |
+
+!|script            |String Fixture                          |
+|$firstName=        |convert To Lower Case|$firstName        |
+|$lastName=         |convert To Lower Case|$lastName         |
+|$firstNameExpected=|convert To Lower Case|$firstNameExpected|
+|$lastNameExpected= |convert To Lower Case|$lastNameExpected |
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 check Exepected Value
+!**> check
+!|script|echo script                       |
+|check  |echo|$firstName|$firstNameExpected|
+|check  |echo|$lastName |$lastNameExpected |
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                            |
+|create |${path}EXTERNUSER.API\GetCustomerAccounts\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 004-UpdateAccountNotificationPreferences
+!***> update-Account-Notification-Preferences
+##########################################################################################
+
+!2 get data
+!**> data
+!|script   |json fixture                                                           |
+|load file |${path}EXTERNUSER.API\UpdateAccountNotificationPreferences\REQUEST.json|
+|$jsonFile=|json path|$                                                            |
+**!
+
+!2 exec request
+!**> request
+!|script              |json http test                                                                                                                   |
+|methodePostWithApiKey|https://${domaine}/EXTERNUSER.API/Notification/$userAccountCode/Preferences|key|$token|json|$jsonFile|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                 |
+|create |${path}EXTERNUSER.API\UpdateGeneralPreferences\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 005-UpdateGeneralPreferences
+!***> Update-General-Preferences
+##########################################################################################
+
+!2 get data
+!**> data
+!|script   |json fixture                                               |
+|load file |${path}EXTERNUSER.API\UpdateGeneralPreferences\REQUEST.json|
+|$jsonFile=|json path|$                                                |
+**!
+
+!2 exec request
+!**> request
+!|script              |json http test                                                                                                                                 |
+|methodePostWithApiKey|https://${domaine}/EXTERNUSER.API/PersonalInformation/$userAccountCode/GeneralPreferences|key|$token|json|$jsonFile|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                   |
+|create |${path}EXTERNUSER.API\CreateAccountFundingMethod\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 006-CreateAccountFundingMethod
+!***> Create-Account-Funding-Method
+##########################################################################################
+
+!2 get data
+!**> data
+!|script      |json fixture                                                 |
+|load file    |${path}EXTERNUSER.API\CreateAccountFundingMethod\REQUEST.json|
+|set json path|userAccountCode|to|$userAccountCode                          |
+|$jsonFile=   |json path      |$                                            |
+**!
+
+!2 exec request
+!**> request
+!|script              |json http test                                                                                       |
+|methodePostWithApiKey|https://${domaine}/EXTERNUSER.API/FundingMethod|key|$token|json|$jsonFile|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                   |
+|create |${path}EXTERNUSER.API\CreateAccountFundingMethod\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 007-CreateOrUpdateAddresses
+!***> create-Or-Update-Addresses
+##########################################################################################
+
+!2 get data
+!**> data
+!|script   |json fixture                                              |
+|load file |${path}EXTERNUSER.API\CreateOrUpdateAddresses\REQUEST.json|
+|$jsonFile=|json path|$                                               |
+**!
+
+!2 exec request
+!**> request
+!|script              |json http test                                                                                                                        |
+|methodePostWithApiKey|https://${domaine}/EXTERNUSER.API/PersonalInformation/$userAccountCode/Addresses|key|$token|json|$jsonFile|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                |
+|create |${path}EXTERNUSER.API\CreateOrUpdateAddresses\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 008-GetExternalReferences
+!***> get-External-References
+##########################################################################################
+
+!2 get data
+!**> data
+!|script                         |json fixture                                             |
+|load file                       |${path}EXTERNUSER.API\GetExternalReferences\EXPECTED.json|
+|$ExternalReferenceType1Expected=|json path|data.[0].externalReferenceType                 |
+|$ProviderSystem1Expected=       |json path|data.[0].providerSystem                        |
+|$ExternalReferenceType2Expected=|json path|data.[1].externalReferenceType                 |
+|$ProviderSystem2Expected=       |json path|data.[1].providerSystem                        |
+
+**!
+
+!2 exec request
+!**> request
+!|script                 |json http test                                                                                                                                                                     |
+|methodeGetWithApiKey    |https://${domaine}/EXTERNUSER.API/PersonalInformation/$userAccountCode/ExternalReferences?externalReferenceType=ExternalReferenceType|key|$token|map|""|status|status|result|result|
+|$ExternalReferenceType1=|json path                                                                                                                            |data.[0].externalReferenceType               |
+|$ProviderSystem1=       |json path                                                                                                                            |data.[0].providerSystem                      |
+|$ExternalReferenceType2=|json path                                                                                                                            |data.[1].externalReferenceType               |
+|$ProviderSystem2=       |json path                                                                                                                            |data.[1].providerSystem                      |
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 check Exepected Value
+!**> check
+!|script|echo script                                                 |
+|check  |echo|$ExternalReferenceType1Expected|$ExternalReferenceType1|
+|check  |echo|$ExternalReferenceType2Expected|$ExternalReferenceType2|
+|check  |echo|$ProviderSystem1Expected       |$ProviderSystem1       |
+|check  |echo|$ProviderSystem2Expected       |$ProviderSystem2       |
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                              |
+|create |${path}EXTERNUSER.API\GetExternalReferences\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 009-AUTH-LoginOutUserAdmin
+!***> Login-Out-User-Admin
+##########################################################################################
+
+!2 get data
+!**> data
+
+**!
+
+!2 exec request
+!**> request
+!|script                     |json http test                                                       |
+|methodeDeleteWithApiKeyNoRes|https://${domaine}/AUTH.API/v2/auth|key|$token|body|""|status?|status|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                  |
+|create |${path}FRAMEWORK.AUTHENTICATION.API\AUTH_ADMIN_OUT\RESULT.json|Containing|true|
+**!
+***!
+
+
+!include -teardown .RootPage.PocScarExtUser.ExternalUser.Storys.CreationCompteClientAsClient.ClearFmk
+

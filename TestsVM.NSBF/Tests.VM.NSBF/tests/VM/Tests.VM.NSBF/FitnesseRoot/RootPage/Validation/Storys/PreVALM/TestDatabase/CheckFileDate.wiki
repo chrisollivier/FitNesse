@@ -1,0 +1,73 @@
+---
+Test
+---
+!1 Vérification de l'entrée du fichier en base de données et de la cohérence des dates en tables
+
+!2 Variable et nom fichier
+!********> nom fichier
+|script |date time calculator fixture|yyyy-MM-dd               |
+|$today=|echo                        |!today (yyyy-MM-dd)      |
+|$date= |addDays                     |-1|To|!today (yyyy-MM-dd)|
+
+|script        |string fixture                |
+|$dateFileName=|replace|(-)|all in|$date|with||
+
+!define fileName {250901_SIS_04127_VALNAT_$dateFileName_1.json}
+***!
+
+!2 Vérification entrée en table
+!********> vérification entrée en table
+!3 Table DAT_VALIDATION et DAT_VAL_FILE 
+!********> DAT_VALIDATION DAT_VAL_FILE
+!4 Récupération de l'id et des dates/heures dans les tables DAT_VALIDATION DAT_VAL_FILE et du status du fichier
+
+|script|SQLCommand|databaseSetup|
+|run                            |{{{
+SELECT ID_VALIDATION, DAT_VALIDATION.DATE_CREATION as dateValidationCreation, DAT_VALIDATION.EVENT_DATE, DAT_VAL_FILE.DATE_CREATION as dateValFileCreation, DAT_VAL_FILE.DATE_PROCESSING, FILE_STATUS
+FROM DAT_VALIDATION
+INNER JOIN DAT_VAL_FILE ON DAT_VALIDATION.ID_FILE = DAT_VAL_FILE.ID_FILE
+WHERE DAT_VAL_FILE.FILE_NAME = '${fileName}'
+}}}|
+|show                    |get row             |1                     |
+|$idValidation=          |getColumnValueByName|ID_VALIDATION         |
+|$dateValidationCreation=|getColumnValueByName|dateValidationCreation|
+|$dateValidationEvent=   |getColumnValueByName|EVENT_DATE            |
+|$dateValFileCreation=   |getColumnValueByName|dateValFileCreation   |
+|$dateValFileProcessing= |getColumnValueByName|DATE_PROCESSING       |
+|$statusValFile=         |getColumnValueByName|FILE_STATUS           |
+
+!4 Extraction des dates 
+!|script                 |string fixture                                     |
+|$dateValidationCreation=|replace|\ (.*)|all in|$dateValidationCreation|with||
+|$dateValidationEvent=   |replace|\ (.*)|all in|$dateValidationEvent   |with||
+|$dateValFileCreation=   |replace|\ (.*)|all in|$dateValFileCreation   |with||
+|$dateValFileProcessing= |replace|\ (.*)|all in|$dateValFileProcessing |with||
+
+!4 Vérification des dates en cohérence avec le test
+!|script|echo script                        |
+|check  |echo|$dateValidationCreation|$today|
+|check  |echo|$dateValFileProcessing |$today|
+|check  |echo|$dateValidationEvent   |$date |
+|check  |echo|$dateValFileCreation   |$date |
+|check  |echo|$statusValFile         |3     |
+
+***!
+
+!3 Table DAT_VAL_KO 
+!********> DAT_VAL_KO
+!4 Vérification 
+
+|script|SQLCommand|databaseSetup|
+|run                            |{{{
+SELECT ID_VAL_KO, VALIDATION_TYPE 
+FROM DAT_VAL_KO
+WHERE ID_VALIDATION = '$idValidation'
+}}}|
+|$idValKo=         |getColumnValueByName|ID_VAL_KO      |
+|$validationTypeKo=|getColumnValueByName|VALIDATION_TYPE|
+
+!|script|echo script             |
+|check  |echo|$validationTypeKo|3|
+***!
+***!
+

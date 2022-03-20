@@ -1,0 +1,213 @@
+---
+Test
+---
+!1 Test Case 445421: [REDR] Choix de la donnée à corriger (Ecran n°1)
+
+!2 Vérifier les onglets BR09825
+!********> Vérifier les onglets
+Ecran composé de 2 onglets :
+- "Données en erreur"
+- "Historique des corrections"
+Par défault l'onglet actif est "données en erreur"
+
+!|script                                      |
+|click if available|Erreurs post-paiement     |
+|check             |location  |$urlcorrection |
+|is enabled        |Données en erreur         |
+|is enabled        |Historique des corrections|
+***!
+
+!2 Vérifier les données affichés BR09824
+!********> Vérifier les données affichés
+Cet écran affiche les données erronées en attente de correction. Par défaut, sont affichées :
+- les validations faites sur le réseau ferré (Mode de transport RER/Trin, Métro)
+- les validations dont l'horodatage de validations est antérieur à la date limite d'acceptation (date de facturation - délaiLimiteAcceptationValidationAvantCutOff)
+- les validations présentant des données en erreur corrigeables par l'administrateur
+Cet affichage se fait à l'aide de filtres pré-sélectionnés.
+
+!|script                                                                                                             |
+|$correctable=   |valueOf|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[1]/div/div/div/div/div[1]/div[1]/div)|
+|check           |echo   |$correctable                                    |Oui                                       |
+|$transportation=|valueOf|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div)|
+|check           |echo   |$transportation                                 |Ferré                                     |
+|$cutOff=        |valueOf|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[3]/div/div/div/div/div[1]/div[1]/div)|
+|check           |echo   |$cutOff                                         |Cut-off M                                 |
+***!
+
+!2 Zone 1 Nom
+!********> Zone 1 nom
+BR09296 Nom écran "Erreurs post-paiment"
+!********> Nom écran "Erreurs post-paiment"
+BR09296 Cet écran porte le même nom que la tuile par laquelle on y accède sur l'écran de navigation. Cet écran s'appelle "Erreurs post-paiment"
+
+!|script                                                     |
+|$title=|valueOf|xpath=(//*[@id="app"]/div/header/div/div[2])|
+|check  |echo   |$title        |Erreurs post-paiement        |
+***!
+
+BR09848 Icône flèche
+!********> Icône flèche
+BR09848 L'icône "flèche" permet de revenir à l'écran précédant. Dans ce cas, cela remène à l'écran principale (écran de navigation)
+
+!|script                                                        |
+|click if available|xpath=(//*[@id="app"]/div/header/div/button)|
+|check             |location                |$url               |
+|click if available|Erreurs post-paiement                       |
+***!
+
+***!
+
+!2 Zone 6-Exploitant BR09299
+!********> Zone 6-Exploitant
+Cette IHM est accéssible à l'administrateur habilité du système (Opérateur SIS) et l'administrateur habilité externe (Opérateur SIEE). L'administrateur habilité du système accède à toutes les validations à corriger manuellement. L'administrateur habilité externe accède aux validations qu'il a réalisé (transporteur ayant réalisé la validation est l'administrateur habilité externe) à corriger manuellement.
+
+!|script         |
+|note|pas visible|
+***!
+
+!2 Zone 9-Filtre
+!********> Zone 9-filtre
+BR09334 Le filtre disponible sont : "Corrigeable SIS" ou "Toutes données", il permet de filtrer sur les données "corrigeables" par l'administrateur ou d'afficher toute les données en erreurs.
+La liste de données corrigeable est définie en donnée usine par le fournisseur du système. "ferré" (Mode de transport "RER/Train", Métro"), "Surface (Mode de transport vaut "Bus" ou "Tramway"), ou "Tous modes de transport".
+Il permet de filtrer selon le mode de transport des validations en erreur (et à fortiori selon le type de tarification) le filtre "Cut-off M" ou "Cut-off M+1", il permet de filtrer sur les validations en erreur nécessaire avant le prochain cut-off ou les validations à traiter pour le cut-off suivant.
+
+!3 Filtre Correctable SIS
+!********> filtre Correctable SIS
+|script                                                                                                                                |
+|refresh                                                                                                                               |
+|note              |Suppression filtre par défaut                                                                                      |
+|click if available|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[1]/div/div/div/div/div[1]/div[2]/div/button)                 |
+|check             |valueOf|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[1]/div/div/div/div/div[1]/label)     |Corrigeable SIS|
+|note              |Sélection du premier filtre                                                                                        |
+|click if available|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[1]/div/div/div/div/div[1]/div[1])                            |
+|click if available|xpath=(/html/body/div/div[2]/div/div/div)                                                                          |
+|check             |valueOf|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[1]/div/div/div/div/div[1]/div[1]/div)|Oui            |
+|note              |Suppression du filtre                                                                                              |
+|click if available|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[1]/div/div/div/div/div[1]/div[2]/div/button)                 |
+***!
+
+!3 Filtre Transportation mode
+!********> filtre Transportation mode
+|script                                                                                                                                  |
+|refresh                                                                                                                                 |
+|note              |Supression du filtre par défaut                                                                                      |
+|click if available|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/div/button)                   |
+|check             |valueOf|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/label)     |Mode de transport|
+|note              |Sélection du premier filtre                                                                                          |
+|click if available|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1])                              |
+|click if available|xpath=(/html/body/div/div[2]/div/div[1]/div)                                                                         |
+|check             |valueOf|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div)|Ferré            |
+|note              |Supression du filtre                                                                                                 |
+|click if available|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/div/button)                   |
+|note              |Sélection du deuxième filtre                                                                                         |
+|click if available|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1])                              |
+|click if available|xpath=(/html/body/div/div[2]/div/div[2]/div)                                                                         |
+|check             |valueOf|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div)|Surface          |
+|note              |Supression du filtre                                                                                                 |
+|click if available|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/div/button)                   |
+***!
+
+!3 Filtre Cut-off
+!********> filtre Cut-off
+|script                                                                                                                          |
+|refresh                                                                                                                         |
+|note              |Supression filtre                                                                                            |
+|click if available|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[3]/div/div/div/div/div[1]/div[2]/div/button)           |
+|check             |valueOf|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[3]/div/div/div/div/div[1]/label)     |Cut-off  |
+|note              |Sélection du premier filtre                                                                                  |
+|click if available|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[3]/div/div/div/div/div[1])                             |
+|click if available|xpath=(/html/body/div/div[2]/div/div/div)                                                                    |
+|check             |valueOf|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[3]/div/div/div/div/div[1]/div[1]/div)|Cut-off M|
+|note              |Supression du filtre                                                                                         |
+|click if available|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[3]/div/div/div/div/div[1]/div[2]/div/button)           |
+***!
+
+BR09849 L'icône "Entonnoir"
+!********> L'icône "Entonnoir"
+BR09849 L'icône "Entonnoir" permet d'ajouter dezs filtres supplémentaires.
+
+|script              |
+|note|pas d'entonnoir|
+***!
+
+BR09336 Supression filtre
+!********> Supression filtre
+BR09336 Par défaut, l'utilisateur accède à la liste des données corrigeables SIS, ayant été faites en réseau ferré et nécessaire pour les prochain cut-off il peut afficher l'ensemble des données en erreur en attente des correction manuelle en enlevant les filtres pré-sélectionnés.
+
+!|script                                                                                                                            |
+|refresh                                                                                                                            |
+|click if available|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[1]/div/div/div/div/div[1]/div[2]/div/button)              |
+|click if available|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/div[2]/div/button)              |
+|click if available|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[3]/div/div/div/div/div[1]/div[2]/div/button)              |
+|check             |valueOf|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[1]/div/div/div/div/div[1]/label)|Corrigeable SIS  |
+|check             |valueOf|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[2]/div/div/div/div/div[1]/label)|Mode de transport|
+|check             |ValueOf|xpath=(//*[@id="error"]/div/div/div[1]/div/div[2]/div[3]/div/div/div/div/div[1]/label)|Cut-off          |
+***!
+
+BR09855  Zone de recherche
+!********> zone de recherche
+BR09855 La zone de recherche permet à l'administrateur de saisir librement et l'IHM propose en auto-complétion tout les éléments qui contiennent la saisie.
+
+!|script                         |
+|note|recherche non fonctionnelle|
+
+***!
+
+***!
+
+!2 ZONE 15 - Données à corriger manuellement
+!********> ZONE 15 - Données à corriger manuellement
+BR09346  Etat "Erroné/En attent de correction manuelle"
+!********> Etat "Erroné/En attent de correction manuelle"
+BR09346 Pour chaque validation dans l'état "Erroné/En attent de correction manuelle", cet écran affiche les données en erreurs (toute donnée de cette validation associée à un compte-rendu de vérification)
+
+!|script         |
+|note|pas de data|
+***!
+
+BR09347 Nombre toal de validation dans l'état "Erroné/ En attente de correction manuelle"
+!********> Nombre toal de validation dans l'état "Erroné/ En attente de correction manuelle"
+BR09347 Cet écran affiche le nombre toal de validation dans l'état "Erroné/ En attente de correction manuelle". Le nombre totale de validations erronées ne peut excéder la somme des données erronées.
+
+!|script         |
+|note|pas de data|
+***!
+
+BR09356 Trier par ordre alphabétique le type de donnée en erreur
+!********> Trier par ordre alphabétique le type de donnée en erreur
+BR09356 L'administrateur a la possibilité de trier par ordre alphabétique le type de donnée en erreur.
+
+!|script         |
+|note|pas de data|
+***!
+
+***!
+
+!2 ZONE 15.1 - Nombre total d'erreur par donnée
+!********> ZONE 15.1 - Nombre total d'erreur par donnée
+BR09359 Trier les données erronées dans l'ordre croissant ou décroissant
+!********> Trier les données erronées dans l'ordre croissant ou décroissant
+BR09359 L'administrateur habilité a la possibilité de trier les données erronées dans l'ordre croissant ou décroissant.
+
+!|script                        |
+|note|pas de solution disponible|
+***!
+
+BR09356 Affichage du nombre d'occurence
+!********> Affichage du nombre d'occurence
+BR09356 Le sytème affiche le nombre d'occurence (nombre de valeur différente) d'une donnée erronée pour toutes les validations en attente de correction manuelle.
+
+!|script                   |
+|note|information manquante|
+***!
+
+***!
+
+!2 Zone 15.2 - Type d'erreur BR09944
+!********> Zone 15.2 - Type d'erreur
+Pour chaque donnée en erreur, l'IHM affiche le type d'erreur
+
+!|script                   |
+|note|information manquante|
+***!
+

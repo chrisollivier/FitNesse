@@ -1,0 +1,49 @@
+!include -setup .RootPage.SetUp
+!include -setup .RootPage.setUpTestIHM
+
+!2 variable
+!********> variable
+!4 Chemin des fichiers utilisés par le test
+
+!define directoryPath {Storys\PreVALM\IHMRedressementExport\}
+***!
+
+!2 IHM Redressement Export
+
+!3 Récupération des données user
+!********> Récupération des données user
+!|script       |json fixture                          |
+|load file     |${directoryPath}ConnexionATLASOps.json|
+|$url=         |json path        |UrlValidation       |
+|$userLogin=   |json path        |User.Login          |
+|$userPassword=|json path        |User.Password       |
+|$language=    |json path        |Language            |
+***!
+
+!3 Scénario utile :
+!********> Scénario utile
+!3 Scénario connexion :
+Necessite SetupTestIHM ! avec Browser Test
+!|scenario          |connexionATLASOps                      |
+|open               |$url                                   |
+|enter              |$userLogin       |as    |id=login      |
+|enter              |$userPassword    |as    |id=password   |
+|click  if available|English (US)                           |
+|click  if available|Français (FR)                          |
+|click              |Connection                             |
+|wait for visible   |Fiabilisation des données de validation|
+
+!3 Scénario déconnexion :
+Necessite SetupTestIHM ! avec Browser Test
+!|scenario         |deconnexionATLASOps                                            |
+|click if available|xpath=(//*[@id="userInfoMenu"]/button/span/button)             |
+|click if available|xpath=(//*[@id="userInfoMenu"]/div[2]/div/div[1]/div/button[1])|
+|$link=            |location                                                       |
+|check             |echo |$link |https://sbil-webapplis-t.nsbf2.intg/AUTH.GUI/login|
+***!
+
+!2 Connexion à l'IHM
+!********> Connexion à l'IHM
+!|script          |
+|connexionATLASOps|
+***!

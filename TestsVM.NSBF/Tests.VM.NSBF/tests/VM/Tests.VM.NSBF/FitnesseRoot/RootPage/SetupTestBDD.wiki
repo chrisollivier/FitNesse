@@ -1,0 +1,10 @@
+---
+Static
+---
+!2 data BDD
+|import                 |
+|six42.fitnesse.jdbcslim|
+
+|define table type  |
+|SQLCommand|as Table|
+

@@ -1,0 +1,60 @@
+---
+Test
+---
+!1 Réinitialisation des données de test
+
+!2 Script sql de réinitialisation
+!********> script sql de réinitialisation
+
+#!|script     |json fixture                                                   |
+#|loadFile    |Storys\PreVALM\TestDatabase\TestCheckNameFile\CleanFitnesse.sql|
+#|$requestSQL=|object                                                         |
+
+#|script|SQLCommand|databaseSetup|
+#|run   |$requestSQL             |
+***!
+
+!2 Création d'un fichier de test J-1
+!********> création d'un fichier de test J-1
+!3 Récupération de la date du jour -1 
+!********> récupération de la date du jour -1
+
+#|script|date time calculator fixture|yyyy-MM-dd               |
+#|$date=|addDays                     |-1|To|!today (yyyy-MM-dd)|
+***!
+
+!3 Récupération de l'annéee et formatage de la date pour le nom du fichier
+!********> récupération de l'annéee et formatage de la date pour le nom du fichier
+
+#|script        |string fixture                   |
+#|$year=        |replace|\-(.*)|all in|$date|with||
+#|$dateFileName=|replace|(-)   |all in|$date|with||
+
+#!define file {Storys\PreVALM\TestDatabase\TestCheckNameFile\250901_SIS_04127_VALNAT_YYYYMMDD_1.json}
+#!define fileName {250901_SIS_04127_VALNAT_$dateFileName_1.json}
+***!
+
+!3 Modification des data du fichier
+!********> modification des data du fichier
+
+#!|script   |file fixture   |
+#|$dataFile=|text in|${file}|
+
+#!|script   |string fixture                                  |
+#|$dataFile=|replace|(YYYY-MM-DD)|all in|$dataFile|with|$date|
+#|$dataFile=|replace|(YYYY)      |all in|$dataFile|with|$year|
+***!
+
+!3 Création du nouveaux fichier et déplacement
+!********> création du nouveaux fichier et déplacement
+
+#!|script       |file fixture                                                                                                            |
+#|create        |Storys\PreVALM\TestDatabase\TestCheckNameFile\${fileName}|Containing|$dataFile                                          |
+#|copy          |Storys\PreVALM\TestDatabase\TestCheckNameFile\${fileName}|to        |D:\CMS.INTG\DATA\SAPP\ITF\EXT\IMPVAL\IN\${fileName}|
+#|deleteIfExists|Storys\PreVALM\TestDatabase\TestCheckNameFile\${fileName}                                                               |
+***!
+***!
+
+#!|script|json http test|
+#|wait   |600  |seconds |
+

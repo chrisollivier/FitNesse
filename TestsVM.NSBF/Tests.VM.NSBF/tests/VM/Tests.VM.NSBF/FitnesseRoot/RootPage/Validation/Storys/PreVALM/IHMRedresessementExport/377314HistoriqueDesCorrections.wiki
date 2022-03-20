@@ -1,0 +1,55 @@
+---
+Test
+---
+!1 Test Case 377314 [REDR] Description IHM de correction des fichiers - Historique des corrections
+L'IHM affiche correctement l'historique des corrections de fichier.
+
+!2 Afficher l'historique des corrections BR09939
+!********> Page historique des correction
+L'écran est accessible a partir de l'onglet "Historique des corrections" ou après import réussie
+
+!|script                                      |
+|click if available|Fichiers en erreur        |
+|check             |location    |$urlfiles    |
+|is enabled        |Rejets                    |
+|is enabled        |Non reçus                 |
+|click if available|Historique des corrections|
+|is not visible    |Recherche...              |
+***!
+
+!2 Vérification des zones visibles
+!********> Vérification des zones visibles
+!3 Vérification zone 1 IHM BR099xx
+!********> zone 1
+Le nom de l'écran porte le nom "Fichier en erreur"
+
+!|script                                                                        |
+|check|value of|xpath=(//*[@id="app"]/div/header/div/div[2])|Fichiers en erreurs|
+***!
+
+!3 Vérification zone 2 IHM BR09982
+!********> zone 2
+Après "import+vérification" réussi, le fichier passe en haut de la pile
+
+!|script                   |
+|note|à tester avec fichier|
+***!
+
+!3 Vérifier la liste des historisations BR09983
+!********> liste historisation redressements
+L'IHM affiche correctement la liste des historisations :
+- Un nom de fichier
+- Une date de traitement (date vérif)
+- Emmetteur
+- Importé par
+- Type erreur
+- Statut
+
+!|script                                                                   |
+|click if available|xpath=(//*[@id="app"]/div/header/div/div[1]/div/button)|
+|check             |location               |$urlredressements              |
+|click if available|Historique des redressements                           |
+***!
+
+***!
+

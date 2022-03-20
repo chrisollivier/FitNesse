@@ -1,0 +1,9 @@
+---
+Static
+---
+!2 Déconnexion IHM
+!********> Deconnexion
+!|script            |
+|deconnexionATLASOps|
+
+***!

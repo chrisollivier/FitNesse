@@ -1,0 +1,38 @@
+---
+Static
+---
+!include -setup .RootPage.SetUp
+
+!2 Variable
+!********> variable
+!4 Chemin des fichiers utilisés par le test
+
+!define directoryPath {Storys\PreVALM\TestDatabase\}
+***!
+
+!2 Test Database
+!3 Configuration accès bdd
+!********> Configuration accès bdd
+!3 Récupération config
+!|script   |json fixture                     |
+|load file |${directoryPath}tnsname.ora      |
+|$tnsname= |object                           |
+|load file |${directoryPath}InfoDatabase.json|
+|$login=   |json path     |User.Login        |
+|$password=|json path     |User.Password     |
+
+!3 Configuration connection au serveur Oracle
+|Define Properties|databaseSetup                  |
+|key              |value                          |
+|jdbcDriver       |oracle.jdbc.driver.OracleDriver|
+|DBURL            |jdbc:oracle:thin:@$tnsname     |
+|DBUSER           |$login                         |
+|DBPASSWORD       |$password                      |
+|CMD              |                               |
+***!
+
+!2 Ouverture connexion
+!********> Ouverture connexion
+!|script|SQLCommand|databaseSetup|
+|openConnection                  |
+***!

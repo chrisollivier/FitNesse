@@ -1,0 +1,230 @@
+---
+Test
+---
+!1 Test case 376200: [REDR] Description IHM de correction des fichiers - Liste Fichiers
+L'IHM affiche corectement les résultats de traitement du fichier :
+
+!2 Afficher le tableau de bord de traitement des corrections BR09939
+!********> tableau de bord de traitement des corrections
+L'IHM est constitué de 3 onglets : "Rejets"/"Historique"/"Non reçus" (écran "rejet" par défault)
+
+!|script                                      |
+|click if available|Fichiers en erreur        |
+|check             |location    |$urlfiles    |
+|is enabled        |Rejets                    |
+|is enabled        |Historique des corrections|
+|is enabled        |Non reçus                 |
+***!
+
+!2 Vérifier la liste des fichiers "en erreur" BR09940
+!********> liste fichier en erreur
+- Cette écran affiche les fichiers en erreur en attente de correction manuelle
+- Un fichier en erreur peux passer corrigé par réémission par le SIEE, il ne sera plus dans la liste
+- Par défault, les données présentées sont :
+-> Nom du ficher
+
+!|script                                  |
+|show|take screenshot|FilesInErrorRejected|
+***!
+
+!2 Vérifier les données affichées par fichier en erreur BR09940
+!********> données affichées par fichier en erreur
+Par défault, les donnéesprésentées sont :
+- Nom du fichiers
+- Date de traitement (réception ou import)
+- Emetteur fichier (valeur "inconnu" si erreur émetteur)
+- Importé par
+- Type erreur
+- Status
+- Nombre erreur restant à traiter
+
+!|script                      |
+|is visible|Nom               |
+|is visible|Date de traitement|
+|is visible|Émetteur          |
+|is visible|Importé par       |
+|is visible|Type d'erreur     |
+|is visible|Status            |
+***!
+
+!2 Vérifier les erreurs type "donnée" ou "enregistrement"
+!********> erreurs type "donnée" ou "enregistrement"
+La colonne "Status" affiche le statut "partiel" pour ce type d'erreur
+
+!|script                                                                                                                   |
+|click if available|xpath=(//*[@id="app"]/div/main/div/div/div[2]/div/div/div[1]/div/div[1]/div/div[4]/div/div/div/div/div)|
+|click if available|xpath=(/html/body/div/div[2]/div/div[2])                                                               |
+|check             |row exists where             |Status             |is             |Rejet             |false             |
+|click if available|clear icon                                                                                             |
+
+***!
+
+!2 Vérifier les erreurs type "Fichier"
+!********> erreurs type "Fichier"
+La colonne "Status" affiche le statut "rejet" pour ce type d'erreur
+
+!|script                                                                                                                   |
+|click if available|xpath=(//*[@id="app"]/div/main/div/div/div[2]/div/div/div[1]/div/div[1]/div/div[4]/div/div/div/div/div)|
+|click if available|xpath=(/html/body/div/div[2]/div/div[1]/div/div)                                                       |
+|check             |row exists where             |Status             |is             |Partiel            |false            |
+|click if available|clear icon                                                                                             |
+***!
+
+!2 Vérification zones
+!********> Vérification zones
+!3 zone 1 IHM
+!********> zone 1 nom de la page
+BR09941 Nommage écran
+!********> Nommage écran
+BR09941 Cette écran se nomme "Fichiers en erreurs"
+
+!|script                                                                       |
+|check|valueOf|xpath=(//*[@id="app"]/div/header/div/div[2])|Fichiers en erreurs|
+***!
+
+BR09942 L'icône flèche
+!********> Icône flèche
+BR09942 L'icône flèche permet de revenir a l'écran principale
+
+!|script                                                        |
+|click if available|xpath=(//*[@id="app"]/div/header/div/button)|
+|check             |location                |$url               |
+|click if available|Fichiers en erreur                          |
+***!
+
+***!
+
+!3 zone 2 IHM BR09943
+!********> zone 2 habilitation
+Cet écran est accéssible selon habilitation
+- Tous les fichiers : Habilitation système
+- Tous les fichiers de l'émetteur : Habilitation externe de l'émetteur (exploitant)
+
+!|script                           |
+|note|non visible par l'utilisateur|
+***!
+
+!3 zone 3 IHM
+!********> zone 3 bar de recherche
+BR09946  La barre de recherche
+!********>  Barre de recherche
+BR09946 La barre de recherche permet la rechercher dans les colonnes, pour :
+- "nom de fichier"
+- "importé par"
+
+!|script                                                                                                                                                                                                                                                                |
+|note         |nom de la deuxième ligne                                                                                                                                                                                                                                 |
+|$valueColumn=|value of    |xpath=(//*[@id="app"]/div/main/div/div/div[2]/div/div/div/div/div[3]/div/div/div[2]/div[1]/table/tbody/tr[2]/td[2])                                                                                                                         |
+|enter        |$valueColumn|as                                                                                                                 |xpath=(/html/body/div/div[1]/div/div/main/div/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/div/div/div/div[1]/input)|
+|press        |Enter                                                                                                                                                                                                                                                    |
+|note         |vérifie que le nom est maintenant en première ligne                                                                                                                                                                                                      |
+|check        |value of    |xpath=(//*[@id="app"]/div/main/div/div/div[2]/div/div/div/div/div[3]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[2])|$valueColumn                                                                                                            |
+|note         |Vérifique qu'aucune autre ligne n'est affiché                                                                                                                                                                                                            |
+|check        |value of    |xpath=(//*[@id="app"]/div/main/div/div/div[2]/div/div/div/div/div[3]/div/div/div[2]/div[1]/table/tbody/tr[2]/td[2])|null                                                                                                                    |
+***!
+
+BR09947 l'autocomplétion barre de recherche
+!********> Autocomplétion
+BR09947 l'autocomplétion est effective dans la recherche
+
+!|script                  |
+|note|Pas d'autocomplétion|
+***!
+
+***!
+
+!3 zone 4 IHM BR09948
+!********> zone 4 filtrage émetteur du fichier
+Le filtrage est possible sur l'émetteur du fichier (autorisation) selon la liste proposée par le système
+
+!|script                                                                                                                              |
+|refresh                                                                                                                              |
+|click if available|xpath=(//*[@id="app"]/div/main/div/div/div[2]/div/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div[1]/div[1])|
+|click if available|xpath=(/html/body/div/div[2]/div/div[1])                                                                          |
+|note              |récupère le deuxième filtre et vérifie qu'aucune ligne ne correspond pour cet émetteur                            |
+|$valueFiltre=     |value of                  |xpath=(/html/body/div/div[2]/div/div[2]/div/div)                                       |
+|check             |row exists where          |Émetteur               |is               |$valueFiltre              |false             |
+|click if available|clear icon                                                                                                        |
+***!
+
+!3 zone 5 IHM BR09949
+!********> zone 5 ajout de filtre
+L'icône entonnoir permet de rajouter des filtres
+
+!|script             |
+|note|pas d'entonnoir|
+***!
+
+!3 zone 7 IHM
+!********> zone 7
+BR09956 Le bouton "log"
+!********> Bouton "log"
+BR09956 Le bouton "log" donne accès aux CR de vérification de fichier (log récupérable)
+
+!|script                   |
+|note|a tester avec fichier|
+***!
+
+BR09961 Le bouton "warning"
+!********> Bouton "warning"
+BR09961 Le bouton "warning" permet de télécharger le fichier sélectionné pour correction
+
+!|script                                                                                                                                               |
+|note              |firefox ne peux pas télécharger automatiquement les fichiers val                                                                   |
+|enter             |json   |as|xpath=(/html/body/div/div[1]/div/div/main/div/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/div/div/div/div[1]/input)|
+|press             |Enter                                                                                                                              |
+|$nomFichier=      |valueOf|xpath=(//*[@id="app"]/div/main/div/div/div[2]/div/div/div/div/div[3]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[2])        |
+|click if available|xpath=(//*[@id="app"]/div/main/div/div/div[2]/div/div/div/div/div[3]/div/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/button)         |
+|click if available|xpath=(//*[@id="app"]/div/main/div/div/div[2]/div/div/div/div/div[3]/div/div/div[2]/div[1]/table/tbody/tr[2]/td[2]/div/button[1])  |
+|wait              |5      |seconds                                                                                                                    |
+
+|script      |string fixture                          |
+|$nouveauNom=|replace|[.]|all in|$nomFichier|with|_01.|
+
+!|script      |File fixture                                 |
+|note         |vérifie que le fichier à bien été télécharger|
+|set directory|FitnesseRoot\files\pagesources               |
+|check        |exists        |$nouveauNom       |true       |
+|check        |delete        |$nouveauNom       |true       |
+***!
+
+***!
+
+!3 zone 8 IHM
+!********> zone 8 IHM
+BR09971 Le bouton "parcourir"
+!********> Bouton "parcourir"
+BR09971 Le bouton "parcourir" permet de récupérer le fichier corrigé (enregistrement poste local)
+
+!|script                   |
+|note|a tester avec fichier|
+***!
+
+BR09973 
+!********> 
+BR09973 Le fichier corrigé est récupérable également par glisser-déposer
+
+!|script                   |
+|note|a tester avec fichier|
+***!
+
+BR09974
+!********> 
+BR09974 Le bouton "importer" permet d'importer le fichier corrigé (pour qu'il soit vérifié et intégré au traitement)
+
+!|script                   |
+|note|a tester avec fichier|
+***!
+
+BR09976
+!********> 
+BR09976 Après import si la vérification échoue, alors le fichier apparait en haut de la liste des rejets
+
+!|script                   |
+|note|a tester avec fichier|
+***!
+
+***!
+
+***!
+

@@ -1,0 +1,43 @@
+---
+Test
+---
+!1 001-NumberToWords
+!define path {POSTMANAPI\}
+!***> numberToWords
+##########################################################################################
+
+!2 get data
+!**> data
+#!|script        |xml fixture                                                     |
+#|load file      |${path}NumberConversion\REQUEST.xml                             |
+#|register prefix|url  |for namespace|http://www.dataaccess.com/webservicesserver/|
+#|$xmlFile=      |xPath|//url:ubiNum/text()                                       |
+
+!|script  |file fixture                               |
+|$xmlFile=|text in|${path}NumberConversion\REQUEST.xml|
+**!
+
+!2 exec request
+!**> request
+!|script    |json http test                                                                                              |
+|methodePost|https://www.dataaccess.com/webservicesserver/NumberConversion.wso|xml|$xmlFile|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 check result
+!**> check
+!|script|echo script     |
+|check  |echo|$result|tow|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                         |
+|create |${path}NumberConversion\RESULT.xml|Containing|$result|
+**!
+***!

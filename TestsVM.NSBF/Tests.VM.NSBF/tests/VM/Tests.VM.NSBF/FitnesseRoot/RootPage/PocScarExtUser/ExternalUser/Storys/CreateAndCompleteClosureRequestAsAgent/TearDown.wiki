@@ -1,0 +1,34 @@
+---
+Static
+---
+
+
+!1 001-delete-user
+!***> delete-user
+##########################################################################################
+
+!2 get data
+!**> data
+!|script          |json fixture                                                              |
+|load file        |${path}EXTERNUSERORCHESTRATOR.API\CreateCustomerAccountByAgent\RESULT.json|
+|$userAccountCode=|json path|data                                                            |
+**!
+
+!2 exec request
+!**> request
+!|script                |json http test                                                                                                             |
+|methodeDeleteWithApiKey|https://${domaine}/EXTERNUSER.API/Activation/ExternUser/$userAccountCode|key|${ApiKey}|body|""|status?|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                                 |
+|create |${path}EXTERNUSER.API\RemoveExternUserAccountByUserAccountCode\RESULT.json|Containing|$result|
+**!
+***!

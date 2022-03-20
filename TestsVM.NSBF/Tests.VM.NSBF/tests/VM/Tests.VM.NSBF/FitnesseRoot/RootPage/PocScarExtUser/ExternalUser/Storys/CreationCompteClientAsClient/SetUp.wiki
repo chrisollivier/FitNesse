@@ -1,0 +1,134 @@
+!include -setup .RootPage.SetUP
+
+
+!define path {EXTERNEUSER\CreateCustomerlUserAccountAsCustomer\}
+
+!1 001-GetNetworkID
+!***> getNetworkID
+##########################################################################################
+
+!2 exec request
+!**> request
+!|script    |json http test                                                                                 |
+|methodeGet |https://${domaine}/SCONFGATEWAY.API/NetworkOperator/Networks|map|""|status|status|result|result|
+|$idNetWork=|json path                                                   |data.[0].id                       |
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                          |
+|create |${path}SCONFGATEWAY.API\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 002-auth
+!***> auth-ticketingtoken
+##########################################################################################
+
+!2 get data
+!**> data
+!|script   |json fixture                                               |
+|load file |${path}FRAMEWORK.AUTHENTICATION.API\AUTH_ADMIN\REQUEST.json|
+|$jsonFile=|json path|$                                                |
+**!
+
+!2 exec request
+!**> request
+!|script    |json http test                                                                |
+|methodePost|https://${domaine}/AUTH.API/v2/auth|json|$jsonFile|status|status|result|result|
+|$token=    |json path                          |data.token                                |
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                 |
+|create |${path}FRAMEWORK.AUTHENTICATION.API\AUTH_ADMIN\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 003-CreateExterneCostumer
+!***> createExterneCostumer
+##########################################################################################
+
+!2 get data
+!**> data
+!|script   |json fixture                                                                  |
+|load file |${path}EXTERNUSERORCHESTRATOR.API\CreateCustomerAccountByCustomer\REQUEST.json|
+|$jsonFile=|json path|$                                                                   |
+
+**!
+
+!2 exec request
+!**> request
+!|script    |json http test                                                                                                            |
+|methodePost|https://${domaine}/EXTERNUSERORCHESTRATOR.API/Activation/Customer/$idNetWork/TI|json|$jsonFile|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                                    |
+|create |${path}EXTERNUSERORCHESTRATOR.API\CreateCustomerAccountByCustomer\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 004-Duplication-Externe-Costumer
+!***> duplication-Externe-Costumer
+##########################################################################################
+
+!2 get data
+!**> data
+!|script   |json fixture                                              |
+|load file |${path}EXTERNUSERORCHESTRATOR.API\DUPLICATION\REQUEST.json|
+|$jsonFile=|json path|$                                               |
+
+**!
+
+!2 exec request
+!**> request
+!|script    |json http test                                                                                                            |
+|methodePost|https://${domaine}/EXTERNUSERORCHESTRATOR.API/Activation/Customer/$idNetWork/TI|json|$jsonFile|status|status|result|result|
+|$code=     |json path                                                                      |errors.[0].code                           |
+|$label=    |json path                                                                      |errors.[0].label                          |
+**!
+
+!2 check body
+!**> check
+!|script|echo script                        |
+|check  |echo|$code|ERR_LOGIN_ALREADY_EXISTS|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                |
+|create |${path}EXTERNUSERORCHESTRATOR.API\DUPLICATION\RESULT.json|Containing|$result|
+**!
+
+***!

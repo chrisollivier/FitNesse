@@ -1,0 +1,170 @@
+---
+Test
+---
+!1 Test case 377637: [REDR] Description du tableau de bord du concentrateur - Tuiles bord
+L'IHM affiche correctement les TUILES du bord concentrateur:
+
+!2 Afficher les TUILES du bord "FIABILISATION DES DONNEES DE VALIDATION"
+!********> Affichage tuiles
+BR10037 Affichage des traitements manuels
+!********> Affichage des traitements manuels
+BR10037 Sur chacune des tuiles, sont affichées en orange les traitements manuels à faire par l'admin, en violet les traitements déjà éffectués par l'admin (zone10)
+
+!|script                   |
+|note|information manquante|
+***!
+
+BR10024 Titre tuile "Fichiers en erreur"
+!********> Titre tuile "Fichiers en erreur"
+BR10024 Le titre de cette tuile est "Fichiers en erreur" (zone10.1)
+
+!|script                                                                                                      |
+|check|value of|xpath=(//*[@id="app"]/div/main/div/main/div/div/div[2]/div[1]/a/div[1]/div)|Fichiers en erreur|
+***!
+
+BR10027 Accès au IHM de correction des fichiers
+!********> Accès au IHM de correction des fichiers
+BR10027 Cette tuile permet d'accéder au IHM de correction manuelle des fichiers (zone10.1)
+
+!|script                                                        |
+|click if available|Fichiers en erreur                          |
+|check             |location             |$urlfiles             |
+|click if available|xpath=(//*[@id="app"]/div/header/div/button)|
+|check             |location             |$url                  |
+***!
+
+***!
+
+!2 Vérifier la zone 10.2 IHM
+!********> Zone 10.2 IHM
+BR10025 Titre tuile "Erreurs post-paiement"
+!********> Titre tuile "Erreurs post-paiement"
+BT10025 Le titre de cette tuile est "Erreurs post-paiement" (zone10.2)
+
+!|script                                                                                                         |
+|check|value of|xpath=(//*[@id="app"]/div/main/div/main/div/div/div[2]/div[2]/a/div[1]/div)|Erreurs post-paiement|
+***!
+
+BR09277 Accès au IHM de correction NL+
+!********> Accès au IHM de correction NL+
+BR09277 Cette tuile permet d'accéder à l'IHM de correction manuelle des validations NL+ (zone10.3)
+
+!|script                                                        |
+|click if available|Erreurs post-paiement                       |
+|check             |location           |$urlcorrection          |
+|click if available|xpath=(//*[@id="app"]/div/header/div/button)|
+|check             |location           |$url                    |
+***!
+
+BR09291 Nombre total de validation de données à corriger NL+
+!********> Nombre total de validation de données à corriger
+BR09291 Cette tuile affiche le nombre total de données à corriger de toutes les validations NL+ dans l'état "Erroné/en attente de correction manuelle" sur une période glissante de 35 jours (zone10.2)
+
+!|script                                                                                                |
+|$val=|value of|xpath=(//*[@id="app"]/div/main/div/main/div/div/div[2]/div[2]/a/div[2]/div/div/div/span)|
+
+!|script|string fixture        |
+|check  |convertToInt|$val|$val|
+***!
+
+***!
+
+!2 Vérifier la zone 10.3 IHM
+!********> Vérifier la zone 10.3 IHM
+BR10026 Titre tuile "Autres erreurs"
+!********> Titre tuile "Autres erreurs"
+BR10026 Le titre de cette tuile est "Autres erreurs" (zone10.3)
+
+!|script|json http test                                                                                     |
+|check  |value of|xpath=(//*[@id="app"]/div/main/div/main/div/div/div[2]/div[3]/a/div[1]/div)|Autres erreurs|
+***!
+
+BR09290 Accès au IHM de correction hors NL+
+!********> Accès au IHM de correction hors NL+
+BR09290 Cette tuile permet d'accéder à l'IHM de correction manuelle des validations hors NL+
+
+!|script                                                        |
+|note              |Même page que post-paiement ?               |
+|click if available|Autres erreurs                              |
+|check             |location           |$urlcorrection          |
+|click if available|xpath=(//*[@id="app"]/div/header/div/button)|
+|check             |location           |$url                    |
+***!
+
+BR09293 Nombre total de validation de données à corriger hors NL+
+!********> Nombre total de validation de données à corriger hors NL+
+BR09293 Cette tuile affiche le nombre total de données à corriger de toutes les validations hors NL+ (zone10.3)
+
+!|script                                                                                                |
+|$val=|value of|xpath=(//*[@id="app"]/div/main/div/main/div/div/div[2]/div[3]/a/div[2]/div/div/div/span)|
+
+!|script|string fixture        |
+|check  |convertToInt|$val|$val|
+***!
+
+***!
+
+!2 Vérifier la zone 10.4 IHM
+!********> Vérifier la zone 10.4 IHM
+BR10031 Titre tuile "Incohérences horodatages"
+!********> Titre tuile "Incohérences horodatages"
+BR10031 Le titre de cette tuile est "Incohérences horodatages" (zone10.4)
+
+!|script|json http test                                                                                                 |
+|check  |value of|xpath=(//*[@id="app"]/div/main/div/main/div/div/div[2]/div[4]/div/div[1]/div)|Incohérences horodatages|
+***!
+
+BR10033 Accès à l'aide au redressement des validations
+!********> Accès à l'aide au redressement des validations
+BR10033 Elle permet d'accéder à l'IHM d'aide au redressement des validations présentant des incohérences horodatage/séquence identifiées comme non-fiable (zone10.4)
+
+!|script                                    |
+|click if available|Incohérences horodatages|
+|check             |location|$urlhorodatages|
+***!
+
+BR10032 Nombre total de validation rejetées
+!********> Nombre total de validation rejetées
+BR10032 Elle affiche le nombre total de validations rejetées par le module "Reconstitution et valorisation des déplacements" dans l'état "Non-fiable). (zone10.4)
+
+!|script                                                                                                  |
+|$val=|value of|xpath=(//*[@id="app"]/div/main/div/main/div/div/div[2]/div[4]/div/div[2]/div/div/div/span)|
+
+!|script|string fixture        |
+|check  |convertToInt|$val|$val|
+***!
+
+***!
+
+!2 Vérifier la zone 10.5 IHM
+!********> Vérifier la zone 10.5 IHM
+BR10034 Titre tuile "Redressements"
+!********> Titre tuile "Redressements"
+BR10034 Le titre de cette tuile est "Redressements" (zone10.5)
+
+!|script|json http test                                                                                      |
+|check  |value of|xpath=(//*[@id="app"]/div/main/div/main/div/div/div[2]/div[5]/div/div[1]/div)|Redressements|
+***!
+
+BR10035 Accès à l'IHM de redressement
+!********> Accès à l'IHM de redressement
+BR10035 Elle permet d'accéder à l'IHM de redressement des validations (zone10.5)
+
+!|script                                      |
+|click if available|Redressements             |
+|check             |location|$urlredressements|
+***!
+
+BR10036 Nombre total de validation redressé
+!********> Nombre total de validation redressé
+BR10036 Elle affiche le nombre total de validations redressées dans l'état "Valide/redressé" (zone10.5)
+
+!|script                                                                                                  |
+|$val=|value of|xpath=(//*[@id="app"]/div/main/div/main/div/div/div[2]/div[5]/div/div[2]/div/div/div/span)|
+
+!|script|string fixture        |
+|check  |convertToInt|$val|$val|
+***!
+
+***!
+

@@ -1,0 +1,566 @@
+---
+Test
+---
+!1 001-UpdateMeansOfContact
+!***> update-Means-Of-Contact
+##########################################################################################
+
+!2 get data
+!**> data
+!|script          |json fixture                                                              |
+|load file        |${path}EXTERNUSERORCHESTRATOR.API\CreateCustomerAccountByAgent\RESULT.json|
+|$userAccountCode=|json path                              |data                              |
+
+!|script   |json fixture                                           |
+|load file |${path}EXTERNUSER.API\UpdateMeansOfContact\REQUEST.json|
+|$jsonFile=|json path                      |$                      |
+**!
+
+!2 exec request
+!**> request
+!|script    |json http test                                                                                                                  |
+|methodePost|https://${domaine}/EXTERNUSER.API/PersonalInformation/$userAccountCode/MeansOfContact|json|$jsonFile|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                             |
+|create |${path}EXTERNUSER.API\UpdateMeansOfContact\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 002-ValidateAccount
+!***> validate-Account
+##########################################################################################
+
+!2 exec request
+!**> request
+!|script              |json http test                                                                                                                                      |
+|methodePostWithApiKey|https://${domaine}/EXTERNUSER.API/Activation/$userAccountCode/ValidateAccount?forceConfirmation=false|key|$token|json|""|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                        |
+|create |${path}EXTERNUSER.API\ValidateAccount\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 003-RequestWebAccessEmail
+!***> request-Web-Access-Email
+#########################################################################################
+
+!2 exec request
+!**> request
+!|script              |json http test                                                                                                                    |
+|methodePostWithApiKey|https://${domaine}/EXTERNUSER.API/Activation/$userAccountCode/RequestWebAccessEmail|key|$token|json|""|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                              |
+|create |${path}EXTERNUSER.API\RequestWebAccessEmail\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 004-GetUserActivationKey
+!***> get-User-Activation-Key
+#########################################################################################
+
+!2 get data
+!**> data
+!|script   |json fixture                           |
+|load file |CONFIG\CONNECTIONBDD.json              |
+|$url=     |json path|BDD.[0].URL.SDEV_Nsbf_ScarOps|
+|$user=    |json path|BDD.[0].USER                 |
+|$password=|json path|BDD.[0].PASSWORD             |
+
+!|script    |json fixture                                                               |
+|load file  |${path}EXTERNUSERORCHESTRATOR.API\CreateCustomerAccountByAgent\REQUEST.json|
+|$firstname=|json path                            |firstName                            |
+|$lastname= |json path                            |lastName                             |
+
+!|script   |String Fixture                 |
+|$lastname=|convert To Upper Case|$lastname|
+**!
+
+!2 config & connection to Oracle DB
+!**> connection
+!|Define Properties|databaseSetup                  |
+|key               |value                          |
+|jdbcDriver        |oracle.jdbc.driver.OracleDriver|
+|DBURL             |jdbc:oracle:thin:@$url         |
+|DBUSER            |$user                          |
+|DBPASSWORD        |$password                      |
+|CMD               |                               |
+**!
+
+!2 open transaction
+!**> transaction
+!|script|SQLCommand|databaseSetup|
+|open Connection                 |
+|execute|begin Transaction       |
+**!
+
+!2 exec request
+!**> request
+
+|script             |SQLCommand                                    |databaseSetup                              |
+|run                |{{{SELECT * FROM acc_identity WHERE firstname = '$firstname' and lastname = '$lastname'}}}|
+|$id_account_holder=|getColumnValueByName                          |ID_ACCOUNT_HOLDER                          |
+
+|script              |SQLCommand                                 |databaseSetup                            |
+|run                 |{{{SELECT * FROM acc_accesscreation WHERE id_account_holder = '$id_account_holder'}}}|
+|$ACCESSCREATION_KEY=|getColumnValueByName                       |ACCESSCREATION_KEY                       |
+**!
+
+!2 close connection
+!**> close
+!|Script|SQLCommand|databaseSetup|
+|close Connection                |
+**!
+***!
+
+
+!1 005-CreateWebAccessByKey
+!***> create-Web-Access-By-Key
+##########################################################################################
+
+!2 get data
+!**> data
+!|script   |json fixture                                                       |
+|load file |${path}EXTERNUSERORCHESTRATOR.API\CreateWebAccessByKey\REQUEST.json|
+|$jsonFile=|json path                            |$                            |
+**!
+
+!2 exec request
+!**> request
+!|script              |json http test                                                                                                                                         |
+|methodePostWithApiKey|https://${domaine}/EXTERNUSERORCHESTRATOR.API/Activation/CreateWebAccessByKey/$ACCESSCREATION_KEY|key|$token|json|$jsonFile|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                         |
+|create |${path}EXTERNUSERORCHESTRATOR.API\CreateWebAccessByKey\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 006-ConfirmAccount
+!***> confirm-Account
+##########################################################################################
+
+!2 exec request
+!**> request
+!|script              |json http test                                                                                                             |
+|methodePostWithApiKey|https://${domaine}/EXTERNUSER.API/Activation/$userAccountCode/ConfirmAccount|key|$token|json|""|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                       |
+|create |${path}EXTERNUSER.API\ConfirmAccount\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 007-CreateClosureRequestAsync
+!***> create-Closure-Request-Async
+##########################################################################################
+
+!2 get data
+!**> data
+!|script      |json fixture                                                            |
+|load file    |${path}EXTERNUSERORCHESTRATOR.API\CreateClosureRequestAsync\REQUEST.json|
+|set json path|userAccountCodeList.[0]          |to          |$userAccountCode         |
+|$jsonFile=   |json path                        |$                                     |
+**!
+
+!2 exec request
+!**> request
+!|script              |json http test                                                                                                     |
+|methodePostWithApiKey|https://${domaine}/EXTERNUSERORCHESTRATOR.API/Closure/Request|key|$token|json|$jsonFile|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                              |
+|create |${path}EXTERNUSERORCHESTRATOR.API\CreateClosureRequestAsync\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 008-GetClosureRequestsAsync
+!***> get-Closure-Requests-Async
+##########################################################################################
+
+!2 exec request
+!**> request
+!|script               |json http test                                                                                                                                                            |
+|methodeGetWithApiKey  |https://${domaine}/EXTERNUSERORCHESTRATOR.API/Closure/Request?userAccountCodeListDto.userAccountCodeList=$userAccountCode|key |$token |map |""|status|status|result|result|
+|$ClosureRequestStatus=|json path                                                                                                                |data.closureRequestList.[0].closureRequestStatus|
+|$unfulfilledRules=    |json path                                                                                                                |data.closureRequestList.[0].unfulfilledRules    |
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 check expected data
+!**> check
+!|script|echo script                  |
+|check  |echo|$ClosureRequestStatus|2 |
+|check  |echo|$unfulfilledRules    |[]|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                            |
+|create |${path}EXTERNUSERORCHESTRATOR.API\GetClosureRequestsAsync\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 009-GetCustomerAccounts
+!***>  get-Customer-Accounts
+##########################################################################################
+
+!2 exec request
+!**> request
+!|script             |json http test                                                                                                                                                                                  |
+|methodeGetWithApiKey|https://${domaine}/EXTERNUSER.API/Search/CustomerUser/UniversalSearch?searchCriteria.statusScope=1&searchCriteria.userAccountCode=$userAccountCode|key|$token|map|""|status|status|result|result|
+|$accountStatus=     |json path                                                                                                                                         |data.list.[0].data.accountStatus             |
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 check expected data
+!**> check
+!|script|echo script           |
+|check  |echo|$accountStatus|12|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                            |
+|create |${path}EXTERNUSER.API\GetCustomerAccounts\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 010-CancelClosureRequestAsync
+!***> cancel-Closure-Request-Async
+##########################################################################################
+
+!2 get data
+!**> data
+!|script      |json fixture                                                            |
+|load file    |${path}EXTERNUSERORCHESTRATOR.API\CancelClosureRequestAsync\REQUEST.json|
+|set json path|userAccountCodeList.[0]          |to          |$userAccountCode         |
+|$jsonFile=   |json path                        |$                                     |
+**!
+
+!2 exec request
+!**> request
+!|script                |json http test                                                                                                     |
+|methodeDeleteWithApiKey|https://${domaine}/EXTERNUSERORCHESTRATOR.API/Closure/Request|key|$token|body|$jsonFile|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                              |
+|create |${path}EXTERNUSERORCHESTRATOR.API\CancelClosureRequestAsync\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 011-GetCustomerAccounts
+!***>  get-Customer-Accounts
+##########################################################################################
+
+!2 exec request
+!**> request
+!|script             |json http test                                                                                                                                                 |
+|methodeGetWithApiKey|https://${domaine}/EXTERNUSER.API/Search/Customer?getCustomerAccountsCriteriaDto.userAccountCode=$userAccountCode|key|$token|map|""|status|status|result|result|
+|$accountStatus=     |json path                                                                                                        |data.accountStatus                           |
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 check expected data
+!**> check
+!|script|echo script          |
+|check  |echo|$accountStatus|2|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                            |
+|create |${path}EXTERNUSER.API\GetCustomerAccounts\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 012-CreateClosureRequestAsync
+!***> create-Closure-Request-Async
+##########################################################################################
+
+!2 get data
+!**> data
+!|script      |json fixture                                                            |
+|load file    |${path}EXTERNUSERORCHESTRATOR.API\CreateClosureRequestAsync\REQUEST.json|
+|set json path|userAccountCodeList.[0]          |to          |$userAccountCode         |
+|set json path|closureReasonId                  |to          |2                        |
+|$jsonFile=   |json path                        |$                                     |
+**!
+
+!2 exec request
+!**> request
+!|script              |json http test                                                                                                     |
+|methodePostWithApiKey|https://${domaine}/EXTERNUSERORCHESTRATOR.API/Closure/Request|key|$token|json|$jsonFile|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                              |
+|create |${path}EXTERNUSERORCHESTRATOR.API\CreateClosureRequestAsync\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 013-GetClosureRequestsAsync
+!***> get-Closure-Requests-Async
+##########################################################################################
+
+!2 exec request
+!**> request
+!|script               |json http test                                                                                                                                                            |
+|methodeGetWithApiKey  |https://${domaine}/EXTERNUSERORCHESTRATOR.API/Closure/Request?userAccountCodeListDto.userAccountCodeList=$userAccountCode|key |$token |map |""|status|status|result|result|
+|$ClosureRequestStatus=|json path                                                                                                                |data.closureRequestList.[0].closureRequestStatus|
+|$unfulfilledRules=    |json path                                                                                                                |data.closureRequestList.[0].unfulfilledRules    |
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 check expected data
+!**> check
+!|script|echo script                  |
+|check  |echo|$ClosureRequestStatus|2 |
+|check  |echo|$unfulfilledRules    |[]|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                            |
+|create |${path}EXTERNUSERORCHESTRATOR.API\GetClosureRequestsAsync\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 014-GetCustomerAccounts
+!***>  get-Customer-Accounts
+##########################################################################################
+
+!2 exec request
+!**> request
+!|script             |json http test                                                                                                                                                                                  |
+|methodeGetWithApiKey|https://${domaine}/EXTERNUSER.API/Search/CustomerUser/UniversalSearch?searchCriteria.statusScope=1&searchCriteria.userAccountCode=$userAccountCode|key|$token|map|""|status|status|result|result|
+|$accountStatus=     |json path                                                                                                                                         |data.list.[0].data.accountStatus             |
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 check expected data
+!**> check
+!|script|echo script           |
+|check  |echo|$accountStatus|12|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                            |
+|create |${path}EXTERNUSER.API\GetCustomerAccounts\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 015-ConfirmClosureRequestAsync
+!***> confirm-Closure-Request-Async
+##########################################################################################
+
+!2 get data
+!**> data
+!|script      |json fixture                                                             |
+|load file    |${path}EXTERNUSERORCHESTRATOR.API\ConfirmClosureRequestAsync\REQUEST.json|
+|set json path|userAccountCodeList.[0]          |to          |$userAccountCode          |
+|$jsonFile=   |json path                        |$                                      |
+**!
+
+!2 exec request
+!**> request
+!|script              |json http test                                                                                                     |
+|methodePostWithApiKey|https://${domaine}/EXTERNUSERORCHESTRATOR.API/Closure/Confirm|key|$token|json|$jsonFile|status|status|result|result|
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                               |
+|create |${path}EXTERNUSERORCHESTRATOR.API\ConfirmClosureRequestAsync\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 016-GetCustomerAccounts
+!***>  get-Customer-Accounts
+##########################################################################################
+
+!2 exec request
+!**> request
+!|script             |json http test                                                                                                                                                                                  |
+|methodeGetWithApiKey|https://${domaine}/EXTERNUSER.API/Search/CustomerUser/UniversalSearch?searchCriteria.statusScope=1&searchCriteria.userAccountCode=$userAccountCode|key|$token|map|""|status|status|result|result|
+|$accountStatus=     |json path                                                                                                                                         |data.list.[0].data.accountStatus             |
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|200|
+**!
+
+!2 check expected data
+!**> check
+!|script|echo script          |
+|check  |echo|$accountStatus|4|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                            |
+|create |${path}EXTERNUSER.API\GetCustomerAccounts\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 016-AUTH-ExterneUser
+!***> auth-ExterneUser
+##########################################################################################
+
+!2 get data
+!**> data
+!|script   |json fixture                                                  |
+|load file |${path}FRAMEWORK.AUTHENTICATION.API\AUTH_WEB_USER\REQUEST.json|
+|$jsonFile=|json path                          |$                         |
+
+**!
+
+!2 exec request
+!**> request
+!|script             |json http test                                                                       |
+|methodePostWithError|https://${domaine}/AUTH.API/v2/webuserauth|json|$jsonFile|status|status|result|result|
+|$code=              |json path                                 |errors.[0].code                           |
+**!
+
+!2 check status
+!**> check
+!|script|echo script     |
+|check  |echo|$status|417|
+**!
+
+!2 check ErrorCode
+!**> check
+!|script|echo script |
+|check  |echo|$code|2|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                    |
+|create |${path}FRAMEWORK.AUTHENTICATION.API\AUTH_WEB_USER\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+
+
+!include -teardown .RootPage.PocScarExtUser.ExternalUser.Storys.CreateCustomerAccountByAgent.ClearFmk
