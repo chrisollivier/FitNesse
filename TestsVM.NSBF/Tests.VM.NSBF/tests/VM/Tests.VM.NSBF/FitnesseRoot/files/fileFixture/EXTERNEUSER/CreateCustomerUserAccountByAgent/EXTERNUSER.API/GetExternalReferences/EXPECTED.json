@@ -1,0 +1,18 @@
+{
+  "resourceType": "List",
+  "links": null,
+  "rels": [],
+  "data": [
+    {
+      "providerSystem": 99,
+      "externalReference": "0000000090",
+      "externalReferenceType": 5
+    },
+    {
+      "providerSystem": 99,
+      "externalReference": "250502010990000000051",
+      "externalReferenceType": 2
+    }
+  ],
+  "errors": null
+}

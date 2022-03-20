@@ -1,0 +1,9 @@
+{"BDD":
+	[
+		{
+			"URL":{"SDEV_Nsbf_ScarOps":"(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = SCAROPS-t.nsbf1.dev)(PORT = 1521)))(CONNECT_DATA = (SERVICE_NAME = SCAROPS)))"},
+			"USER":"SCAR",
+			"PASSWORD":"SCAR"
+		}
+	]
+}

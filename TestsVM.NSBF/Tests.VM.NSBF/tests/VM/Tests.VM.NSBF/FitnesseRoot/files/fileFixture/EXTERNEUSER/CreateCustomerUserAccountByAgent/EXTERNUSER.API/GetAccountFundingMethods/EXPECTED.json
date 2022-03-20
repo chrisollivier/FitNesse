@@ -1,0 +1,1 @@
+{"resourceType":"GetAccountFundingMethodsResultDTO","links":null,"rels":[],"data":{"canAddFundingMethods":true,"fundingMethods":[{"bankAccount":{"bankName":"LCL Valence","bic":"SOGEFRPP","iban":"FR7630004000031234567890143"},"creditCard":null,"fundingMethodId":"null","fundingMethodType":1,"rank":1,"useableByLinkedAccounts":true}]},"errors":null}

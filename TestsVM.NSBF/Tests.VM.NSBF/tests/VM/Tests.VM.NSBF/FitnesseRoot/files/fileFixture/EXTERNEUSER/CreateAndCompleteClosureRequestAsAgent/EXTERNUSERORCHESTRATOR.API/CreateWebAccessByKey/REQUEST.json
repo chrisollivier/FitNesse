@@ -1,0 +1,14 @@
+{
+  "login": "JeanMichel",
+  "password": "JeanMichel@123!",
+  "securityQuestions": [
+    {
+      "questionId": 1,
+      "answer": "string"
+    },
+    {
+      "questionId": 2,
+      "answer": "string"
+    }
+  ]
+}

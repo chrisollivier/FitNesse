@@ -1,0 +1,18 @@
+{
+  "dateOfBirth": "1995-10-10T08:53:05.247Z",
+  "firstName": "Jean",
+  "login": "JeanMichel",
+  "lastName": "Michel",
+  "password": "JeanMichel@123!",
+  "email": "JeanMichel@conduent.com",
+  "securityQuestions": [
+    {
+      "questionId": 1,
+      "answer": "string"
+    },
+	{
+      "questionId": 2,
+      "answer": "string"
+    }
+  ]
+}

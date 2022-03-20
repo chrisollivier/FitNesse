@@ -1,0 +1,10 @@
+{
+  "Url": "https://sbil-webapplis-t.nsbf2.intg",
+  "UrlValidation": "https://sbil-webapplis-t.nsbf2.intg/VALIDATION.GUI/",
+  "UrlRecovalo": "https://sbil-webapplis-t.nsbf2.intg/RECOVALO.GUI/",
+  "User": {
+    "Login": "L7777_010",
+    "Password": "Judopokemon0!"
+  },
+  "Language": "fr-FR"
+}

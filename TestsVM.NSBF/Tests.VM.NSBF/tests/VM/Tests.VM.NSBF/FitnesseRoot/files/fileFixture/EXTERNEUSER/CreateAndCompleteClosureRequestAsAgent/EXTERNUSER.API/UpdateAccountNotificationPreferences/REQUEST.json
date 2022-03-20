@@ -1,0 +1,8 @@
+[
+  {
+    "notificationGroup": "USER_ACCOUNT_CHANGES",
+    "accountAuthorization": true,
+    "emailAuthorization": true,
+    "smsAuthorization": true
+  }
+]

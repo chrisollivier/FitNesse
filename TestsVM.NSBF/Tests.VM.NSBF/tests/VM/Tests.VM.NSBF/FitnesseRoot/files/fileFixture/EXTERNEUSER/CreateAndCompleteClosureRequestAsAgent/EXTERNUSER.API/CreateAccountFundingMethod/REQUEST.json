@@ -1,0 +1,13 @@
+{
+  "userAccountCode": $userAccountCode,
+  "bankAccount": {
+    "bankName": "LCL Valence",
+    "bic": "SOGEFRPP",
+    "iban": "FR7630004000031234567890143"
+  },
+  "creditCard": {
+    "token": ""
+  },
+  "fundingMethodType": 1,
+  "usableByLinks": true
+}

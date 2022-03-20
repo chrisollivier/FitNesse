@@ -1,0 +1,13 @@
+{
+    "resourceType": "SearchCustomerAccountsDto",
+    "rels": [],
+    "data": {
+        "userAccountCode": "TI202201251400000448",
+        "helpDeskCode": "0000000032",
+        "accountStatus": 7,
+        "firstName": "Jean",
+        "lastName": "MICHEL",
+        "birthDate": "1995-10-10T08:53:05",
+        "isTestAccount": false
+    }
+}
