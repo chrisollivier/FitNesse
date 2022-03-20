@@ -1,0 +1,8 @@
+{
+  "name": "edgedriver",
+  "platform": "windows",
+  "bit": "64",
+  "version": "96.0.1054.29",
+  "url": "https://msedgedriver.azureedge.net/96.0.1054.29/edgedriver_win64.zip",
+  "fileMatchInside": "msedgedriver.exe"
+}
