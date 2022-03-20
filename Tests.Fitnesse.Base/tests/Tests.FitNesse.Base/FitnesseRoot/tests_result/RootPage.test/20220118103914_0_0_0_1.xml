@@ -1,0 +1,534 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20211030</FitNesseVersion>
+  <rootPath>RootPage.test</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>9</exceptions>
+    </counts>
+    <date>2022-01-18T10:39:14+01:00</date>
+    <runTimeInMillis>101</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RootPage.SetUp"&gt;.RootPage.SetUp&lt;/a&gt; &lt;a href="RootPage.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RootPage.configuration"&gt;.RootPage.configuration&lt;/a&gt; &lt;a href="RootPage.configuration?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;h1 id="0"&gt;Configuration&lt;/h1&gt;
+Cette page répresente toutes les configurations appliqué aux différents tests présent sur ce serveur &lt;span class="fitnesse"&gt;FitNesse&lt;/span&gt;.&lt;br/&gt;&lt;br/&gt;&lt;h2 id="1"&gt;Lien des différentes Apis et Ihms regroupé par application&lt;/h2&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="2"&gt;WS_VAD_AUTH&lt;/h4&gt;
+&lt;span class="meta"&gt;variable defined: link_WS_VAD_AUTH=https://sbil-api-t.klb21.dev/WS_VAD_AUTH/&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="3"&gt;WS_VAD&lt;/h4&gt;
+&lt;span class="meta"&gt;variable defined: link_WS_VAD=https://sbil-api-t.klb21.dev/WS_VAD/&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="4"&gt;WS_VAD_DATA&lt;/h4&gt;
+&lt;span class="meta"&gt;variable defined: link_WS_VAD_DATA=https://sbil-api-t.klb21.dev/WS_VAD_DATA/&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="5"&gt;blank Object&lt;/h4&gt;
+&lt;span class="meta"&gt;variable defined: data=!-{"data":{}} -!&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h3 id="6"&gt;Configuration technique pour &lt;span class="fitnesse"&gt;FitNesse&lt;/span&gt; :&lt;/h3&gt;
+&lt;table class="toolchainTable importTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.web&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.util&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.slim.test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.*&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h3 id="7"&gt;Scénario utile :&lt;/h3&gt;
+Necessite SetupTestIHM !&lt;br/&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;ChoixIHM&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;Cle&lt;/td&gt;
+		&lt;td&gt;cle&lt;/td&gt;
+		&lt;td&gt;resultChoix?&lt;/td&gt;
+		&lt;td&gt;resultChoix&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;open&lt;/td&gt;
+		&lt;td colspan="6"&gt;http://localhost:3000/&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;enter&lt;/td&gt;
+		&lt;td&gt;@cle&lt;/td&gt;
+		&lt;td&gt;as&lt;/td&gt;
+		&lt;td colspan="4"&gt;id=cle&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;enter&lt;/td&gt;
+		&lt;td&gt;@json&lt;/td&gt;
+		&lt;td&gt;as&lt;/td&gt;
+		&lt;td colspan="4"&gt;id=data&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;click&lt;/td&gt;
+		&lt;td colspan="6"&gt;Send Data&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;wait&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td colspan="5"&gt;seconds&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;$resultChoix=&lt;/td&gt;
+		&lt;td&gt;value of&lt;/td&gt;
+		&lt;td colspan="5"&gt;id=result&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h3 id="8"&gt;Scénario Post :&lt;/h3&gt;
+&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodePost&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Content-Type&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;post&lt;/td&gt;
+		&lt;td&gt;@json&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td colspan="6"&gt;@url&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h3 id="9"&gt;Scénario Get :&lt;/h3&gt;
+&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodeGet&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;map&lt;/td&gt;
+		&lt;td&gt;map&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=ApiKey-&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;get from&lt;/td&gt;
+		&lt;td&gt;@url&lt;/td&gt;
+		&lt;td&gt;template&lt;/td&gt;
+		&lt;td colspan="6"&gt;@map&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h3 id="10"&gt;Scénario Put :&lt;/h3&gt;
+&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodePut&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=ApiKey-&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;put&lt;/td&gt;
+		&lt;td&gt;@json&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td colspan="6"&gt;@url&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h3 id="11"&gt;Scénario Delete :&lt;/h3&gt;
+&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodeDelete&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;body&lt;/td&gt;
+		&lt;td&gt;body&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=ApiKey-&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;delete&lt;/td&gt;
+		&lt;td&gt;@url&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td colspan="6"&gt;@body&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;span class="meta"&gt;variable defined: token=AEFHAO&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="2"&gt;json fixture &lt;span class="error"&gt;Could not invoke constructor for JsonFixture[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;load file &lt;span class="error"&gt;The instance scriptTableActor.loadFile. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;PocLb22Lyon\Storys\ClientVenteProduitAnnexeGenerique\TestCaseVenteReussi\005-sales-calculateitemprice\REQUEST.json&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result= &lt;span class="error"&gt;The instance scriptTableActor.jsonPath. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td&gt;Content.Value&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;json fixture &lt;span class="error"&gt;Could not invoke constructor for JsonFixture[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor6"&gt;
+		&lt;td&gt;load &lt;span class="error"&gt;The instance scriptTableActor.load. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;$result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;set json path &lt;span class="error"&gt;The instance scriptTableActor.setJsonPathTo. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;ContextWebApi.SessionId&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td&gt;AEFHAO&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result= &lt;span class="error"&gt;The instance scriptTableActor.jsonPath. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="2"&gt;$.ContextWebApi.AccessType&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;h2 id="12"&gt;Requête Api&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Requête api&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="7"&gt;json http test &lt;span class="error"&gt;Could not invoke constructor for JsonHttpTest[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;methodePost &lt;span class="error"&gt;The instance scriptTableActor.methodePostJsonCodeErreurResult. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;https://sbil-api-t.klb21.dev/WS_VAD/sales/calculateitemprice&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;$result&lt;/td&gt;
+		&lt;td&gt;codeErreur&lt;/td&gt;
+		&lt;td&gt;codeErreur&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <relativePageName>test</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='nl.hsac.fitnesse.fixture'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_1', instruction='import', path='nl.hsac.fitnesse.fixture.slim'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_2', instruction='import', path='nl.hsac.fitnesse.fixture.slim.web'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.web)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.web</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_3', instruction='import', path='nl.hsac.fitnesse.fixture.util'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.util)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_3</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.util</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_4', instruction='import', path='fitnesse.slim.test'}</instruction>
+        <slimResult>pass(fitnesse.slim.test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_4</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.slim.test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_5', instruction='import', path='nl.hsac.fitnesse.fixture.slim.*'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.*)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_5</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.*</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_6_0', instruction='make', instanceName='scriptTableActor', className='JsonFixture', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_6_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for JsonFixture[0]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_6_1', instruction='call', instanceName='scriptTableActor', methodName='loadFile', args=[PocLb22Lyon\Storys\ClientVenteProduitAnnexeGenerique\TestCaseVenteReussi\005-sales-calculateitemprice\REQUEST.json]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_6_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.loadFile. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_6_2', instruction='callAndAssign', symbolName='result', instanceName='scriptTableActor', methodName='jsonPath', args=[Content.Value]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_6_2</instructionId>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.jsonPath. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_0', instruction='make', instanceName='scriptTableActor', className='JsonFixture', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_7_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for JsonFixture[0]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_1', instruction='call', instanceName='scriptTableActor', methodName='load', args=[$result]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_7_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.load. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_2', instruction='call', instanceName='scriptTableActor', methodName='setJsonPathTo', args=[ContextWebApi.SessionId, AEFHAO]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_7_2</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.setJsonPathTo. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_3', instruction='callAndAssign', symbolName='result', instanceName='scriptTableActor', methodName='jsonPath', args=[$.ContextWebApi.AccessType]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_7_3</instructionId>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.jsonPath. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_8_0', instruction='make', instanceName='scriptTableActor', className='JsonHttpTest', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_8_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for JsonHttpTest[0]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_8_1', instruction='call', instanceName='scriptTableActor', methodName='methodePostJsonCodeErreurResult', args=[https://sbil-api-t.klb21.dev/WS_VAD/sales/calculateitemprice, $result, codeErreur, result]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_8_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.methodePostJsonCodeErreurResult. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp tools/fixtures;tools/fixtures/*.jar;C:\FitNesse_1.0_base\tools\fitnesse-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>353</totalRunTimeInMillis>
+</testResults>
+

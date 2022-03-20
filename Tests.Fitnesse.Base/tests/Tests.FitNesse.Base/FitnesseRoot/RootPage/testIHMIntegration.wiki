@@ -1,0 +1,43 @@
+---
+Test
+---
+!include SetupTestIHM
+!define json {!-
+{
+"data":[
+{"id":"0","name":"article 1"},
+{"id":"1","name":"article 2"},
+{"id":"2","name":"article 3"}
+]
+}
+-!}
+
+!define jsonAenvoye {!-
+{
+"id":"0:0 bonjour",
+"data": {}
+}
+-!}
+
+!|script                                          |
+|ChoixIHM|${json}|Cle|name|resultChoix|resultChoix|
+|echo    |$resultChoix                            |
+
+!|script      |json formatter     |
+|$resultChoix=|format|$resultChoix|
+
+#!|script                                                                   |
+#|$jsonAenvoye=|update json path|${jsonAenvoye}|with|data|value|$resultChoix|
+
+
+!|script      |json fixture             |
+|load         |${jsonAenvoye}           |
+|set json path|data     |to|$resultChoix|
+|$jsonAenvoye=|json path|$              |
+
+!|script      |json formatter     |
+|$jsonAenvoye=|format|$jsonAenvoye|
+
+!|script|file fixture                     |
+|create |TRUC.json|Containing|$jsonAenvoye|
+

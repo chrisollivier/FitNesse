@@ -1,0 +1,362 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20211030</FitNesseVersion>
+  <rootPath>RootPage.test</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2022-01-18T11:11:13+01:00</date>
+    <runTimeInMillis>85</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RootPage.SetUp"&gt;.RootPage.SetUp&lt;/a&gt; &lt;a href="RootPage.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;h3 id="0"&gt;Configuration technique pour &lt;span class="fitnesse"&gt;FitNesse&lt;/span&gt; :&lt;/h3&gt;
+&lt;table class="toolchainTable importTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.web&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.util&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.slim.test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.*&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h3 id="1"&gt;Scénario Post :&lt;/h3&gt;
+&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodePost&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Content-Type&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;post&lt;/td&gt;
+		&lt;td&gt;@json&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td colspan="6"&gt;@url&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h3 id="2"&gt;Scénario Get :&lt;/h3&gt;
+&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodeGet&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;map&lt;/td&gt;
+		&lt;td&gt;map&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=ApiKey-&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;get from&lt;/td&gt;
+		&lt;td&gt;@url&lt;/td&gt;
+		&lt;td&gt;template&lt;/td&gt;
+		&lt;td colspan="6"&gt;@map&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h3 id="3"&gt;Scénario Put :&lt;/h3&gt;
+&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodePut&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=ApiKey-&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;put&lt;/td&gt;
+		&lt;td&gt;@json&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td colspan="6"&gt;@url&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h3 id="4"&gt;Scénario Delete :&lt;/h3&gt;
+&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodeDelete&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;body&lt;/td&gt;
+		&lt;td&gt;body&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=ApiKey-&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;delete&lt;/td&gt;
+		&lt;td&gt;@url&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td colspan="6"&gt;@body&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;echo script&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;echo&lt;/td&gt;
+		&lt;td&gt;Hello World&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>test</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='nl.hsac.fitnesse.fixture'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_1', instruction='import', path='nl.hsac.fitnesse.fixture.slim'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_2', instruction='import', path='nl.hsac.fitnesse.fixture.slim.web'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.web)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.web</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_3', instruction='import', path='nl.hsac.fitnesse.fixture.util'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.util)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_3</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.util</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_4', instruction='import', path='fitnesse.slim.test'}</instruction>
+        <slimResult>pass(fitnesse.slim.test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_4</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.slim.test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_5', instruction='import', path='nl.hsac.fitnesse.fixture.slim.*'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.*)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_5</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.*</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_5_0', instruction='make', instanceName='scriptTableActor', className='EchoScript', args=[]}</instruction>
+        <slimResult>pass(echo script)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_5_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>echo script</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_5_1', instruction='call', instanceName='scriptTableActor', methodName='echo', args=[Hello World]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_5_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp ../tools/fixtures;C:\FitNesse_1.0_base\tests\..\tools\fixtures\accessors-smart-2.4.7.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\animal-sniffer-annotations-1.14.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\asm-9.1.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\byte-buddy-1.8.15.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\cglib-nodep-3.3.0.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\checker-compat-qual-2.0.0.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\commons-cli-1.4.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\commons-codec-1.11.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\commons-exec-1.3.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\commons-io-2.6.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\commons-net-3.8.0.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\commons-text-1.9.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\diff-1.1.11.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\error_prone_annotations-2.1.3.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\freemarker-2.3.31.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\galen-core-2.4.4.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\galen-rainbow4j-2.4.4.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\gson-2.8.5.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\guava-25.0-jre.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\httpclient-4.5.13.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\httpclient-win-4.5.13.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\httpcore-4.4.13.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\httpmime-4.5.13.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\j2objc-annotations-1.1.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\jackson-annotations-2.9.0.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\jackson-core-2.9.7.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\jackson-databind-2.9.7.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\jcl-over-slf4j-1.7.25.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\jna-4.5.2.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\jna-platform-4.5.2.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\json-path-2.6.0.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\json-smart-2.4.7.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\jsr305-1.3.9.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\okhttp-3.11.0.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\okio-1.14.0.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\phantomjsdriver-1.4.4.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\rhino-1.7.7.2.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\selenium-api-3.141.59.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\selenium-chrome-driver-3.141.59.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\selenium-edge-driver-3.141.59.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\selenium-firefox-driver-3.141.59.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\selenium-ie-driver-3.141.59.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\selenium-java-3.141.59.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\selenium-opera-driver-3.141.59.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\selenium-remote-driver-3.141.59.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\selenium-safari-driver-3.141.59.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\selenium-support-3.141.59.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\snakeyaml-1.28.jar;C:\FitNesse_1.0_base\tests\..\tools\fixtures\snakeyaml-1.29.jar;tools/fixtures;tools/fixtures/*.jar;C:\FitNesse_1.0_base\tools\fitnesse-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>1</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>364</totalRunTimeInMillis>
+</testResults>
+

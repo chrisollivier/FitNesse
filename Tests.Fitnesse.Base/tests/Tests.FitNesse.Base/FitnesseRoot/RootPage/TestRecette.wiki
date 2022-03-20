@@ -1,0 +1,54 @@
+!include -setup .NoRegresionTests.SetupTestIHM 
+!******> test
+!define json {!-{
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
+}
+
+-!}
+***!
+
+!|scenario    |ChoixIHM|json|Cle|cle|resultChoix?|resultChoix|
+|open         |http://localhost:3000/                        |
+|enter        |@cle    |as  |id=cle                          |
+|enter        |@json   |as  |id=data                         |
+|click        |Send Data                                     |
+|wait         |10      |seconds                              |
+|$resultChoix=|value of|id=result                            |
+
+#!|script                                          |
+#|ChoixIHM|${json}|Cle|name|resultChoix|resultChoix|
+#|echo    |$resultChoix                            |
+

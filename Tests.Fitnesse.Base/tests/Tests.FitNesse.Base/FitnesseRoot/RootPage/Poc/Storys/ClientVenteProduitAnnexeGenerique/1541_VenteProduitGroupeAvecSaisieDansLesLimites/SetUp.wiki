@@ -1,0 +1,72 @@
+!include -setup .RootPage.SetUP
+
+!1 Réinitialisation des data
+
+!********> variable
+!4 Chemin des fichiers utilisés par le test
+
+!define directoryPath {PocLb22Lyon\Storys\ClientVenteProduitAnnexeGenerique\SetUp\}
+***!
+
+
+!1 Récupération du token
+!********> Récupération du token
+
+!2 Récupération des données dans le json
+!********> Récupération data
+!|script   |json fixture                                        |
+|load file |${directoryPath}001-auth-ticketingtoken\REQUEST.json|
+|$jsonFile=|json path|Content.Value                             |
+***!
+
+!2 Requête Api
+!********> Requête api
+!|script    |json http test                                                                   |
+|methodePost|${link_WS_VAD_AUTH}auth/ticketingtoken|json|$jsonFile|status|status|result|result|
+***!
+
+!2 Vérification du status de l'api
+!********> Vérification du résultat de l'api
+!|script|echo script     |
+|check  |echo|$status|200|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script|file fixture                                                          |
+|create |${directoryPath}001-auth-ticketingtoken\RESULT.json|containing|$result|
+***!
+
+***!
+
+
+!1 Reset external data
+!********> Reset external data
+
+!2 Récupération des données dans le json
+!********> Récupération data
+!|script   |json fixture                                                |
+|load file |${directoryPath}002-datasales-externalresetdata\REQUEST.json|
+|$jsonFile=|json path|Content.Value                                     |
+***!
+
+!2 Requête Api
+!********> Requête api
+!|script    |json http test                                                                           |
+|methodePost|${link_WS_VAD_DATA}datasales/externalresetdata|json|$jsonFile|status|status|result|result|
+***!
+
+!2 Vérification du status de l'api
+!********> Vérification du résultat de l'api
+!|script|echo script     |
+|check  |echo|$status|200|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script|file fixture                                                                  |
+|create |${directoryPath}002-datasales-externalresetdata\RESULT.json|containing|$result|
+***!
+
+***!
+

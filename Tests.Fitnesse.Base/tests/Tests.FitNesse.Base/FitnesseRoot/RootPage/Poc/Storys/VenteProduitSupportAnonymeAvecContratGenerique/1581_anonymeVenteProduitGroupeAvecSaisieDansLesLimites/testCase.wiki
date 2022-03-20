@@ -1,0 +1,264 @@
+---
+Test
+---
+!include -setup .RootPage.SetUp
+
+!1 001-auth-ticketingtoken
+!***> auth-ticketingtoken
+##########################################################################################
+
+!2 get data
+!**> data
+!|script   |json fixture                                                  |
+|load file |${directoryPath}\testCase\001-auth-ticketingtoken\REQUEST.json|
+|$jsonFile=|json path|Content.Value                                       |
+**!
+
+!2 exec request
+!**> request
+!|script    |json http test                                                                   |
+|methodePost|${link_WS_VAD_AUTH}auth/ticketingtoken|json|$jsonFile|status|status|result|result|
+|$token=    |json path                             |Token                                     |
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                    |
+|create |${directoryPath}\testCase\001-auth-ticketingtoken\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 002-sales-clearbasket
+!***> sales-clearbasket
+##########################################################################################
+
+!2 get data
+!**> data
+!|script|echo script                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|$url=  |echo|https://sbil-api-t.klb21.dev/WS_VAD/sales/clearbasket?ContextWebApi.AccessType=0&ContextWebApi.CultureName=fr-FR&ContextWebApi.SessionId=$token&ContextWebApi.AccessMode=0&ContextWebApi.SalesMode=0&ContextWebApi.EquipmentReference=01TW-------------10&ContextWebApi.IsChangedSessionDetected=False&ContextWebApi.AuthenticationType=1&ContextWebApi.CurrentDateOffsetDays=0&MediaSerialNumber=1111111112&MediaUnicity=2|
+**!
+
+!2 exec request
+!**> request
+!|script      |json http test                          |
+|methodeDelete|$url|body|""|status|status|result|result|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                  |
+|create |${directoryPath}\testCase\002-sales-clearbasket\RESULT.json|Containing|$result|
+**!
+
+****!
+
+
+!1 003-sales-catalog
+!***> sales-catalog
+##########################################################################################
+
+!2 get data
+!**> data
+!|script|echo script                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|$url=  |echo|https://sbil-api-t.klb21.dev/WS_VAD/sales/catalog?ContextWebApi.AccessType=0&ContextWebApi.CultureName=fr-FR&ContextWebApi.SessionId=$token&ContextWebApi.AccessMode=0&ContextWebApi.SalesMode=0&ContextWebApi.EquipmentReference=01TW-------------10&ContextWebApi.IsChangedSessionDetected=False&ContextWebApi.AuthenticationType=1&ContextWebApi.CurrentDateOffsetDays=0&MediaSerialNumber=1111111112&MediaUnicity=2&ProductTypes%5B0%5D=1&SalesCatalogOutputFormat.RetrieveSalesTree=False&SalesItemDetailsFilters.RetrieveSubscriptionFlag=False&SalesItemDetailsFilters.RetrieveItemInfoDetails=True&SalesItemDetailsFilters.RetrieveEvidenceInfoDetails=True&SalesItemDetailsFilters.RetrieveWEEETax=False&SalesItemDetailsFilters.RetrieveCompatibleMedia=False&SalesItemDetailsFilters.RetrieveMaxQuantity=False&SalesItemDetailsFilters.RetrieveSalesCriterias=False&SalesItemDetailsFilters.IncludeNonMarketedProducts=False|
+**!
+
+!2 exec request
+!**> request
+!|script   |json http test                         |
+|methodeGet|$url|map|""|status|status|result|result|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                              |
+|create |${directoryPath}\testCase\003-sales-catalog\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 004-sales-calculateitemprice
+!***> sales-calculateitemprice
+##########################################################################################
+
+!2 get data
+!**> data
+!|script      |json fixture                                                       |
+|load file    |${directoryPath}\testCase\004-sales-calculateitemprice\REQUEST.json|
+|set json path|Content.Value.ContextWebApi.SessionId|to|$token                    |
+|$jsonFile=   |json path                            |Content.Value                |
+**!
+
+!2 exec request
+!**> request
+!|script    |json http test                                                                   |
+|methodePost|${link_WS_VAD}sales/calculateitemprice|json|$jsonFile|status|status|result|result|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                         |
+|create |${directoryPath}\testCase\004-sales-calculateitemprice\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 005-sales-additem
+!***> sales-additem
+
+!2 get data
+!**> data
+!|script      |json fixture                                            |
+|load file    |${directoryPath}\testCase\005-sales-additem\REQUEST.json|
+|set json path|Content.Value.ContextWebApi.SessionId|to|$token         |
+|$jsonFile=   |json path                            |Content.Value     |
+
+**!
+
+!2 exec request
+!**> request
+!|script    |json http test                                                        |
+|methodePost|${link_WS_VAD}sales/additem|json|$jsonFile|status|status|result|result|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                              |
+|create |${directoryPath}\testCase\005-sales-additem\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 006-sales-getbasket
+!***> sales-getbasket
+
+!2 get data
+!**> data
+!|script|echo script                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|$url=  |echo|https://sbil-api-t.klb21.dev/WS_VAD/sales/getbasket?ContextWebApi.AccessType=0&ContextWebApi.CultureName=fr-FR&ContextWebApi.SessionId=$token&ContextWebApi.AccessMode=0&ContextWebApi.SalesMode=0&ContextWebApi.EquipmentReference=01TW-------------10&ContextWebApi.IsChangedSessionDetected=False&ContextWebApi.AuthenticationType=1&ContextWebApi.CurrentDateOffsetDays=0&MediaSerialNumber=1111111112&MediaUnicity=2|
+**!
+
+!2 exec request
+!**> request
+!|script   |json http test                         |
+|methodeGet|$url|map|""|status|status|result|result|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                |
+|create |${directoryPath}\testCase\006-sales-getbasket\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 007-sales-updateorderstatus
+!***> sales-updateorderstatus
+
+!2 get data
+!**> data
+!|script      |json fixture                                                      |
+|load file    |${directoryPath}\testCase\007-sales-updateorderstatus\REQUEST.json|
+|set json path|Content.Value.ContextWebApi.SessionId|to|$token                   |
+|$jsonFile=   |json path                            |Content.Value               |
+**!
+
+!2 exec request
+!**> request
+!|script   |json http test                                                                  |
+|methodePut|${link_WS_VAD}sales/updateorderstatus|json|$jsonFile|status|status|result|result|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                        |
+|create |${directoryPath}\testCase\007-sales-updateorderstatus\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 008-sales-acceptpayment
+!***> sales-acceptpayment
+
+!2 get data
+!**> data
+!|script      |json fixture                                                  |
+|load file    |${directoryPath}\testCase\008-sales-acceptpayment\REQUEST.json|
+|set json path|Content.Value.ContextWebApi.SessionId|to|$token               |
+|$jsonFile=   |json path                            |Content.Value           |
+**!
+
+!2 exec request
+!**> request
+!|script    |json http test                                                              |
+|methodePost|${link_WS_VAD}sales/acceptpayment|json|$jsonFile|status|status|result|result|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                    |
+|create |${directoryPath}\testCase\008-sales-acceptpayment\RESULT.json|Containing|$result|
+**!
+***!
+
+
+!1 009-sales-order
+!***> sales-order
+
+!2 get data
+!**> data
+!|script|echo script                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|$url=  |echo|https://sbil-api-t.klb21.dev/WS_VAD/sales/order?OrderId=41833&ContextWebApi.AccessType=0&ContextWebApi.CultureName=fr-FR&ContextWebApi.SessionId=$token&ContextWebApi.AccessMode=0&ContextWebApi.SalesMode=0&ContextWebApi.EquipmentReference=01TW-------------10&ContextWebApi.IsChangedSessionDetected=False&ContextWebApi.AuthenticationType=1&ContextWebApi.CurrentDateOffsetDays=0&Medias%5B0%5D.MediaSerialNumber=1111111112&Medias%5B0%5D.MediaUnicity=2|
+**!
+
+!2 exec request
+!**> request
+!|script   |json http test                         |
+|methodeGet|$url|map|""|status|status|result|result|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                            |
+|create |${directoryPath}\testCase\009-sales-order\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+!1 010-datasales-checkautoloading
+!***> datasales-checkautoloading
+
+!2 get data
+!**> data
+!|script      |json fixture                                                         |
+|load file    |${directoryPath}\testCase\010-datasales-checkautoloading\REQUEST.json|
+|set json path|Content.Value.ContextWebApi.SessionId|to|$token                      |
+|$jsonFile=   |json path                            |Content.Value                  |
+**!
+
+!2 exec request
+!**> request
+!|script    |json http test                                                                          |
+|methodePost|${link_WS_VAD_DATA}datasales/checkautoloading|json|$jsonFile|status|status|result|result|
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                           |
+|create |${directoryPath}\testCase\010-datasales-checkautoloading\RESULT.json|Containing|$result|
+**!
+
+***!
+
+
+
+
+
+

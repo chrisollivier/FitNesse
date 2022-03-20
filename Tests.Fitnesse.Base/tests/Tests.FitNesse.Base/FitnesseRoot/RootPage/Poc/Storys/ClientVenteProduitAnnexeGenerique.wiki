@@ -1,0 +1,85 @@
+---
+Suite
+Suites: 1527
+---
+!include -setup .NoRegresionTests.configuration
+
+!1 Client vente produit annexe generique
+
+Ce scénario permet d'effectuer une vente d'un produit annexe generique pour un client.
+Pour ce faire, nous utiliserons ces étapes:
+
+!2 1. Récupération du token
+
+Cette étape est indispensable, celle-ci permet de récupérer un token au près de l'api a travers le scénario suivant :
+
+[[Récupération du token][.NoRegresionTests.PocLb22Lyon.Requetes.WsVadAuth.AuthWsVadAuth.postTicketingtokenAuthWsVadAuth]] 
+[POST] ${link_WS_VAD_AUTH}auth/ticketingtoken
+
+Elle nous renvoie un token ainsi qu'une date d'expiration. Dans nos cas de tests nous recupèront le token que nous utiliseront à chaque opération de ce scénario.
+
+!2 2. Réinitialisation du panier
+
+!style_error(Necéssite le token récupéré lors de l'étape 1)
+Cette étape permet de réinitialiser notre panier afin de partir d'un panier vide pour être certain que nous commençons nos tests sur une base vide.
+Celle-ci se fait au près de cette requête :
+
+[[Réinitialisation du panier][.NoRegresionTests.PocLb22Lyon.Requetes.WsVad.WsVadSales.deleteClearbasketWsVadSales]] 
+[DELETE] ${link_WS_VAD}sales/clearbasket
+
+!2 3. Récupération de la liste des produits annexes disponible
+
+!style_error(Necéssite le token récupéré lors de l'étape 1)
+Cette étape permet de récupérer la liste des produits annexes disponibles. Grâce à celle-ci, nous pouvons choisi parmi la liste retourné le ou les produits que nous souhaitons acheter.
+Cela se fait au près de cette requête :
+
+[[Récupération de la liste des produits annexes disponible][.NoRegresionTests.PocLb22Lyon.Requetes.WsVad.WsVadSales.getCatalogWsVadSales]] 
+[GET] ${link_WS_VAD}sales/catalog/
+
+Une fois le resultat récupéré, la liste de produit se trouve ici : SalesFlatCatalog.SalesItemsDetails
+
+
+!2 4. Ajout de l'article au panier
+
+!style_error(Necéssite le token récupéré lors de l'étape 1) 
+!style_error(Necéssite de connaitre le produit à ajouter au panier -> étape 3) 
+Cette étape permet d'ajout d'un produit présent dans la liste des produits annexes disponible au panier. 
+Pour ce faire nous passerons par cette requête:
+
+[[Ajout d'un article au panier][.NoRegresionTests.PocLb22Lyon.Requetes.WsVad.WsVadSales.postAdditemWsVadSales]] 
+[POST] ${link_WS_VAD}sales/additem
+
+!2 5. Consultation du panier 
+
+!style_error(Necéssite le token récupéré lors de l'étape 1)
+Cette étape permet d'afficher le panier du client. Celle-ci passe par cette requête:
+
+[[Consultation du panier][.NoRegresionTests.PocLb22Lyon.Requetes.WsVad.WsVadSales.getGetbasketWsVadSales]]
+[GET] ${link_WS_VAD}sales/getbasket
+
+!2 6. Mise à jour de l'état de la commande 
+
+!style_error(Necéssite le token récupéré lors de l'étape 1) 
+!style_error(Necéssite d'avoir un article dans le panier -> étape 4)
+Cette étape permet de mettre à jour l'état de la commande, ici nous passons l'état à Paiement en cours.
+Pour mettre à jour nous passons par cette requête :
+
+[[ Mise à jour de l'état d'une commande ][.NoRegresionTests.PocLb22Lyon.Requetes.WsVad.WsVadSales.putUpdateorderstatusWsVadSales]]
+[PUT] ${link_WS_VAD}sales/updateorderstatus
+
+!2 7. Validation de la commande (Paiement)
+
+!style_error(Necéssite le token récupéré lors de l'étape 1) 
+!style_error(Necéssite la mise à jour de l'état de la commande -> étape 6) 
+Cette étape permet d'effectuer la validation de la commande.
+Nous devons passer par cette requête :
+
+[[Validation d'une commande][.NoRegresionTests.PocLb22Lyon.Requetes.WsVad.WsVadSales.postAcceptpaymentWsVadSales]]
+[POST] ${link_WS_VAD}sales/acceptpayment
+
+
+!1 !img files/pictures/story1527.PNG
+
+
+!3 Les différents cas de tests : 
+!contents -R2 -g -p -f -h

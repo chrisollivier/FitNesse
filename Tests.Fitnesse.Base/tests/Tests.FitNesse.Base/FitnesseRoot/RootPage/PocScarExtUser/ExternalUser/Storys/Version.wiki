@@ -1,0 +1,17 @@
+---
+Test
+---
+!define urlVersion {https://sbil-webapplis-t.nsbf1.dev/WS_SCARONLINE_IHM_REST.API/version}
+
+!define urlFullVerssion {https://sbil-api-t.nsbf1.dev/EXTERNUSER.API/version/versionFull}
+
+!|script   |json http test                                  |
+|methodeGet|${urlVersion}|map|""|status|status|result|result|
+
+!|script   |json http test                                       |
+|methodeGet|${urlFullVerssion}|map|""|status|status|result|result|
+
+#!|script |json http test                                     |
+#|get from|https://sbil-api-t.nsbf1.dev/EXTERNUSER.API/version|
+#|show    |response                                           |
+#|check   |response status                |200                |

@@ -1,0 +1,13 @@
+#Copyright (C) 2015 by six42, All rights reserved. Contact the author via http://github.com/six42
+#
+!|Import                          |
+|nl.hsac.fitnesse.fixture         |
+|nl.hsac.fitnesse.fixture.slim    |
+|nl.hsac.fitnesse.fixture.slim.web|
+|nl.hsac.fitnesse.fixture.util    |
+|fitnesse.slim.test               |
+|fitnesse.*|
+|nl.hsac.fitnesse.fixture.slim.*  |
+|six42.fitnesse.jdbcslim.*|
+|six42.fitnesse.jdbcslim.propertydecode.*|
+!include -seamless .PlugIns.JdbcSlim.XxTestMoreDrivers.HtwoTest.ScenarioLibrary

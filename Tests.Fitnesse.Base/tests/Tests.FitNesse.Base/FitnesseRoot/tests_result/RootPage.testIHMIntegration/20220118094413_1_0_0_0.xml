@@ -1,0 +1,912 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20211030</FitNesseVersion>
+  <rootPath>RootPage.testIHMIntegration</rootPath>
+  <result>
+    <counts>
+      <right>7</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2022-01-18T09:44:14+01:00</date>
+    <runTimeInMillis>8461</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RootPage.SetUp"&gt;.RootPage.SetUp&lt;/a&gt; &lt;a href="RootPage.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RootPage.configuration"&gt;.RootPage.configuration&lt;/a&gt; &lt;a href="RootPage.configuration?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;h1 id="0"&gt;Configuration&lt;/h1&gt;
+Cette page répresente toutes les configurations appliqué aux différents tests présent sur ce serveur &lt;span class="fitnesse"&gt;FitNesse&lt;/span&gt;.&lt;br/&gt;&lt;br/&gt;&lt;h2 id="1"&gt;Lien des différentes Apis et Ihms regroupé par application&lt;/h2&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="2"&gt;WS_VAD_AUTH&lt;/h4&gt;
+&lt;span class="meta"&gt;variable defined: link_WS_VAD_AUTH=https://sbil-api-t.klb21.dev/WS_VAD_AUTH/&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="3"&gt;WS_VAD&lt;/h4&gt;
+&lt;span class="meta"&gt;variable defined: link_WS_VAD=https://sbil-api-t.klb21.dev/WS_VAD/&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="4"&gt;WS_VAD_DATA&lt;/h4&gt;
+&lt;span class="meta"&gt;variable defined: link_WS_VAD_DATA=https://sbil-api-t.klb21.dev/WS_VAD_DATA/&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="5"&gt;blank Object&lt;/h4&gt;
+&lt;span class="meta"&gt;variable defined: data=!-{"data":{}} -!&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h3 id="6"&gt;Configuration technique pour &lt;span class="fitnesse"&gt;FitNesse&lt;/span&gt; :&lt;/h3&gt;
+&lt;table class="toolchainTable importTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.web&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.util&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.slim.test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.*&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h3 id="7"&gt;Scénario utile :&lt;/h3&gt;
+Necessite SetupTestIHM !&lt;br/&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;ChoixIHM&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;Cle&lt;/td&gt;
+		&lt;td&gt;cle&lt;/td&gt;
+		&lt;td&gt;resultChoix?&lt;/td&gt;
+		&lt;td&gt;resultChoix&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;open&lt;/td&gt;
+		&lt;td colspan="6"&gt;http://localhost:3000/&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;enter&lt;/td&gt;
+		&lt;td&gt;@cle&lt;/td&gt;
+		&lt;td&gt;as&lt;/td&gt;
+		&lt;td colspan="4"&gt;id=cle&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;enter&lt;/td&gt;
+		&lt;td&gt;@json&lt;/td&gt;
+		&lt;td&gt;as&lt;/td&gt;
+		&lt;td colspan="4"&gt;id=data&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;click&lt;/td&gt;
+		&lt;td colspan="6"&gt;Send Data&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;wait&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td colspan="5"&gt;seconds&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;$resultChoix=&lt;/td&gt;
+		&lt;td&gt;value of&lt;/td&gt;
+		&lt;td colspan="5"&gt;id=result&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h3 id="8"&gt;Scénario Post :&lt;/h3&gt;
+&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodePost&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Content-Type&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;post&lt;/td&gt;
+		&lt;td&gt;@json&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td colspan="6"&gt;@url&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h3 id="9"&gt;Scénario Get :&lt;/h3&gt;
+&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodeGet&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;map&lt;/td&gt;
+		&lt;td&gt;map&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=ApiKey-&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;get from&lt;/td&gt;
+		&lt;td&gt;@url&lt;/td&gt;
+		&lt;td&gt;template&lt;/td&gt;
+		&lt;td colspan="6"&gt;@map&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h3 id="10"&gt;Scénario Put :&lt;/h3&gt;
+&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodePut&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=ApiKey-&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;put&lt;/td&gt;
+		&lt;td&gt;@json&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td colspan="6"&gt;@url&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h3 id="11"&gt;Scénario Delete :&lt;/h3&gt;
+&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodeDelete&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;body&lt;/td&gt;
+		&lt;td&gt;body&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=ApiKey-&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;delete&lt;/td&gt;
+		&lt;td&gt;@url&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td colspan="6"&gt;@body&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;div class="collapsible"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RootPage.SetupTestIHM"&gt;SetupTestIHM&lt;/a&gt; &lt;a href="RootPage.SetupTestIHM?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;Attention de vérifier les prérequis nécessaire dans la documentation d'installation. &lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable importTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.slim.test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.web&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Démarage du driver chrome:&lt;br/&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;selenium driver setup&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;start driver for&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;chrome&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table class="toolchainTable libraryTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;library&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;echo script&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;browser test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;span class="meta"&gt;variable defined: json=!-
+{
+"data":[
+{"id":"0","name":"article 1"},
+{"id":"1","name":"article 2"},
+{"id":"2","name":"article 3"}
+]
+}
+-!&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: jsonAenvoye=!-
+{
+"id":"0:0 bonjour",
+"data": {}
+}
+-!&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="6"&gt;script&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="scenario closed"&gt;
+		&lt;td class="pass"&gt;ChoixIHM&lt;/td&gt;
+		&lt;td class="pass"&gt;
+{
+"data":[
+{"id":"0","name":"article 1"},
+{"id":"1","name":"article 2"},
+{"id":"2","name":"article 3"}
+]
+}
+&lt;/td&gt;
+		&lt;td class="pass"&gt;Cle&lt;/td&gt;
+		&lt;td class="pass"&gt;name&lt;/td&gt;
+		&lt;td class="pass"&gt;resultChoix&lt;/td&gt;
+		&lt;td class="pass"&gt;resultChoix&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="scenario-detail closed-detail"&gt;&lt;td colspan="6"&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;ChoixIHM&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;Cle&lt;/td&gt;
+		&lt;td&gt;cle&lt;/td&gt;
+		&lt;td&gt;resultChoix?&lt;/td&gt;
+		&lt;td&gt;resultChoix&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;open&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="6"&gt;http://localhost:3000/&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;enter&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;name&lt;/td&gt;
+		&lt;td&gt;as&lt;/td&gt;
+		&lt;td colspan="4"&gt;id=cle&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;enter&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;
+{
+"data":[
+{"id":"0","name":"article 1"},
+{"id":"1","name":"article 2"},
+{"id":"2","name":"article 3"}
+]
+}
+&lt;/td&gt;
+		&lt;td&gt;as&lt;/td&gt;
+		&lt;td colspan="4"&gt;id=data&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;click&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="6"&gt;Send Data&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;wait&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td colspan="5"&gt;seconds&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;$resultChoix&amp;lt;-[{"id":"1","name":"article 2"}]&lt;/td&gt;
+		&lt;td&gt;value of&lt;/td&gt;
+		&lt;td colspan="5"&gt;id=result&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;echo&lt;/td&gt;
+		&lt;td colspan="5"&gt;$resultChoix-&gt;[{"id":"1","name":"article 2"}]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;json formatter&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;$resultChoix&amp;lt;-[{
+    "id": "1",
+    "name": "article 2"
+}]&lt;/td&gt;
+		&lt;td&gt;format&lt;/td&gt;
+		&lt;td&gt;$resultChoix-&gt;[{"id":"1","name":"article 2"}]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;json fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor6"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;load&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="3"&gt;
+{
+"id":"0:0 bonjour",
+"data": {}
+}
+&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;set json path&lt;/td&gt;
+		&lt;td&gt;data&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td&gt;$resultChoix-&gt;[{
+    "id": "1",
+    "name": "article 2"
+}]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor6"&gt;
+		&lt;td&gt;$jsonAenvoye&amp;lt;-[{"id":"0:0 bonjour","data":"{\n    \"id\": \"1\",\n    \"name\": \"article 2\"\n}"}]&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="2"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;json formatter&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor6"&gt;
+		&lt;td&gt;$jsonAenvoye&amp;lt;-[{
+    "id": "0:0 bonjour",
+    "data": "{\n    \"id\": \"1\",\n    \"name\": \"article 2\"\n}"
+}]&lt;/td&gt;
+		&lt;td&gt;format&lt;/td&gt;
+		&lt;td&gt;$jsonAenvoye-&gt;[{"id":"0:0 bonjour","data":"{\n    \"id\": \"1\",\n    \"name\": \"article 2\"\n}"}]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;file fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;create&lt;/td&gt;
+		&lt;td&gt;TRUC.json&lt;/td&gt;
+		&lt;td&gt;Containing&lt;/td&gt;
+		&lt;td&gt;$jsonAenvoye-&gt;[{
+    "id": "0:0 bonjour",
+    "data": "{\n    \"id\": \"1\",\n    \"name\": \"article 2\"\n}"
+}]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;</content>
+    <relativePageName>testIHMIntegration</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='nl.hsac.fitnesse.fixture'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_1', instruction='import', path='nl.hsac.fitnesse.fixture.slim'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_2', instruction='import', path='nl.hsac.fitnesse.fixture.slim.web'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.web)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.web</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_3', instruction='import', path='nl.hsac.fitnesse.fixture.util'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.util)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_3</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.util</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_4', instruction='import', path='fitnesse.slim.test'}</instruction>
+        <slimResult>pass(fitnesse.slim.test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_4</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.slim.test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_5', instruction='import', path='nl.hsac.fitnesse.fixture.slim.*'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.*)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_5</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.*</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_6_0', instruction='import', path='fitnesse.slim.test'}</instruction>
+        <slimResult>pass(fitnesse.slim.test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_6_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.slim.test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_6_1', instruction='import', path='nl.hsac.fitnesse.fixture'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_6_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_6_2', instruction='import', path='nl.hsac.fitnesse.fixture.slim'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_6_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_6_3', instruction='import', path='nl.hsac.fitnesse.fixture.slim.web'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.web)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_6_3</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.web</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_0', instruction='make', instanceName='scriptTableActor', className='SeleniumDriverSetup', args=[]}</instruction>
+        <slimResult>pass(selenium driver setup)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_7_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>selenium driver setup</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_1', instruction='call', instanceName='scriptTableActor', methodName='startDriverFor', args=[chrome]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_7_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='library_8_0', instruction='make', instanceName='library1', className='EchoScript', args=[]}</instruction>
+        <slimResult>pass(echo script)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>library_8_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>echo script</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='library_8_1', instruction='make', instanceName='library2', className='BrowserTest', args=[]}</instruction>
+        <slimResult>pass(browser test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>library_8_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>browser test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_9_0/scriptTable_1_0', instruction='call', instanceName='scriptTableActor', methodName='open', args=[http://localhost:3000/]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_9_0/scriptTable_1_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_9_0/scriptTable_1_1', instruction='call', instanceName='scriptTableActor', methodName='enterAs', args=[name, id=cle]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_9_0/scriptTable_1_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_9_0/scriptTable_1_2', instruction='call', instanceName='scriptTableActor', methodName='enterAs', args=[
+{
+"data":[
+{"id":"0","name":"article 1"},
+{"id":"1","name":"article 2"},
+{"id":"2","name":"article 3"}
+]
+}
+, id=data]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_9_0/scriptTable_1_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_9_0/scriptTable_1_3', instruction='call', instanceName='scriptTableActor', methodName='click', args=[Send Data]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_9_0/scriptTable_1_3</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_9_0/scriptTable_1_4', instruction='call', instanceName='scriptTableActor', methodName='waitSeconds', args=[3]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_9_0/scriptTable_1_4</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_9_0/scriptTable_1_5', instruction='callAndAssign', symbolName='resultChoix', instanceName='scriptTableActor', methodName='valueOf', args=[id=result]}</instruction>
+        <slimResult>$resultChoix&lt;-[{"id":"1","name":"article 2"}]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_9_0/scriptTable_1_5</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$resultChoix&lt;-[{"id":"1","name":"article 2"}]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_9_1', instruction='call', instanceName='scriptTableActor', methodName='echo', args=[$resultChoix]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_9_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_10_0', instruction='make', instanceName='scriptTableActor', className='JsonFormatter', args=[]}</instruction>
+        <slimResult>pass(json formatter)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_10_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>json formatter</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_10_1', instruction='callAndAssign', symbolName='resultChoix', instanceName='scriptTableActor', methodName='format', args=[$resultChoix]}</instruction>
+        <slimResult>$resultChoix&lt;-[{
+    "id": "1",
+    "name": "article 2"
+}]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_10_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$resultChoix&lt;-[{
+    "id": "1",
+    "name": "article 2"
+}]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_11_0', instruction='make', instanceName='scriptTableActor', className='JsonFixture', args=[]}</instruction>
+        <slimResult>pass(json fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_11_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>json fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_11_1', instruction='call', instanceName='scriptTableActor', methodName='load', args=[
+{
+"id":"0:0 bonjour",
+"data": {}
+}
+]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_11_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_11_2', instruction='call', instanceName='scriptTableActor', methodName='setJsonPathTo', args=[data, $resultChoix]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_11_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_11_3', instruction='callAndAssign', symbolName='jsonAenvoye', instanceName='scriptTableActor', methodName='jsonPath', args=[$]}</instruction>
+        <slimResult>$jsonAenvoye&lt;-[{"id":"0:0 bonjour","data":"{\n    \"id\": \"1\",\n    \"name\": \"article 2\"\n}"}]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_11_3</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$jsonAenvoye&lt;-[{"id":"0:0 bonjour","data":"{\n    \"id\": \"1\",\n    \"name\": \"article 2\"\n}"}]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_12_0', instruction='make', instanceName='scriptTableActor', className='JsonFormatter', args=[]}</instruction>
+        <slimResult>pass(json formatter)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_12_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>json formatter</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_12_1', instruction='callAndAssign', symbolName='jsonAenvoye', instanceName='scriptTableActor', methodName='format', args=[$jsonAenvoye]}</instruction>
+        <slimResult>$jsonAenvoye&lt;-[{
+    "id": "0:0 bonjour",
+    "data": "{\n    \"id\": \"1\",\n    \"name\": \"article 2\"\n}"
+}]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_12_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$jsonAenvoye&lt;-[{
+    "id": "0:0 bonjour",
+    "data": "{\n    \"id\": \"1\",\n    \"name\": \"article 2\"\n}"
+}]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_13_0', instruction='make', instanceName='scriptTableActor', className='FileFixture', args=[]}</instruction>
+        <slimResult>pass(file fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_13_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>file fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_13_1', instruction='call', instanceName='scriptTableActor', methodName='createContaining', args=[TRUC.json, $jsonAenvoye]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_13_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp tools/fixtures;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\accessors-smart-2.4.7.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\animal-sniffer-annotations-1.14.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\asm-9.1.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\byte-buddy-1.8.15.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\cglib-nodep-3.3.0.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\checker-compat-qual-2.0.0.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\commons-cli-1.4.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\commons-codec-1.11.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\commons-exec-1.3.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\commons-io-2.6.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\commons-net-3.8.0.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\commons-text-1.9.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\diff-1.1.11.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\error_prone_annotations-2.1.3.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\freemarker-2.3.31.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\galen-core-2.4.4.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\galen-rainbow4j-2.4.4.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\gson-2.8.5.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\guava-25.0-jre.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\httpclient-4.5.13.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\httpclient-win-4.5.13.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\httpcore-4.4.13.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\httpmime-4.5.13.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\j2objc-annotations-1.1.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\jackson-annotations-2.9.0.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\jackson-core-2.9.7.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\jackson-databind-2.9.7.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\jcl-over-slf4j-1.7.25.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\jna-4.5.2.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\jna-platform-4.5.2.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\json-path-2.6.0.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\json-smart-2.4.7.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\jsr305-1.3.9.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\okhttp-3.11.0.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\okio-1.14.0.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\phantomjsdriver-1.4.4.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\rhino-1.7.7.2.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\selenium-api-3.141.59.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\selenium-chrome-driver-3.141.59.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\selenium-edge-driver-3.141.59.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\selenium-firefox-driver-3.141.59.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\selenium-ie-driver-3.141.59.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\selenium-java-3.141.59.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\selenium-opera-driver-3.141.59.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\selenium-remote-driver-3.141.59.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\selenium-safari-driver-3.141.59.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\selenium-support-3.141.59.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\snakeyaml-1.28.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fixtures\snakeyaml-1.29.jar;C:\Users\JG52281943\Desktop\FitNesse_1.0_LyonB22\tools\fitnesse-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr>janv. 18, 2022 9:44:15 AM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFOS: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+
+Starting ChromeDriver 96.0.4664.45 (76e4c1bb2ab4671b8beba3444e61c0f17584b2fc-refs/branch-heads/4664@{#947}) on port 10873
+
+Only local connections are allowed.
+
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+
+ChromeDriver was started successfully.
+
+[1642495458.503][WARNING]: This version of ChromeDriver has not been tested with Chrome version 97.
+
+janv. 18, 2022 9:44:18 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFOS: Detected dialect: W3C
+
+</stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>10243</totalRunTimeInMillis>
+</testResults>
+

@@ -1,0 +1,32 @@
+---
+Test
+---
+!define token {AEFHAO}
+
+!|script      |json fixture                                                                                                      |
+|load file    |PocLb22Lyon\Storys\ClientVenteProduitAnnexeGenerique\TestCaseVenteReussi\005-sales-calculateitemprice\REQUEST.json|
+|$result=     |json path                                                 |Content.Value                                          |
+
+!|script|json fixture|
+|load|$result|
+|set json path|ContextWebApi.SessionId                     |to                       |${token}                       |
+|$result=|json path|$.ContextWebApi.AccessType|
+
+
+
+
+#!|script |json path helper                                                  |
+#|$result=|update json|$result|path|ContextWebApi.SessionId|with value|$token|
+
+
+
+#!|script |json formatter|
+#|$result=|format|$result|
+
+
+
+!2 Requête Api
+!********> Requête api
+!|script    |json http test                                                                         |
+|methodePost|${link_WS_VAD}sales/calculateitemprice|json|$result|codeErreur|codeErreur|result|result|
+***!

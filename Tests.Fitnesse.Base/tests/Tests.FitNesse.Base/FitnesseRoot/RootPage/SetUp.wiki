@@ -1,0 +1,135 @@
+!include -setup .RootPage.configuration
+
+!1 Configuration technique pour FitNesse :
+!***> Configuration
+!|Import                          |
+|nl.hsac.fitnesse.fixture         |
+|nl.hsac.fitnesse.fixture.slim    |
+|nl.hsac.fitnesse.fixture.slim.web|
+|nl.hsac.fitnesse.fixture.util    |
+|fitnesse.slim.test               |
+|nl.hsac.fitnesse.fixture.slim.*  |
+***!
+
+!1 Scénario utile :
+!***> utile
+
+!3 Scénario ChoixIHM :
+Necessite SetupTestIHM !
+!**> ChoixIHM
+!|scenario    |ChoixIHM|json|Cle|cle|resultChoix?|resultChoix|
+|open         |http://localhost:3000/                        |
+|enter        |@cle    |as  |id=cle                          |
+|enter        |@json   |as  |id=data                         |
+|click        |Send Data                                     |
+|wait         |3       |seconds                              |
+|$resultChoix=|value of|id=result                            |
+**!
+
+***!
+
+!1 Post Methode
+!***> Methodes
+
+!3 Scénario Post :
+!**> Post default
+!|scenario|methodePost     |url       |json|json|status?|status|result?|result|
+|set value|application/json|for header|Content-Type                           |
+|set value|application/json|for header|Accept                                 |
+|post     |@json           |to        |@url                                   |
+|show     |request                                                            |
+|show     |response                                                           |
+|$result= |json path       |$                                                 |
+|$status= |response status                                                    |
+**!
+***!
+
+!1 Get Methode
+!***> Methodes
+
+!3 Scénario Get :
+!**> Get default
+!|scenario|methodeGet        |url       |map|map|status?|status|result?|result|
+|set value|application/json  |for header|Accept                               |
+|set value|XAuthToken=ApiKey-|for header|Cookie                               |
+|get from |@url              |template  |@map                                 |
+|show     |response                                                           |
+|show     |request                                                            |
+|$result= |json path         |$                                               |
+|$status= |response status                                                    |
+**!
+
+!3 Scénario Get With Api Key :
+!**> Get Api key
+!|scenario        |methodeGetWithApiKey|url       |key|key|map|map|status?|status|result?|result|
+|set store cookies|true                                                                         |
+|set value        |application/json    |for header|Accept                                       |
+|set value        |XAuthToken=@key     |for header|Cookie                                       |
+|get from         |@url                |template  |@map                                         |
+|show             |response                                                                     |
+|show             |request                                                                      |
+|$result=         |json path           |$                                                       |
+|$status=         |response status                                                              |
+
+**!
+***!
+
+!1 Put Methode
+!***> Methodes
+
+!3 Scénario Put :
+!**> Put default
+!|scenario|methodePut        |url       |json|json|status?|status|result|result|
+|set value|application/json  |for header|Accept                                |
+|set value|XAuthToken=ApiKey-|for header|Cookie                                |
+|put      |@json             |to        |@url                                  |
+|show     |response                                                            |
+|show     |request                                                             |
+|$result= |json path         |$                                                |
+|$status= |response status                                                     |
+**!
+
+!3 Scénario Put With Api Key :
+!**> Get Api key
+!|scenario        |methodePutWithApiKey|url       |key|key|json|json|status?|status|result|result|
+|set store cookies|true                                                                          |
+|set value        |application/json    |for header|Accept                                        |
+|set value        |XAuthToken=@key     |for header|Cookie                                        |
+|put              |@json               |to        |@url                                          |
+|show             |response                                                                      |
+|show             |request                                                                       |
+|$result=         |json path           |$                                                        |
+|$status=         |response status                                                               |
+**!
+***!
+
+!1 Delete Methode
+!***> Methodes
+
+!3 Scénario Delete :
+!**> Delete default
+!|scenario|methodeDelete     |url       |body|body|status?|status|result|result|
+|set value|application/json  |for header|Accept                                |
+|set value|XAuthToken=ApiKey-|for header|Cookie                                |
+|delete   |@url              |with      |@body                                 |
+|show     |response                                                            |
+|show     |request                                                             |
+|$status= |response status                                                     |
+|$result= |json path         |$                                                |
+**!
+
+!3 Scénario Delete With Api Key :
+!**> Get Api key
+!|scenario        |methodeDeleteWithApiKey|url       |key|key|body|body|status?|status|result|result|
+|set store cookies|true                                                                             |
+|set value        |application/json       |for header|Accept                                        |
+|set value        |XAuthToken=@key        |for header|Cookie                                        |
+|delete           |@url                   |with      |@body                                         |
+|show             |response                                                                         |
+|show             |request                                                                          |
+|$status=         |response status                                                                  |
+|$result=         |json path              |$                                                        |
+**!
+***!
+
+

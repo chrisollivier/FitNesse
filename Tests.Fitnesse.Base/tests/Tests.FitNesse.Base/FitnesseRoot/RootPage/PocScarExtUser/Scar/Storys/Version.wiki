@@ -1,0 +1,13 @@
+---
+Test
+---
+!define url {https://sbil-webapplis-t.nsbf1.dev/WS_SCARONLINE_IHM_REST.API/version}
+
+!|script   |json http test                         |
+|methodeGet|https://sbil-webapplis-t.nsbf1.dev/WS_SCARONLINE_IHM_REST.API/version|map|""|status|status|result|result|
+
+#!|script                                                                       |
+#|get from|https://sbil-webapplis-t.nsbf1.dev/WS_SCARONLINE_IHM_REST.API/version|
+#|show    |response                                                             |
+#|check   |response status                         |200                         |
+

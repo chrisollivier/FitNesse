@@ -1,0 +1,638 @@
+!include -setup .RootPage.SetUpTestIHM
+!1 Test case d'une vente reussi sans choix
+
+Dans ce test, nous allons effectuer toutes les actions necéssaire afin d'effectuer une vente à un client.
+Pour ce faire nous passerons par ces étapes :
+ 1 Recupération du token
+ 1 Récupération user médias
+ 1 Réinitialisation du panier
+ 1 Liste des produits annexes disponibles
+ 1 Calcule prix article
+ 1 Ajout de l'article au panier
+ 1 Consultation du panier
+ 1 Mise à jour de l'état de la commande -> Paiement en cours
+ 1 Validation de la commande de produit annexe (Paiement)
+ 1 Consultation de la commande effectué
+ 1 Vérification contenu cohérence de la vente
+
+
+Nous allons commencer, par récupérer un token qui va être utilisé pour toutes les autres requêtes. Ensuite, nous allons réinitialiser le panier afin de partir d'une "base vide" pour la suite des tests.
+Nous afficherons la liste des produits disponible, puis nous ajouterons au panier le produit "Product n°2607". Une fois ajouté, nous verifions que le produit et bien présent dans le panier.
+Ensuite, nous passerons à la partie paiement. Pour ce faire, nous mettons à jour l'état de la commande à "Paiement en cours" puis effectuons le paiement puis nous consulterons la commande.
+
+!********> variable
+!4 Chemin des fichiers utilisés par le test
+
+!define directoryPath {PocLb22Lyon\Storys\ClientVenteProduitAnnexeGenerique\TestCaseVenteReussiAvecChoixArticle\}
+***!
+
+
+!1 Recupération du token
+!********> Recupération du token
+
+!2 Récupération des données dans le json
+!********> Récupération data
+!|script   |json fixture                                        |
+|load file |${directoryPath}001-auth-ticketingtoken\REQUEST.json|
+|$jsonFile=|json path|Content.Value                             |
+***!
+
+!2 Requête Api
+!********> Requête api
+!|script    |json http test                                                                   |
+|methodePost|${link_WS_VAD_AUTH}auth/ticketingtoken|json|$jsonFile|status|status|result|result|
+|$token=    |json path                             |Token                                     |
+***!
+
+!2 Vérification du status de l'api
+!********> Vérification du résultat de l'api
+!|script|echo script     |
+|check  |echo|$status|200|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script|file fixture                                                          |
+|create |${directoryPath}001-auth-ticketingtoken\RESULT.json|containing|$result|
+***!
+
+***!
+
+
+!1 Récupération user médias
+!********> Récupération user médias
+
+!2 Format data requête
+!******> data
+#!|ddt                    :map fixture                                                                                                                                                                                                                                                                                          |
+#|ContextWebApi.AccessType|ContextWebApi.CultureName|ContextWebApi.SessionId|ContextWebApi.AccessMode|ContextWebApi.SalesMode|ContextWebApi.EquipmentReference|ContextWebApi.IsChangedSessionDetected|ContextWebApi.AuthenticationType|ContextWebApi.UserCode|ContextWebApi.CurrentDateOffsetDays|UserCode      |result?        |
+#|0                       |fr-FR                    |$token                 |1                       |0                      |01TW-------------10             |False                                 |1                               |EXTIS000000001        |0                                  |EXTIS000000001|$dataMediaUser=|
+
+!|script|echo script                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|$url=  |echo|https://sbil-api-t.klb21.dev/WS_VAD/user/medias?ContextWebApi.AccessType=0&ContextWebApi.CultureName=fr-FR&ContextWebApi.SessionId=$token&ContextWebApi.AccessMode=1&ContextWebApi.SalesMode=0&ContextWebApi.EquipmentReference=01TW-------------10&ContextWebApi.IsChangedSessionDetected=False&ContextWebApi.AuthenticationType=1&ContextWebApi.UserCode=EXTIS000000001&ContextWebApi.CurrentDateOffsetDays=0&UserCode=EXTIS000000001|
+***!
+
+!2 Requête Api
+!********> Récupération data
+!|script   |json http test                         |
+|methodeGet|$url|map|""|status|status|result|result|
+***!
+
+!2 Vérification du status de l'api
+!********> Vérification du résultat de l'api
+!|script|echo script     |
+|check  |echo|$status|200|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script|file fixture                                                  |
+|create |${directoryPath}002-user-medias\RESULT.json|containing|$result|
+***!
+
+***!
+
+
+!1 Réinitialisation du panier
+!********> Réinitialisation du panier
+
+!2 Format data requête
+!******> data
+!|script|echo script                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|$url=  |echo|https://sbil-api-t.klb21.dev/WS_VAD/sales/clearbasket?ContextWebApi.AccessType=0&ContextWebApi.CultureName=fr-FR&ContextWebApi.SessionId=$token&ContextWebApi.AccessMode=1&ContextWebApi.SalesMode=0&ContextWebApi.EquipmentReference=01TW-------------10&ContextWebApi.IsChangedSessionDetected=False&ContextWebApi.AuthenticationType=1&ContextWebApi.UserCode=EXTIS000000001&ContextWebApi.CurrentDateOffsetDays=0&UserCode=EXTIS000000001&MediaSerialNumber=9999150001&MediaUnicity=2|
+***!
+
+!2 Requête Api
+!********> Requête api
+!|script      |json http test                          |
+|methodeDelete|$url|body|""|status|status|result|result|
+***!
+
+!2 Vérification du status de l'api
+!********> Vérification du résultat de l'api
+!|script|echo script     |
+|check  |echo|$status|200|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script|file fixture                                                        |
+|create |${directoryPath}003-sales-clearbasket\RESULT.json|containing|$result|
+***!
+
+***!
+
+
+!1 Liste des produits annexes disponibles
+!********> Liste des produits annexes disponibles
+
+!2 Format data requête
+!******> data
+!|script|echo script                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|$url=  |echo|https://sbil-api-t.klb21.dev/WS_VAD/sales/catalog?ContextWebApi.AccessType=0&ContextWebApi.CultureName=fr-FR&ContextWebApi.SessionId=$token&ContextWebApi.AccessMode=1&ContextWebApi.SalesMode=0&ContextWebApi.EquipmentReference=01TW-------------10&ContextWebApi.IsChangedSessionDetected=False&ContextWebApi.AuthenticationType=1&ContextWebApi.UserCode=EXTIS000000001&ContextWebApi.CurrentDateOffsetDays=0&MediaSerialNumber=9999150001&MediaUnicity=2&ProductTypes[0]=1&SalesCatalogOutputFormat.RetrieveSalesTree=False&SalesItemDetailsFilters.RetrieveSubscriptionFlag=False&SalesItemDetailsFilters.RetrieveItemInfoDetails=True&SalesItemDetailsFilters.RetrieveEvidenceInfoDetails=True&SalesItemDetailsFilters.RetrieveWEEETax=False&SalesItemDetailsFilters.RetrieveCompatibleMedia=False&SalesItemDetailsFilters.RetrieveMaxQuantity=False&SalesItemDetailsFilters.RetrieveSalesCriterias=False&SalesItemDetailsFilters.IncludeNonMarketedProducts=False|
+***!
+
+!2 Récupération de la data
+!********> Récupération data
+!|script   |json http test                         |
+|methodeGet|$url|map|""|status|status|result|result|
+***!
+
+!2 Vérification du status de l'api
+!********> Vérification du résultat de l'api
+!|script|echo script     |
+|check  |echo|$status|200|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script|file fixture                                                    |
+|create |${directoryPath}004-sales-catalog\RESULT.json|containing|$result|
+***!
+
+!2 Récupération du choix
+!********> Récupération choix
+!|script   |json fixture                                 |
+|load file |${directoryPath}004-sales-catalog\RESULT.json|
+|$jsonFile=|json path|SalesFlatCatalog                   |
+
+!|script |json http test                             |
+|ChoixIHM|$jsonFile|Cle|Title|resultChoix|resultChoix|
+***!
+
+***!
+
+
+!1 Calcule prix article
+!********> Calcule prix article
+
+!2 Récupération des données dans le json
+!********> Récupération data
+!|script      |json fixture                                             |
+|load file    |${directoryPath}005-sales-calculateitemprice\REQUEST.json|
+|set json path|Content.Value.ContextWebApi.SessionId|to|$token          |
+|$jsonFile=   |json path                            |Content.Value      |
+***!
+
+!2 Requête Api
+!********> Requête api
+!|script    |json http test                                                                   |
+|methodePost|${link_WS_VAD}sales/calculateitemprice|json|$jsonFile|status|status|result|result|
+***!
+
+!2 Vérification du résultat de l'api
+!********> Vérification du résultat de l'api
+!|script|echo script     |
+|check  |echo|$status|200|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script|file fixture                                                               |
+|create |${directoryPath}005-sales-calculateitemprice\RESULT.json|containing|$result|
+***!
+
+***!
+
+
+!1 Ajout d'un article au panier
+!********> Ajout d'un article au panier
+
+!2 Récupération des données dans le json
+!********> Récupération data
+!|script      |json fixture                                       |
+|load file    |${directoryPath}006-sales-additem\REQUEST.json     |
+|set json path|Content.Value.ContextWebApi.SessionId|to|$token    |
+|$jsonFile=   |json path                            |Content.Value|
+***!
+
+!2 Requête Api
+!********> Requête api
+!|script    |json http test                                                        |
+|methodePost|${link_WS_VAD}sales/additem|json|$jsonFile|status|status|result|result|
+***!
+
+!2 Vérification du status de l'api
+!********> Vérification du résultat de l'api
+!|script|echo script     |
+|check  |echo|$status|200|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script|file fixture                                                    |
+|create |${directoryPath}006-sales-additem\RESULT.json|containing|$result|
+***!
+
+***!
+
+
+!1 Consultation du panier
+!********> Consultation du panier
+
+!2 Format data requête
+!******> data
+!|script|echo script                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|$url=  |echo|https://sbil-api-t.klb21.dev/WS_VAD/sales/getbasket?ContextWebApi.AccessType=0&ContextWebApi.CultureName=fr-FR&ContextWebApi.SessionId=$token&ContextWebApi.AccessMode=1&ContextWebApi.SalesMode=0&ContextWebApi.EquipmentReference=01TW-------------10&ContextWebApi.IsChangedSessionDetected=False&ContextWebApi.AuthenticationType=1&ContextWebApi.UserCode=EXTIS000000001&ContextWebApi.CurrentDateOffsetDays=0&UserCode=EXTIS000000001&MediaSerialNumber=9999150001&MediaUnicity=2|
+
+#!| ddt:map fixture                                                                                                                                                                                                                                                     |
+#|ContextWebApi.AccessType|ContextWebApi.CultureName|ContextWebApi.SessionId|ContextWebApi.AccessMode|ContextWebApi.SalesMode|ContextWebApi.EquipmentReference|ContextWebApi.IsChangedSessionDetected|ContextWebApi.UserCode|UserCode      |MediaUnicity|result?        |
+#|0                       |fr-FR                    |$token                 |1                       |0                      |01TW-------------10             |False                                 |EXT00000000026        |EXT00000000026|0           |$datagetbasket=|
+***!
+
+!2 Récupération de la data
+!********> Récupération data
+!|script   |json http test                         |
+|methodeGet|$url|map|""|status|status|result|result|
+***!
+
+!2 Vérification du status de l'api
+!********> Vérification du résultat de l'api
+!|script|echo script     |
+|check  |echo|$status|200|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script|file fixture                                                      |
+|create |${directoryPath}007-sales-getbasket\RESULT.json|containing|$result|
+
+!|script  |echo script                                       |
+|note     |order id doit être récupéré par le résultat du get|
+|$orderId=|echo|41849                                        |
+***!
+***!
+
+
+!1 Mise à jour de l'état de la commande -> Paiement en cours
+!********> Mise à jour de l'état de la commande -> Paiement en cours
+
+!2 Récupération des données dans le json
+!********> Récupération data
+!|script      |json fixture                                            |
+|load file    |${directoryPath}008-sales-updateorderstatus\REQUEST.json|
+|set json path|Content.Value.ContextWebApi.SessionId|to|$token         |
+|set json path|Content.Value.OrderId                |to|$orderId       |
+|$jsonFile=   |json path                            |Content.Value     |
+***!
+
+!2 Récupération de la data
+!********> Récupération data
+!|script   |json http test                                                                  |
+|methodePut|${link_WS_VAD}sales/updateorderstatus|json|$jsonFile|status|status|result|result|
+***!
+
+!2 Vérification du status de l'api
+!********> Vérification du résultat de l'api
+!|script|echo script     |
+|check  |echo|$status|200|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script|file fixture                                                              |
+|create |${directoryPath}008-sales-updateorderstatus\RESULT.json|containing|$result|
+***!
+
+***!
+
+
+!1 Validation de la commande de produit annexe (Paiement)
+!********> Validation de la commande de produit annexe (Paiement)
+
+!2 Récupération des données dans le json
+!********> Récupération data
+!|script      |json fixture                                        |
+|load file    |${directoryPath}009-sales-acceptpayment\REQUEST.json|
+|set json path|Content.Value.ContextWebApi.SessionId|to|$token     |
+|set json path|Content.Value.OrderId                |to|$orderId   |
+|$jsonFile=   |json path                            |Content.Value |
+***!
+
+!2 Requête Api
+!********> Requête api
+!|script    |json http test                                                              |
+|methodePost|${link_WS_VAD}sales/acceptpayment|json|$jsonFile|status|status|result|result|
+***!
+
+!2 Vérification du status de l'api
+!********> Vérification du résultat de l'api
+!|script|echo script     |
+|check  |echo|$status|200|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script|file fixture                                                          |
+|create |${directoryPath}009-sales-acceptpayment\RESULT.json|containing|$result|
+***!
+
+***!
+
+
+!1 Consultation de la commande effectué
+!********> Consultation de la commande effectué
+
+!2 Format data requête
+!******> data
+!|script|echo script                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|$url=  |echo|https://sbil-api-t.klb21.dev/WS_VAD/sales/order?OrderId=$orderId&ContextWebApi.AccessType=0&ContextWebApi.CultureName=fr-FR&ContextWebApi.SessionId=$token&ContextWebApi.AccessMode=1&ContextWebApi.SalesMode=0&ContextWebApi.EquipmentReference=01TW-------------10&ContextWebApi.IsChangedSessionDetected=False&ContextWebApi.AuthenticationType=1&ContextWebApi.UserCode=EXTIS000000001&ContextWebApi.CurrentDateOffsetDays=0&Medias%5B0%5D.MediaSerialNumber=9999150001&Medias%5B0%5D.MediaUnicity=2&UserCode=EXTIS000000001|
+
+#!| ddt:map fixture                                                                                                                                                                                                                   |
+#|OrderId |ContextWebApi.AccessType|ContextWebApi.CultureName|ContextWebApi.SessionId|ContextWebApi.AccessMode|ContextWebApi.SalesMode|ContextWebApi.EquipmentReference|ContextWebApi.IsChangedSessionDetected|UserCode|result?       |
+#|$orderid|0                       |fr-FR                    |$token                 |1                       |0                      |01TW-------------10             |False                                 |UserCode|$datagetorder=|
+***!
+
+!2 Récupération de la data
+!********> Récupération data
+!|script   |json http test                         |
+|methodeGet|$url|map|""|status|status|result|result|
+***!
+
+!2 Vérification du status de l'api
+!********> Vérification du résultat de l'api
+!|script|echo script     |
+|check  |echo|$status|200|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script|file fixture                                                  |
+|create |${directoryPath}010-sales-order\RESULT.json|containing|$result|
+***!
+
+***!
+
+
+!1 Vérification contenu cohérence de la vente
+!********> Vérification contenu cohérence de la vente
+
+!2 Récupération des données dans le json
+!********> Récupération data
+!|script      |json fixture                                               |
+|load file    |${directoryPath}011-datasales-checkautoloading\REQUEST.json|
+|set json path|Content.Value.ContextWebApi.SessionId|to|$token            |
+|$jsonFile=   |json path                            |Content.Value        |
+***!
+
+!2 Requête Api
+!********> Requête api
+!|script    |json http test                                                                          |
+|methodePost|${link_WS_VAD_DATA}datasales/checkautoloading|json|$jsonFile|status|status|result|result|
+***!
+
+!2 Vérification du status de l'api
+!********> Vérification du résultat de l'api
+!|script|echo script     |
+|check  |echo|$status|200|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script|file fixture                                                                 |
+|create |${directoryPath}011-datasales-checkautoloading\RESULT.json|containing|$result|
+***!
+
+***!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!1 Liste des produits annexes disponibles
+!********> Liste des produits annexes disponibles
+
+!2 Format data requête
+!******> data
+!|script|echo script                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|$url=  |echo|https://sbil-api-t.klb21.dev/WS_VAD/sales/catalog?ContextWebApi.AccessType=0&ContextWebApi.CultureName=fr-FR&ContextWebApi.SessionId=$token&ContextWebApi.AccessMode=1&ContextWebApi.SalesMode=0&ContextWebApi.EquipmentReference=01TW-------------10&ContextWebApi.IsChangedSessionDetected=False&ContextWebApi.AuthenticationType=1&ContextWebApi.UserCode=EXTIS000000001&ContextWebApi.CurrentDateOffsetDays=0&MediaSerialNumber=9999150001&MediaUnicity=2&ProductTypes[0]=1&SalesCatalogOutputFormat.RetrieveSalesTree=False&SalesItemDetailsFilters.RetrieveSubscriptionFlag=False&SalesItemDetailsFilters.RetrieveItemInfoDetails=True&SalesItemDetailsFilters.RetrieveEvidenceInfoDetails=True&SalesItemDetailsFilters.RetrieveWEEETax=False&SalesItemDetailsFilters.RetrieveCompatibleMedia=False&SalesItemDetailsFilters.RetrieveMaxQuantity=False&SalesItemDetailsFilters.RetrieveSalesCriterias=False&SalesItemDetailsFilters.IncludeNonMarketedProducts=False|
+***!
+
+!2 Récupération de la data
+!********> Récupération data
+!|script   |json http test                                 |
+|methodeGet|$url|map|""|codeErreur|codeErreur|result|result|
+***!
+
+
+!2 Récupération du choix
+!********> Récupération choix
+!|script                     |json http test                                                      |
+|set value                   |application/json           |for header|Accept                       |
+|set value                   |XAuthToken=ApiKey-         |for header|Cookie                       |
+|get from                    |${link_WS_VAD}sales/catalog|template  |$catalog1                    |
+|check                       |response status            |200                                     |
+|show                        |response                                                            |
+|show                        |request                                                             |
+|$returnGetCatalogWsVadSales=|json path                  |SalesFlatCatalog                        |
+|ChoixIHM                    |$returnGetCatalogWsVadSales|Cle       |Title|resultChoix|resultChoix|
+|echo                        |$resultChoix                                                        |
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script             |Json Fixture         |
+|formatToJsonResponse|$result|result|result|
+
+!|script      |file fixture                           |
+|set directory|${directoryPath}004-sales-catalog      |
+|$test=       |create|REPONSE1.json|containing|$result|
+***!
+
+***!
+***!
+
+!1 Consultation du panier
+!********> Script
+
+!2 Format data
+!******> data
+!|ddt                    :map fixture                                                                                                                                                                                                           |
+|ContextWebApi.AccessType|ContextWebApi.CultureName|ContextWebApi.SessionId|ContextWebApi.AccessMode|ContextWebApi.SalesMode|ContextWebApi.EquipmentReference|ContextWebApi.IsChangedSessionDetected|UserCode      |MediaUnicity|result?        |
+|0                       |fr-FR                    |$token                 |1                       |0                      |01TW-------------10             |False                                 |EXT00000000026|0           |$datagetbasket=|
+***!
+
+!2 Récupération de la data
+!********> Récupération data
+!|script   |json http test                                                                          |
+|methodeGet|${link_WS_VAD}sales/getbasket|map    |$datagetbasket|codeErreur|codeErreur|result|result|
+|check     |echo                         |$result|$result                                           |
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script             |Json Fixture         |
+|formatToJsonResponse|$result|result|result|
+
+!|script      |file fixture                           |
+|set directory|${directoryPath}                       |
+|$test=       |create|REPONSE9.json|containing|$result|
+***!
+
+***!
+
+
+!1 Ajout de l'article au panier
+!********> Script
+
+!2 Récupération de la data
+!********> Récupération data
+!|script      |file fixture         |
+|set directory|${directoryPath}     |
+|$bodyadditem=|text in|REQUEST2.json|
+
+!|script      |json path helper                                                                |
+|$bodyadditem=|update json|$bodyadditem|path|ContextWebApi.SessionId|with value|$token         |
+|$bodyadditem=|update json|$bodyadditem|path|ItemInfo               |with value|$resultChoix[0]|
+***!
+
+!2 Récupération de la data
+!********> Récupération data
+!|script    |json http test                                                                   |
+|methodePost|${link_WS_VAD}sales/additem|json|$bodyadditem|codeErreur|codeErreur|result|result|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script             |Json Fixture         |
+|formatToJsonResponse|$result|result|result|
+
+!|script      |file fixture                            |
+|set directory|${directoryPath}                        |
+|$test=       |create|REPONSE10.json|containing|$result|
+***!
+
+!*****> data
+!|script                                    |
+|$orderid=|echo|$resultpostAdditemWsVadSales|
+***!
+
+***!
+
+!1 Consultation du panier
+!********> Script
+
+!2 Format data
+!******> data
+!|ddt                    :map fixture                                                                                                                                                                                                           |
+|ContextWebApi.AccessType|ContextWebApi.CultureName|ContextWebApi.SessionId|ContextWebApi.AccessMode|ContextWebApi.SalesMode|ContextWebApi.EquipmentReference|ContextWebApi.IsChangedSessionDetected|UserCode      |MediaUnicity|result?        |
+|0                       |fr-FR                    |$token                 |1                       |0                      |01TW-------------10             |False                                 |EXT00000000026|0           |$datagetbasket=|
+***!
+
+!2 Récupération de la data
+!********> Récupération data
+!|script   |json http test                                                                          |
+|methodeGet|${link_WS_VAD}sales/getbasket|map    |$datagetbasket|codeErreur|codeErreur|result|result|
+|check not |echo                         |$result|null                                              |
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script             |Json Fixture         |
+|formatToJsonResponse|$result|result|result|
+
+!|script      |file fixture                            |
+|set directory|${directoryPath}                        |
+|$test=       |create|REPONSE11.json|containing|$result|
+***!
+
+***!
+
+!1 Mise à jour de l'état de la commande -> Paiement en cours
+!********> Script
+
+!2 Récupération de la data
+!********> Récupération data
+!|script             |file fixture         |
+|set directory       |${directoryPath}     |
+|$updateorderstatus= |text in|REQUEST4.json|
+|$bodyacceptPayement=|text in|REQUEST5.json|
+
+!|script            |json path helper                                                               |
+|$updateorderstatus=|update json|$updateorderstatus|path|ContextWebApi.SessionId|with value|$token  |
+|$updateorderstatus=|update json|$updateorderstatus|path|OrderId                |with value|$orderid|
+
+!|script             |json path helper                                                                |
+|$bodyacceptPayement=|update json|$bodyacceptPayement|path|ContextWebApi.SessionId|with value|$token  |
+|$bodyacceptPayement=|update json|$bodyacceptPayement|path|OrderId                |with value|$orderid|
+
+***!
+
+!2 Récupération de la data
+!********> Récupération data
+!|script   |json http test                                                                                    |
+|methodePut|${link_WS_VAD}sales/updateorderstatus|json|$bodyacceptPayement|codeErreur|codeErreur|result|result|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script             |Json Fixture         |
+|formatToJsonResponse|$result|result|result|
+
+!|script      |file fixture                            |
+|set directory|${directoryPath}                        |
+|$test=       |create|REPONSE12.json|containing|$result|
+***!
+
+***!
+
+!1 Validation de la commande de produit annexe (Paiement)
+!********> Script
+
+!2 Récupération de la data
+!********> Récupération data
+!|script    |json http test                                                                                |
+|methodePost|${link_WS_VAD}sales/acceptpayment|json|$bodyacceptPayement|codeErreur|codeErreur|result|result|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script             |Json Fixture         |
+|formatToJsonResponse|$result|result|result|
+
+!|script      |file fixture                            |
+|set directory|${directoryPath}                        |
+|$test=       |create|REPONSE13.json|containing|$result|
+***!
+
+***!
+
+!1 Consultation de la commande effectué
+!********> Script
+
+!2 Format data
+!******> data
+!|ddt    :map fixture                                                                                                                                                                                                                |
+|OrderId |ContextWebApi.AccessType|ContextWebApi.CultureName|ContextWebApi.SessionId|ContextWebApi.AccessMode|ContextWebApi.SalesMode|ContextWebApi.EquipmentReference|ContextWebApi.IsChangedSessionDetected|UserCode|result?       |
+|$orderid|0                       |fr-FR                    |$token                 |1                       |0                      |01TW-------------10             |False                                 |UserCode|$datagetorder=|
+***!
+
+!2 Récupération de la data
+!********> Récupération data
+!|script   |json http test                                                                 |
+|methodeGet|${link_WS_VAD}sales/order|map|$datagetorder|codeErreur|codeErreur|result|result|
+***!
+
+!2 Enregistrement de la data
+!********> Enregistrement data
+!|script             |Json Fixture         |
+|formatToJsonResponse|$result|result|result|
+
+!|script      |file fixture                            |
+|set directory|${directoryPath}                        |
+|$test=       |create|REPONSE14.json|containing|$result|
+***!
+
+***!

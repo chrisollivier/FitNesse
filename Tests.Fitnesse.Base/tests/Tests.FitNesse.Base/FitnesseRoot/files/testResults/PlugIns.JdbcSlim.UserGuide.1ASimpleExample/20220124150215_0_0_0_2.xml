@@ -1,0 +1,2075 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20211030</FitNesseVersion>
+  <rootPath>PlugIns.JdbcSlim.UserGuide.1ASimpleExample</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>45</exceptions>
+    </counts>
+    <date>2022-01-24T15:02:15+01:00</date>
+    <runTimeInMillis>129</runTimeInMillis>
+    <content></content>
+    <relativePageName>SuiteSetUp</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='nl.hsac.fitnesse.fixture'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_1', instruction='import', path='nl.hsac.fitnesse.fixture.slim'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_2', instruction='import', path='nl.hsac.fitnesse.fixture.slim.web'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.web)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.web</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_3', instruction='import', path='nl.hsac.fitnesse.fixture.util'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.util)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_3</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.util</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_4', instruction='import', path='fitnesse.slim.test'}</instruction>
+        <slimResult>pass(fitnesse.slim.test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_4</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.slim.test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_5', instruction='import', path='nl.hsac.fitnesse.fixture.slim.*'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.*)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_5</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.*</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_6', instruction='import', path='six42.fitnesse.jdbcslim.*'}</instruction>
+        <slimResult>pass(six42.fitnesse.jdbcslim.*)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_6</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>six42.fitnesse.jdbcslim.*</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_7', instruction='import', path='six42.fitnesse.jdbcslim.propertydecode.*'}</instruction>
+        <slimResult>pass(six42.fitnesse.jdbcslim.propertydecode.*)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_7</instructionId>
+          <col>0</col>
+          <row>8</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>six42.fitnesse.jdbcslim.propertydecode.*</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_3_0', instruction='import', path='six42.fitnesse.jdbcslim'}</instruction>
+        <slimResult>pass(six42.fitnesse.jdbcslim)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_3_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>six42.fitnesse.jdbcslim</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_0', instruction='make', instanceName='decisionTable_4', className='DefineProperties', args=[TestDatabase]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for DefineProperties[1]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_4', instruction='call', instanceName='decisionTable_4', methodName='setKey', args=[jdbcDriver]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_4</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_4.setKey. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_5', instruction='call', instanceName='decisionTable_4', methodName='setValue', args=[org.h2.Driver]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_5</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_4.setValue. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_8', instruction='call', instanceName='decisionTable_4', methodName='setKey', args=[#DBURL]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_8</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_4.setKey. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_9', instruction='call', instanceName='decisionTable_4', methodName='setValue', args=[jdbc:h2:~/h2db]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_9</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_4.setValue. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_12', instruction='call', instanceName='decisionTable_4', methodName='setKey', args=[DBURL]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_12</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_4.setKey. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_13', instruction='call', instanceName='decisionTable_4', methodName='setValue', args=[jdbc:h2:mem:h2db;DB_CLOSE_DELAY=-1]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_13</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_4.setValue. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_16', instruction='call', instanceName='decisionTable_4', methodName='setKey', args=[DBUSER]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_16</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_4.setKey. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_17', instruction='call', instanceName='decisionTable_4', methodName='setValue', args=[na]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_17</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_4.setValue. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_20', instruction='call', instanceName='decisionTable_4', methodName='setKey', args=[DBPASSWORD]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_20</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_4.setKey. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_21', instruction='call', instanceName='decisionTable_4', methodName='setValue', args=[na]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_21</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_4.setValue. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_24', instruction='call', instanceName='decisionTable_4', methodName='setKey', args=[#DBAUTOCOMMIT]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_24</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_4.setKey. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_25', instruction='call', instanceName='decisionTable_4', methodName='setValue', args=[true]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_25</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_4.setValue. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_28', instruction='call', instanceName='decisionTable_4', methodName='setKey', args=[CMD]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_28</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_4.setKey. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_4_29', instruction='call', instanceName='decisionTable_4', methodName='setValue', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_4_29</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_4.setValue. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_5_0', instruction='make', instanceName='decisionTable_5', className='DefineProperties', args=[TransactionDatabase]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_5_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for DefineProperties[1]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_5_4', instruction='call', instanceName='decisionTable_5', methodName='setKey', args=[.include]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_5_4</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_5.setKey. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_5_5', instruction='call', instanceName='decisionTable_5', methodName='setValue', args=[TestDatabase]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_5_5</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_5.setValue. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_5_8', instruction='call', instanceName='decisionTable_5', methodName='setKey', args=[dbconnection]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_5_8</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_5.setKey. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_5_9', instruction='call', instanceName='decisionTable_5', methodName='setValue', args=[h2WithTransaction]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_5_9</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_5.setValue. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_6_0', instruction='make', instanceName='decisionTable_6', className='DefineProperties', args=[StartupDatabase]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_6_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for DefineProperties[1]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_6_4', instruction='call', instanceName='decisionTable_6', methodName='setKey', args=[.include]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_6_4</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_6.setKey. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_6_5', instruction='call', instanceName='decisionTable_6', methodName='setValue', args=[TestDatabase]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_6_5</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_6.setValue. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_6_8', instruction='call', instanceName='decisionTable_6', methodName='setKey', args=[dbconnection]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_6_8</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_6.setKey. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_6_9', instruction='call', instanceName='decisionTable_6', methodName='setValue', args=[h2init]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_6_9</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_6.setValue. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_6_12', instruction='call', instanceName='decisionTable_6', methodName='setKey', args=[dbupdatecount]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_6_12</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_6.setKey. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_6_13', instruction='call', instanceName='decisionTable_6', methodName='setValue', args=[false]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_6_13</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_6.setValue. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_6_16', instruction='call', instanceName='decisionTable_6', methodName='setKey', args=[dbgetgeneratedkeys]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_6_16</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_6.setKey. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_6_17', instruction='call', instanceName='decisionTable_6', methodName='setValue', args=[false]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_6_17</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>The instance decisionTable_6.setValue. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_0', instruction='make', instanceName='scriptTableActor', className='SQLCommand', args=[StartupDatabase]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_7_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for SQLCommand[1]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_1', instruction='call', instanceName='scriptTableActor', methodName='openConnection', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_7_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.openConnection. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_2', instruction='call', instanceName='scriptTableActor', methodName='execute', args=[drop table if exists TestData]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_7_2</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.execute. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_3', instruction='call', instanceName='scriptTableActor', methodName='success', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_7_3</instructionId>
+          <type>ShowActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.success. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_4', instruction='call', instanceName='scriptTableActor', methodName='rawResult', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_7_4</instructionId>
+          <type>ShowActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.rawResult. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_5', instruction='call', instanceName='scriptTableActor', methodName='resultSheet', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_7_5</instructionId>
+          <type>ShowActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.resultSheet. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_6', instruction='call', instanceName='scriptTableActor', methodName='execute', args=[create table TestData (Id int identity(1,1), Name varchar(255), Phone long, City varchar(255), Profession varchar(255))]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_7_6</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.execute. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_7', instruction='call', instanceName='scriptTableActor', methodName='success', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_7_7</instructionId>
+          <type>ShowActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.success. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_8', instruction='call', instanceName='scriptTableActor', methodName='rawResult', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_7_8</instructionId>
+          <type>ShowActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.rawResult. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_7_9', instruction='call', instanceName='scriptTableActor', methodName='resultSheet', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_7_9</instructionId>
+          <type>ShowActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.resultSheet. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='tableTable_8_0', instruction='make', instanceName='tableTable_8', className='SQLCommand', args=[StartupDatabase, insert into TestData
+values (DEFAULT, '%Name%', %Phone%, '%City%', '%Profession%'), dbgetgeneratedkeys]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>tableTable_8_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for SQLCommand[3]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='tableTable_8_1', instruction='call', instanceName='tableTable_8', methodName='doTable', args=[[[SCOPE_IDENTITY()?, City, Name, Phone, Profession], [1, Berlin, Bill, 12345, Doctor], [2, Denver, Ben, 6789, Artist], [3, Seoul, Tom, 4567890, Milkman], [4, Berlin, Till, 332211, Senator], [5, Paris, Sarah, 999999, Hero], [6, London, James, #null#, Butler], [7, Washington, Bert, 432, President], [8, New York, Kim, 1, Banker]]]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>tableTable_8_1</instructionId>
+          <type>TableTableExpectation</type>
+          <evaluationMessage>The instance tableTable_8.doTable. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='tableTable_9_0', instruction='make', instanceName='tableTable_9', className='SQLCommand', args=[StartupDatabase, select * from TestData, Query]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>tableTable_9_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for SQLCommand[3]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='tableTable_9_1', instruction='call', instanceName='tableTable_9', methodName='doTable', args=[[[ID, Name, Phone, City, Profession], [1, Bill, 12345, Berlin, Doctor], [2, Ben, 6789, Denver, Artist], [3, Tom, 4567890, Seoul, Milkman], [4, Till, 332211, Berlin, Senator], [5, Sarah, 999999, Paris, Hero], [6, James, #null#, London, Butler], [7, Bert, 432, Washington, President], [8, Kim, 1, New York, Banker]]]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>tableTable_9_1</instructionId>
+          <type>TableTableExpectation</type>
+          <evaluationMessage>The instance tableTable_9.doTable. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_10_0', instruction='make', instanceName='scriptTableActor', className='SQLCommand', args=[StartupDatabase]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_10_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for SQLCommand[1]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_10_1', instruction='call', instanceName='scriptTableActor', methodName='closeConnection', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_10_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.closeConnection. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>17</exceptions>
+    </counts>
+    <date>2022-01-24T15:02:15+01:00</date>
+    <runTimeInMillis>31</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="PlugIns.JdbcSlim.ScenarioLibrary"&gt;.PlugIns.JdbcSlim.ScenarioLibrary&lt;/a&gt; &lt;a href="PlugIns.JdbcSlim.ScenarioLibrary?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable importTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.web&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.util&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.slim.test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.*&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;six42.fitnesse.jdbcslim.*&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;six42.fitnesse.jdbcslim.propertydecode.*&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;div class="contents"&gt;
+	&lt;b&gt;Contents:&lt;/b&gt;
+	&lt;ul class="toc1"/&gt;&lt;ul class="toc1"/&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: .FitNesse.SuiteAcceptanceTests.ScenarioLibrary&lt;a title="create page" href="FitNesse.SuiteAcceptanceTests.ScenarioLibrary?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;span class="error"&gt;Page include failed because the page .FitNesse.SuiteAcceptanceTests.ScenarioLibrary does not exist.&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: Header= !define TestLibInstallPath (${LibInstallPath}!-) 
+!define JdbcSlimLib -!(${JdbcSlimLib})!-
+***Standard Test Page header
+!define TEST_SYSTEM {slim}
+
+!path ${TestLibInstallPath}${JdbcSlimLib}
+!path ${TestLibInstallPath}h2-*.jar
+!path ${TestLibInstallPath}dbfit-*.jar
+
+
+|import                 |
+|six42.fitnesse.jdbcslim|
+
+!| define table type|
+|SQLCommand|as Table|
+
+
+!|DefineProperties|TestDatabase                      |
+|key              |value                             |
+|jdbcDriver       |org.h2.Driver                     |
+|DBURL            |jdbc:h2:mem:h2db;DB_CLOSE_DELAY=-1|
+|DBUSER           |na                                |
+|DBPASSWORD       |na                                |
+|CMD              |                                  |
+
+-!&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: StartupText=!-
+!|Define Properties|StartupDatabase|
+|key               |value          |
+|.include          |TestDatabase   |
+|dbconnection      |h2init         |
+|dbupdatecount     |false          |
+|dbgetgeneratedkeys|false          |
+
+
+!|Script|SQLCommand                                                   |StartupDatabase                                                  |
+|openConnection                                                                                                                         |
+|execute|drop table if exists TestData                                                                                                  |
+|show   |success                                                                                                                        |
+|show   |rawResult                                                                                                                      |
+|show   |resultSheet                                                                                                                    |
+|execute|create table TestData (Id int identity(1,1), Name varchar(255), Phone varchar(255), City varchar(255), Profession varchar(255))|
+|show   |success                                                                                                                        |
+|show   |rawResult                                                                                                                      |
+|show   |resultSheet                                                                                                                    |
+
+!|SQLCommand      |StartupDatabase|insert into TestData values (DEFAULT, '%Name%', '%Phone%', '%City%', '%Profession%')|dbgetgeneratedkeys|
+|SCOPE_IDENTITY()?|City           |Name                                                                                |Phone  |Profession|
+|1                |Berlin         |Bill                                                                                |12345  |Doctor    |
+|2                |Denver         |Ben                                                                                 |6789   |Artist    |
+|3                |Seoul          |Tom                                                                                 |4567890|Milkman   |
+|4                |Berlin         |Till                                                                                |332211 |Senator   |
+|5                |Paris          |Sarah                                                                               |999999 |Hero      |
+|6                |London         |James                                                                               |5432   |Butler    |
+|7                |Washington     |Bert                                                                                |432    |President |
+|8                |New York       |Kim                                                                                 |1      |Banker    |
+
+!|SQLCommand|StartupDatabase|select * from TestData|Query                |
+|ID         |Name           |Phone                 |City      |Profession|
+|1          |Bill           |12345                 |Berlin    |Doctor    |
+|2          |Ben            |6789                  |Denver    |Artist    |
+|3          |Tom            |4567890               |Seoul     |Milkman   |
+|4          |Till           |332211                |Berlin    |Senator   |
+|5          |Sarah          |999999                |Paris     |Hero      |
+|6          |James          |5432                  |London    |Butler    |
+|7          |Bert           |432                   |Washington|President |
+|8          |Kim            |1                     |New York  |Banker    |
+
+!|Script|SQLCommand|StartupDatabase|
+|closeConnection                   |
+
+-!&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;given Jdbc Slim test page&lt;/td&gt;
+		&lt;td&gt;page&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;given test page&lt;/td&gt;
+		&lt;td colspan="2"&gt;@page&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;and Test System setup is&lt;/td&gt;
+		&lt;td colspan="2"&gt;!define TestLibInstallPath (..//tools//plugins//) 
+!define JdbcSlimLib (jdbcslim*.jar)
+***Standard Test Page header
+!define TEST_SYSTEM {slim}
+
+!path ${TestLibInstallPath}${JdbcSlimLib}
+!path ${TestLibInstallPath}h2-*.jar
+!path ${TestLibInstallPath}dbfit-*.jar
+
+
+|import                 |
+|six42.fitnesse.jdbcslim|
+
+!| define table type|
+|SQLCommand|as Table|
+
+
+!|DefineProperties|TestDatabase                      |
+|key              |value                             |
+|jdbcDriver       |org.h2.Driver                     |
+|DBURL            |jdbc:h2:mem:h2db;DB_CLOSE_DELAY=-1|
+|DBUSER           |na                                |
+|DBPASSWORD       |na                                |
+|CMD              |                                  |
+
+&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;and Setup content is&lt;/td&gt;
+		&lt;td colspan="2"&gt;
+!|Define Properties|StartupDatabase|
+|key               |value          |
+|.include          |TestDatabase   |
+|dbconnection      |h2init         |
+|dbupdatecount     |false          |
+|dbgetgeneratedkeys|false          |
+
+
+!|Script|SQLCommand                                                   |StartupDatabase                                                  |
+|openConnection                                                                                                                         |
+|execute|drop table if exists TestData                                                                                                  |
+|show   |success                                                                                                                        |
+|show   |rawResult                                                                                                                      |
+|show   |resultSheet                                                                                                                    |
+|execute|create table TestData (Id int identity(1,1), Name varchar(255), Phone varchar(255), City varchar(255), Profession varchar(255))|
+|show   |success                                                                                                                        |
+|show   |rawResult                                                                                                                      |
+|show   |resultSheet                                                                                                                    |
+
+!|SQLCommand      |StartupDatabase|insert into TestData values (DEFAULT, '%Name%', '%Phone%', '%City%', '%Profession%')|dbgetgeneratedkeys|
+|SCOPE_IDENTITY()?|City           |Name                                                                                |Phone  |Profession|
+|1                |Berlin         |Bill                                                                                |12345  |Doctor    |
+|2                |Denver         |Ben                                                                                 |6789   |Artist    |
+|3                |Seoul          |Tom                                                                                 |4567890|Milkman   |
+|4                |Berlin         |Till                                                                                |332211 |Senator   |
+|5                |Paris          |Sarah                                                                               |999999 |Hero      |
+|6                |London         |James                                                                               |5432   |Butler    |
+|7                |Washington     |Bert                                                                                |432    |President |
+|8                |New York       |Kim                                                                                 |1      |Banker    |
+
+!|SQLCommand|StartupDatabase|select * from TestData|Query                |
+|ID         |Name           |Phone                 |City      |Profession|
+|1          |Bill           |12345                 |Berlin    |Doctor    |
+|2          |Ben            |6789                  |Denver    |Artist    |
+|3          |Tom            |4567890               |Seoul     |Milkman   |
+|4          |Till           |332211                |Berlin    |Senator   |
+|5          |Sarah          |999999                |Paris     |Hero      |
+|6          |James          |5432                  |London    |Butler    |
+|7          |Bert           |432                   |Washington|President |
+|8          |Kim            |1                     |New York  |Banker    |
+
+!|Script|SQLCommand|StartupDatabase|
+|closeConnection                   |
+
+&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;and JDBC Slim content is&lt;/td&gt;
+		&lt;td colspan="2"&gt;content&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;given page&lt;/td&gt;
+		&lt;td&gt;$IT&lt;/td&gt;
+		&lt;td&gt;with content&lt;/td&gt;
+		&lt;td&gt;!define TestLibInstallPath (..//tools//plugins//) 
+!define JdbcSlimLib (jdbcslim*.jar)
+***Standard Test Page header
+!define TEST_SYSTEM {slim}
+
+!path ${TestLibInstallPath}${JdbcSlimLib}
+!path ${TestLibInstallPath}h2-*.jar
+!path ${TestLibInstallPath}dbfit-*.jar
+
+
+|import                 |
+|six42.fitnesse.jdbcslim|
+
+!| define table type|
+|SQLCommand|as Table|
+
+
+!|DefineProperties|TestDatabase                      |
+|key              |value                             |
+|jdbcDriver       |org.h2.Driver                     |
+|DBURL            |jdbc:h2:mem:h2db;DB_CLOSE_DELAY=-1|
+|DBUSER           |na                                |
+|DBPASSWORD       |na                                |
+|CMD              |                                  |
+
+
+!|Define Properties|StartupDatabase|
+|key               |value          |
+|.include          |TestDatabase   |
+|dbconnection      |h2init         |
+|dbupdatecount     |false          |
+|dbgetgeneratedkeys|false          |
+
+
+!|Script|SQLCommand                                                   |StartupDatabase                                                  |
+|openConnection                                                                                                                         |
+|execute|drop table if exists TestData                                                                                                  |
+|show   |success                                                                                                                        |
+|show   |rawResult                                                                                                                      |
+|show   |resultSheet                                                                                                                    |
+|execute|create table TestData (Id int identity(1,1), Name varchar(255), Phone varchar(255), City varchar(255), Profession varchar(255))|
+|show   |success                                                                                                                        |
+|show   |rawResult                                                                                                                      |
+|show   |resultSheet                                                                                                                    |
+
+!|SQLCommand      |StartupDatabase|insert into TestData values (DEFAULT, '%Name%', '%Phone%', '%City%', '%Profession%')|dbgetgeneratedkeys|
+|SCOPE_IDENTITY()?|City           |Name                                                                                |Phone  |Profession|
+|1                |Berlin         |Bill                                                                                |12345  |Doctor    |
+|2                |Denver         |Ben                                                                                 |6789   |Artist    |
+|3                |Seoul          |Tom                                                                                 |4567890|Milkman   |
+|4                |Berlin         |Till                                                                                |332211 |Senator   |
+|5                |Paris          |Sarah                                                                               |999999 |Hero      |
+|6                |London         |James                                                                               |5432   |Butler    |
+|7                |Washington     |Bert                                                                                |432    |President |
+|8                |New York       |Kim                                                                                 |1      |Banker    |
+
+!|SQLCommand|StartupDatabase|select * from TestData|Query                |
+|ID         |Name           |Phone                 |City      |Profession|
+|1          |Bill           |12345                 |Berlin    |Doctor    |
+|2          |Ben            |6789                  |Denver    |Artist    |
+|3          |Tom            |4567890               |Seoul     |Milkman   |
+|4          |Till           |332211                |Berlin    |Senator   |
+|5          |Sarah          |999999                |Paris     |Hero      |
+|6          |James          |5432                  |London    |Butler    |
+|7          |Bert           |432                   |Washington|President |
+|8          |Kim            |1                     |New York  |Banker    |
+
+!|Script|SQLCommand|StartupDatabase|
+|closeConnection                   |
+
+ &lt;span class="meta"&gt;undefined variable: TestSTART&lt;/span&gt;
+@content 
+&lt;span class="meta"&gt;undefined variable: TestEND&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;make&lt;/td&gt;
+		&lt;td&gt;$IT&lt;/td&gt;
+		&lt;td colspan="2"&gt;a test page&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Setup jdbcSlim&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable importTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;six42.fitnesse.jdbcslim&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table class="toolchainTable decisionTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="2"&gt;define table type&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;SQLCommand&lt;/td&gt;
+		&lt;td&gt;as Table&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Driver specific setup &lt;/p&gt;
+	&lt;div&gt;&lt;span class="meta"&gt;classpath: ..//tools//plugins//h2-*.jar&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable decisionTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Define Properties &lt;span class="error"&gt;Could not invoke constructor for DefineProperties[1]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;TestDatabase&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;value&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;jdbcDriver &lt;span class="error"&gt;The instance decisionTable_4.setKey. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;org.h2.Driver &lt;span class="error"&gt;The instance decisionTable_4.setValue. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;#DBURL &lt;span class="error"&gt;The instance decisionTable_4.setKey. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;jdbc:h2:~/h2db &lt;span class="error"&gt;The instance decisionTable_4.setValue. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;DBURL &lt;span class="error"&gt;The instance decisionTable_4.setKey. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;jdbc:h2:mem:h2db;DB_CLOSE_DELAY=-1 &lt;span class="error"&gt;The instance decisionTable_4.setValue. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;DBUSER &lt;span class="error"&gt;The instance decisionTable_4.setKey. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;na &lt;span class="error"&gt;The instance decisionTable_4.setValue. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;DBPASSWORD &lt;span class="error"&gt;The instance decisionTable_4.setKey. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;na &lt;span class="error"&gt;The instance decisionTable_4.setValue. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;#DBAUTOCOMMIT &lt;span class="error"&gt;The instance decisionTable_4.setKey. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;true &lt;span class="error"&gt;The instance decisionTable_4.setValue. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;CMD &lt;span class="error"&gt;The instance decisionTable_4.setKey. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt; &lt;span class="error"&gt;The instance decisionTable_4.setValue. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Create database and add data&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;table class="toolchainTable decisionTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Define Properties &lt;span class="error"&gt;Could not invoke constructor for DefineProperties[1]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;TransactionDatabase&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;value&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;.include &lt;span class="error"&gt;The instance decisionTable_5.setKey. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;TestDatabase &lt;span class="error"&gt;The instance decisionTable_5.setValue. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;dbconnection &lt;span class="error"&gt;The instance decisionTable_5.setKey. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;h2WithTransaction &lt;span class="error"&gt;The instance decisionTable_5.setValue. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable decisionTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Define Properties &lt;span class="error"&gt;Could not invoke constructor for DefineProperties[1]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;StartupDatabase&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;value&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;.include &lt;span class="error"&gt;The instance decisionTable_6.setKey. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;TestDatabase &lt;span class="error"&gt;The instance decisionTable_6.setValue. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;dbconnection &lt;span class="error"&gt;The instance decisionTable_6.setKey. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;h2init &lt;span class="error"&gt;The instance decisionTable_6.setValue. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;dbupdatecount &lt;span class="error"&gt;The instance decisionTable_6.setKey. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;false &lt;span class="error"&gt;The instance decisionTable_6.setValue. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;dbgetgeneratedkeys &lt;span class="error"&gt;The instance decisionTable_6.setKey. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;false &lt;span class="error"&gt;The instance decisionTable_6.setValue. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Script&lt;/td&gt;
+		&lt;td&gt;SQLCommand &lt;span class="error"&gt;Could not invoke constructor for SQLCommand[1]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;StartupDatabase&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td colspan="3"&gt;openConnection &lt;span class="error"&gt;The instance scriptTableActor.openConnection. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;execute &lt;span class="error"&gt;The instance scriptTableActor.execute. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;drop table if exists TestData&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show &lt;span class="error"&gt;The instance scriptTableActor.success. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;success&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show &lt;span class="error"&gt;The instance scriptTableActor.rawResult. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;rawResult&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show &lt;span class="error"&gt;The instance scriptTableActor.resultSheet. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;resultSheet&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;execute &lt;span class="error"&gt;The instance scriptTableActor.execute. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;create table TestData (Id int identity(1,1), Name varchar(255), Phone long, City varchar(255), Profession varchar(255))&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show &lt;span class="error"&gt;The instance scriptTableActor.success. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;success&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show &lt;span class="error"&gt;The instance scriptTableActor.rawResult. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;rawResult&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show &lt;span class="error"&gt;The instance scriptTableActor.resultSheet. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;resultSheet&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table class="toolchainTable decisionTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;SQLCommand &lt;span class="error"&gt;Could not invoke constructor for SQLCommand[3]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;StartupDatabase&lt;/td&gt;
+		&lt;td&gt;insert into TestData
+values (DEFAULT, '%Name%', %Phone%, '%City%', '%Profession%')&lt;/td&gt;
+		&lt;td colspan="2"&gt;dbgetgeneratedkeys&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;SCOPE_IDENTITY()?&lt;/td&gt;
+		&lt;td&gt;City&lt;/td&gt;
+		&lt;td&gt;Name&lt;/td&gt;
+		&lt;td&gt;Phone&lt;/td&gt;
+		&lt;td&gt;Profession&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;Berlin&lt;/td&gt;
+		&lt;td&gt;Bill&lt;/td&gt;
+		&lt;td&gt;12345&lt;/td&gt;
+		&lt;td&gt;Doctor&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;Denver&lt;/td&gt;
+		&lt;td&gt;Ben&lt;/td&gt;
+		&lt;td&gt;6789&lt;/td&gt;
+		&lt;td&gt;Artist&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;Seoul&lt;/td&gt;
+		&lt;td&gt;Tom&lt;/td&gt;
+		&lt;td&gt;4567890&lt;/td&gt;
+		&lt;td&gt;Milkman&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;Berlin&lt;/td&gt;
+		&lt;td&gt;Till&lt;/td&gt;
+		&lt;td&gt;332211&lt;/td&gt;
+		&lt;td&gt;Senator&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;Paris&lt;/td&gt;
+		&lt;td&gt;Sarah&lt;/td&gt;
+		&lt;td&gt;999999&lt;/td&gt;
+		&lt;td&gt;Hero&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;6&lt;/td&gt;
+		&lt;td&gt;London&lt;/td&gt;
+		&lt;td&gt;James&lt;/td&gt;
+		&lt;td&gt;#null#&lt;/td&gt;
+		&lt;td&gt;Butler&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;7&lt;/td&gt;
+		&lt;td&gt;Washington&lt;/td&gt;
+		&lt;td&gt;Bert&lt;/td&gt;
+		&lt;td&gt;432&lt;/td&gt;
+		&lt;td&gt;President&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;8&lt;/td&gt;
+		&lt;td&gt;New York&lt;/td&gt;
+		&lt;td&gt;Kim&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;Banker&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table class="toolchainTable decisionTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;SQLCommand &lt;span class="error"&gt;Could not invoke constructor for SQLCommand[3]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;StartupDatabase&lt;/td&gt;
+		&lt;td&gt;select * from TestData&lt;/td&gt;
+		&lt;td colspan="2"&gt;Query&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;ID&lt;/td&gt;
+		&lt;td&gt;Name&lt;/td&gt;
+		&lt;td&gt;Phone&lt;/td&gt;
+		&lt;td&gt;City&lt;/td&gt;
+		&lt;td&gt;Profession&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;Bill&lt;/td&gt;
+		&lt;td&gt;12345&lt;/td&gt;
+		&lt;td&gt;Berlin&lt;/td&gt;
+		&lt;td&gt;Doctor&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;Ben&lt;/td&gt;
+		&lt;td&gt;6789&lt;/td&gt;
+		&lt;td&gt;Denver&lt;/td&gt;
+		&lt;td&gt;Artist&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td&gt;Tom&lt;/td&gt;
+		&lt;td&gt;4567890&lt;/td&gt;
+		&lt;td&gt;Seoul&lt;/td&gt;
+		&lt;td&gt;Milkman&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;4&lt;/td&gt;
+		&lt;td&gt;Till&lt;/td&gt;
+		&lt;td&gt;332211&lt;/td&gt;
+		&lt;td&gt;Berlin&lt;/td&gt;
+		&lt;td&gt;Senator&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;5&lt;/td&gt;
+		&lt;td&gt;Sarah&lt;/td&gt;
+		&lt;td&gt;999999&lt;/td&gt;
+		&lt;td&gt;Paris&lt;/td&gt;
+		&lt;td&gt;Hero&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;6&lt;/td&gt;
+		&lt;td&gt;James&lt;/td&gt;
+		&lt;td&gt;#null#&lt;/td&gt;
+		&lt;td&gt;London&lt;/td&gt;
+		&lt;td&gt;Butler&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;7&lt;/td&gt;
+		&lt;td&gt;Bert&lt;/td&gt;
+		&lt;td&gt;432&lt;/td&gt;
+		&lt;td&gt;Washington&lt;/td&gt;
+		&lt;td&gt;President&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;8&lt;/td&gt;
+		&lt;td&gt;Kim&lt;/td&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;New York&lt;/td&gt;
+		&lt;td&gt;Banker&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Script&lt;/td&gt;
+		&lt;td&gt;SQLCommand &lt;span class="error"&gt;Could not invoke constructor for SQLCommand[1]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;StartupDatabase&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td colspan="3"&gt;closeConnection &lt;span class="error"&gt;The instance scriptTableActor.closeConnection. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="PlugIns.JdbcSlim.ScenarioLibrary"&gt;.PlugIns.JdbcSlim.ScenarioLibrary&lt;/a&gt; &lt;a href="PlugIns.JdbcSlim.ScenarioLibrary?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable importTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.web&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.util&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.slim.test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.*&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;six42.fitnesse.jdbcslim.*&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;six42.fitnesse.jdbcslim.propertydecode.*&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;div class="contents"&gt;
+	&lt;b&gt;Contents:&lt;/b&gt;
+	&lt;ul class="toc1"&gt;
+		&lt;li&gt;
+			&lt;a href="PlugIns.JdbcSlim.UserGuide.1ASimpleExample.SeparatingSqlCommandsAndRequirements" class="test"&gt;Separating Sql Commands And Requirements +&lt;/a&gt;
+			&lt;ul class="toc2"&gt;
+				&lt;li&gt;
+					&lt;a href="PlugIns.JdbcSlim.UserGuide.1ASimpleExample.SeparatingSqlCommandsAndRequirements.SqlSetUp" class="static"&gt;Sql Set Up&lt;/a&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;a href="PlugIns.JdbcSlim.UserGuide.1ASimpleExample.SeparatingSqlCommandsAndRequirements.SqlTearDown" class="static"&gt;Sql Tear Down&lt;/a&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href="PlugIns.JdbcSlim.UserGuide.1ASimpleExample.WritingGenericRequirementsWithAlias" class="test"&gt;Writing Generic Requirements With Alias +&lt;/a&gt;
+			&lt;span class="pageHelp"&gt;: Requirements without any visible SQL&lt;/span&gt;
+			&lt;ul class="toc2"&gt;
+				&lt;li&gt;
+					&lt;a href="PlugIns.JdbcSlim.UserGuide.1ASimpleExample.WritingGenericRequirementsWithAlias.SqlSetUp" class="static"&gt;Sql Set Up&lt;/a&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;a href="PlugIns.JdbcSlim.UserGuide.1ASimpleExample.WritingGenericRequirementsWithAlias.SqlTearDown" class="static"&gt;Sql Tear Down&lt;/a&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: .FitNesse.SuiteAcceptanceTests.ScenarioLibrary&lt;a title="create page" href="FitNesse.SuiteAcceptanceTests.ScenarioLibrary?edit&amp;amp;nonExistent=true"&gt;[?]&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;span class="error"&gt;Page include failed because the page .FitNesse.SuiteAcceptanceTests.ScenarioLibrary does not exist.&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: Header= !define TestLibInstallPath (${LibInstallPath}!-) 
+!define JdbcSlimLib -!(${JdbcSlimLib})!-
+***Standard Test Page header
+!define TEST_SYSTEM {slim}
+
+!path ${TestLibInstallPath}${JdbcSlimLib}
+!path ${TestLibInstallPath}h2-*.jar
+!path ${TestLibInstallPath}dbfit-*.jar
+
+
+|import                 |
+|six42.fitnesse.jdbcslim|
+
+!| define table type|
+|SQLCommand|as Table|
+
+
+!|DefineProperties|TestDatabase                      |
+|key              |value                             |
+|jdbcDriver       |org.h2.Driver                     |
+|DBURL            |jdbc:h2:mem:h2db;DB_CLOSE_DELAY=-1|
+|DBUSER           |na                                |
+|DBPASSWORD       |na                                |
+|CMD              |                                  |
+
+-!&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: StartupText=!-
+!|Define Properties|StartupDatabase|
+|key               |value          |
+|.include          |TestDatabase   |
+|dbconnection      |h2init         |
+|dbupdatecount     |false          |
+|dbgetgeneratedkeys|false          |
+
+
+!|Script|SQLCommand                                                   |StartupDatabase                                                  |
+|openConnection                                                                                                                         |
+|execute|drop table if exists TestData                                                                                                  |
+|show   |success                                                                                                                        |
+|show   |rawResult                                                                                                                      |
+|show   |resultSheet                                                                                                                    |
+|execute|create table TestData (Id int identity(1,1), Name varchar(255), Phone varchar(255), City varchar(255), Profession varchar(255))|
+|show   |success                                                                                                                        |
+|show   |rawResult                                                                                                                      |
+|show   |resultSheet                                                                                                                    |
+
+!|SQLCommand      |StartupDatabase|insert into TestData values (DEFAULT, '%Name%', '%Phone%', '%City%', '%Profession%')|dbgetgeneratedkeys|
+|SCOPE_IDENTITY()?|City           |Name                                                                                |Phone  |Profession|
+|1                |Berlin         |Bill                                                                                |12345  |Doctor    |
+|2                |Denver         |Ben                                                                                 |6789   |Artist    |
+|3                |Seoul          |Tom                                                                                 |4567890|Milkman   |
+|4                |Berlin         |Till                                                                                |332211 |Senator   |
+|5                |Paris          |Sarah                                                                               |999999 |Hero      |
+|6                |London         |James                                                                               |5432   |Butler    |
+|7                |Washington     |Bert                                                                                |432    |President |
+|8                |New York       |Kim                                                                                 |1      |Banker    |
+
+!|SQLCommand|StartupDatabase|select * from TestData|Query                |
+|ID         |Name           |Phone                 |City      |Profession|
+|1          |Bill           |12345                 |Berlin    |Doctor    |
+|2          |Ben            |6789                  |Denver    |Artist    |
+|3          |Tom            |4567890               |Seoul     |Milkman   |
+|4          |Till           |332211                |Berlin    |Senator   |
+|5          |Sarah          |999999                |Paris     |Hero      |
+|6          |James          |5432                  |London    |Butler    |
+|7          |Bert           |432                   |Washington|President |
+|8          |Kim            |1                     |New York  |Banker    |
+
+!|Script|SQLCommand|StartupDatabase|
+|closeConnection                   |
+
+-!&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;given Jdbc Slim test page&lt;/td&gt;
+		&lt;td&gt;page&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;given test page&lt;/td&gt;
+		&lt;td colspan="2"&gt;@page&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;and Test System setup is&lt;/td&gt;
+		&lt;td colspan="2"&gt;!define TestLibInstallPath (..//tools//plugins//) 
+!define JdbcSlimLib (jdbcslim*.jar)
+***Standard Test Page header
+!define TEST_SYSTEM {slim}
+
+!path ${TestLibInstallPath}${JdbcSlimLib}
+!path ${TestLibInstallPath}h2-*.jar
+!path ${TestLibInstallPath}dbfit-*.jar
+
+
+|import                 |
+|six42.fitnesse.jdbcslim|
+
+!| define table type|
+|SQLCommand|as Table|
+
+
+!|DefineProperties|TestDatabase                      |
+|key              |value                             |
+|jdbcDriver       |org.h2.Driver                     |
+|DBURL            |jdbc:h2:mem:h2db;DB_CLOSE_DELAY=-1|
+|DBUSER           |na                                |
+|DBPASSWORD       |na                                |
+|CMD              |                                  |
+
+&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;and Setup content is&lt;/td&gt;
+		&lt;td colspan="2"&gt;
+!|Define Properties|StartupDatabase|
+|key               |value          |
+|.include          |TestDatabase   |
+|dbconnection      |h2init         |
+|dbupdatecount     |false          |
+|dbgetgeneratedkeys|false          |
+
+
+!|Script|SQLCommand                                                   |StartupDatabase                                                  |
+|openConnection                                                                                                                         |
+|execute|drop table if exists TestData                                                                                                  |
+|show   |success                                                                                                                        |
+|show   |rawResult                                                                                                                      |
+|show   |resultSheet                                                                                                                    |
+|execute|create table TestData (Id int identity(1,1), Name varchar(255), Phone varchar(255), City varchar(255), Profession varchar(255))|
+|show   |success                                                                                                                        |
+|show   |rawResult                                                                                                                      |
+|show   |resultSheet                                                                                                                    |
+
+!|SQLCommand      |StartupDatabase|insert into TestData values (DEFAULT, '%Name%', '%Phone%', '%City%', '%Profession%')|dbgetgeneratedkeys|
+|SCOPE_IDENTITY()?|City           |Name                                                                                |Phone  |Profession|
+|1                |Berlin         |Bill                                                                                |12345  |Doctor    |
+|2                |Denver         |Ben                                                                                 |6789   |Artist    |
+|3                |Seoul          |Tom                                                                                 |4567890|Milkman   |
+|4                |Berlin         |Till                                                                                |332211 |Senator   |
+|5                |Paris          |Sarah                                                                               |999999 |Hero      |
+|6                |London         |James                                                                               |5432   |Butler    |
+|7                |Washington     |Bert                                                                                |432    |President |
+|8                |New York       |Kim                                                                                 |1      |Banker    |
+
+!|SQLCommand|StartupDatabase|select * from TestData|Query                |
+|ID         |Name           |Phone                 |City      |Profession|
+|1          |Bill           |12345                 |Berlin    |Doctor    |
+|2          |Ben            |6789                  |Denver    |Artist    |
+|3          |Tom            |4567890               |Seoul     |Milkman   |
+|4          |Till           |332211                |Berlin    |Senator   |
+|5          |Sarah          |999999                |Paris     |Hero      |
+|6          |James          |5432                  |London    |Butler    |
+|7          |Bert           |432                   |Washington|President |
+|8          |Kim            |1                     |New York  |Banker    |
+
+!|Script|SQLCommand|StartupDatabase|
+|closeConnection                   |
+
+&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;and JDBC Slim content is&lt;/td&gt;
+		&lt;td colspan="2"&gt;content&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;given page&lt;/td&gt;
+		&lt;td&gt;$IT&lt;/td&gt;
+		&lt;td&gt;with content&lt;/td&gt;
+		&lt;td&gt;!define TestLibInstallPath (..//tools//plugins//) 
+!define JdbcSlimLib (jdbcslim*.jar)
+***Standard Test Page header
+!define TEST_SYSTEM {slim}
+
+!path ${TestLibInstallPath}${JdbcSlimLib}
+!path ${TestLibInstallPath}h2-*.jar
+!path ${TestLibInstallPath}dbfit-*.jar
+
+
+|import                 |
+|six42.fitnesse.jdbcslim|
+
+!| define table type|
+|SQLCommand|as Table|
+
+
+!|DefineProperties|TestDatabase                      |
+|key              |value                             |
+|jdbcDriver       |org.h2.Driver                     |
+|DBURL            |jdbc:h2:mem:h2db;DB_CLOSE_DELAY=-1|
+|DBUSER           |na                                |
+|DBPASSWORD       |na                                |
+|CMD              |                                  |
+
+
+!|Define Properties|StartupDatabase|
+|key               |value          |
+|.include          |TestDatabase   |
+|dbconnection      |h2init         |
+|dbupdatecount     |false          |
+|dbgetgeneratedkeys|false          |
+
+
+!|Script|SQLCommand                                                   |StartupDatabase                                                  |
+|openConnection                                                                                                                         |
+|execute|drop table if exists TestData                                                                                                  |
+|show   |success                                                                                                                        |
+|show   |rawResult                                                                                                                      |
+|show   |resultSheet                                                                                                                    |
+|execute|create table TestData (Id int identity(1,1), Name varchar(255), Phone varchar(255), City varchar(255), Profession varchar(255))|
+|show   |success                                                                                                                        |
+|show   |rawResult                                                                                                                      |
+|show   |resultSheet                                                                                                                    |
+
+!|SQLCommand      |StartupDatabase|insert into TestData values (DEFAULT, '%Name%', '%Phone%', '%City%', '%Profession%')|dbgetgeneratedkeys|
+|SCOPE_IDENTITY()?|City           |Name                                                                                |Phone  |Profession|
+|1                |Berlin         |Bill                                                                                |12345  |Doctor    |
+|2                |Denver         |Ben                                                                                 |6789   |Artist    |
+|3                |Seoul          |Tom                                                                                 |4567890|Milkman   |
+|4                |Berlin         |Till                                                                                |332211 |Senator   |
+|5                |Paris          |Sarah                                                                               |999999 |Hero      |
+|6                |London         |James                                                                               |5432   |Butler    |
+|7                |Washington     |Bert                                                                                |432    |President |
+|8                |New York       |Kim                                                                                 |1      |Banker    |
+
+!|SQLCommand|StartupDatabase|select * from TestData|Query                |
+|ID         |Name           |Phone                 |City      |Profession|
+|1          |Bill           |12345                 |Berlin    |Doctor    |
+|2          |Ben            |6789                  |Denver    |Artist    |
+|3          |Tom            |4567890               |Seoul     |Milkman   |
+|4          |Till           |332211                |Berlin    |Senator   |
+|5          |Sarah          |999999                |Paris     |Hero      |
+|6          |James          |5432                  |London    |Butler    |
+|7          |Bert           |432                   |Washington|President |
+|8          |Kim            |1                     |New York  |Banker    |
+
+!|Script|SQLCommand|StartupDatabase|
+|closeConnection                   |
+
+ &lt;span class="meta"&gt;undefined variable: TestSTART&lt;/span&gt;
+@content 
+&lt;span class="meta"&gt;undefined variable: TestEND&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;make&lt;/td&gt;
+		&lt;td&gt;$IT&lt;/td&gt;
+		&lt;td colspan="2"&gt;a test page&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table class="toolchainTable importTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.web&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.util&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.slim.test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.*&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;six42.fitnesse.jdbcslim.*&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;six42.fitnesse.jdbcslim.propertydecode.*&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Most Tests require three steps.&lt;br/&gt;1. Preparing test data&lt;br/&gt;2. Execution some business functions&lt;br/&gt;3. Validating the impact on the test data&lt;br/&gt;&lt;br/&gt;Lets assume we have a database with some information about people and a we need to test a business function that relocates a person into a new city.  &lt;br/&gt;&lt;br/&gt;&lt;h3 id="0"&gt;1 Preparing test data&lt;/h3&gt;
+&lt;br/&gt;To avoid side effects we execute the test in a transaction&lt;br/&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Script&lt;/td&gt;
+		&lt;td&gt;SQLCommand &lt;span class="error"&gt;Could not invoke constructor for SQLCommand[1]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;TransactionDatabase&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor6"&gt;
+		&lt;td colspan="3"&gt;open Connection &lt;span class="error"&gt;The instance scriptTableActor.openConnection. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;execute &lt;span class="error"&gt;The instance scriptTableActor.execute. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;begin transaction&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;To prepare test data two approaches are possible:&lt;br/&gt;1.1 Inserting new data into a database&lt;br/&gt;1.2 Finding suitable existing data in the database&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;In this examples we use the second approach and find the ID of users named Ben and Sarah which should move. &lt;br/&gt;We store the Id of the users in a Slim Symbol '$TestID' for future reference.&lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable decisionTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;SQLCommand &lt;span class="error"&gt;Could not invoke constructor for SQLCommand[2]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;TransactionDatabase&lt;/td&gt;
+		&lt;td&gt;select ID, NAME from TestData where Name ='%NAME%'&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;ID?&lt;/td&gt;
+		&lt;td colspan="2"&gt;NAME&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;$TestID1=&lt;/td&gt;
+		&lt;td colspan="2"&gt;Ben&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;$TestID2=&lt;/td&gt;
+		&lt;td colspan="2"&gt;Sarah&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;Before we proceed we validate that Ben and Sarah still live in the old Cities: Denver and Paris&lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable decisionTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;SQLCommand &lt;span class="error"&gt;Could not invoke constructor for SQLCommand[2]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;TransactionDatabase&lt;/td&gt;
+		&lt;td&gt;select City from TestData where ID ='%ID%'&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;ID&lt;/td&gt;
+		&lt;td colspan="2"&gt;CITY?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;$TestID1&lt;/td&gt;
+		&lt;td colspan="2"&gt;Denver&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;$TestID2&lt;/td&gt;
+		&lt;td colspan="2"&gt;Paris&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h3 id="1"&gt;Execution some business functions&lt;/h3&gt;
+&lt;br/&gt;Here calls to your business code will go.&lt;br/&gt;A simple update statement which can do the job is given below.&lt;br/&gt;&lt;table class="toolchainTable decisionTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;SQLCommand &lt;span class="error"&gt;Could not invoke constructor for SQLCommand[3]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;TransactionDatabase&lt;/td&gt;
+		&lt;td&gt;update TestData set City='%NewCITY%' where ID ='%ID%'&lt;/td&gt;
+		&lt;td&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;ID&lt;/td&gt;
+		&lt;td&gt;NewCITY&lt;/td&gt;
+		&lt;td colspan="2"&gt;Count?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;$TestID1&lt;/td&gt;
+		&lt;td&gt;HongKong&lt;/td&gt;
+		&lt;td colspan="2"&gt;1&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;$TestID2&lt;/td&gt;
+		&lt;td&gt;Tokyo&lt;/td&gt;
+		&lt;td colspan="2"&gt;1&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h3 id="2"&gt;Validating the impact on the test data&lt;/h3&gt;
+&lt;br/&gt;Finally we check that Ben now lives in Hong Kong and Sarah in Tokyo&lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable decisionTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;SQLCommand &lt;span class="error"&gt;Could not invoke constructor for SQLCommand[2]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;TransactionDatabase&lt;/td&gt;
+		&lt;td&gt;select City from TestData where ID ='%ID%'&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;ID&lt;/td&gt;
+		&lt;td colspan="2"&gt;CITY?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;$TestID1&lt;/td&gt;
+		&lt;td colspan="2"&gt;HongKong&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;$TestID2&lt;/td&gt;
+		&lt;td colspan="2"&gt;Tokyo&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h3 id="3"&gt;Rollback the change to not impact future tests&lt;/h3&gt;
+&lt;br/&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Script&lt;/td&gt;
+		&lt;td&gt;SQLCommand &lt;span class="error"&gt;Could not invoke constructor for SQLCommand[1]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;TransactionDatabase&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor6"&gt;
+		&lt;td colspan="3"&gt;open Connection &lt;span class="error"&gt;The instance scriptTableActor.openConnection. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;execute &lt;span class="error"&gt;The instance scriptTableActor.execute. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;rollback&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor6"&gt;
+		&lt;td colspan="3"&gt;close Connection &lt;span class="error"&gt;The instance scriptTableActor.closeConnection. does not exist&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h4 id="4"&gt;Check that the rollback worked&lt;/h4&gt;
+&lt;table class="toolchainTable decisionTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;SQLCommand &lt;span class="error"&gt;Could not invoke constructor for SQLCommand[2]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;TransactionDatabase&lt;/td&gt;
+		&lt;td&gt;select City from TestData where ID ='%ID%'&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;ID&lt;/td&gt;
+		&lt;td colspan="2"&gt;CITY?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;$TestID1&lt;/td&gt;
+		&lt;td colspan="2"&gt;Denver&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;$TestID2&lt;/td&gt;
+		&lt;td colspan="2"&gt;Paris&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;div class="contents"&gt;
+	&lt;b&gt;Contents:&lt;/b&gt;
+	&lt;ul class="toc1"&gt;
+		&lt;li&gt;
+			&lt;a href="PlugIns.JdbcSlim.UserGuide.1ASimpleExample.SeparatingSqlCommandsAndRequirements" class="test"&gt;Separating Sql Commands And Requirements +&lt;/a&gt;
+			&lt;ul class="toc2"&gt;
+				&lt;li&gt;
+					&lt;a href="PlugIns.JdbcSlim.UserGuide.1ASimpleExample.SeparatingSqlCommandsAndRequirements.SqlSetUp" class="static"&gt;Sql Set Up&lt;/a&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;a href="PlugIns.JdbcSlim.UserGuide.1ASimpleExample.SeparatingSqlCommandsAndRequirements.SqlTearDown" class="static"&gt;Sql Tear Down&lt;/a&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;
+			&lt;a href="PlugIns.JdbcSlim.UserGuide.1ASimpleExample.WritingGenericRequirementsWithAlias" class="test"&gt;Writing Generic Requirements With Alias +&lt;/a&gt;
+			&lt;span class="pageHelp"&gt;: Requirements without any visible SQL&lt;/span&gt;
+			&lt;ul class="toc2"&gt;
+				&lt;li&gt;
+					&lt;a href="PlugIns.JdbcSlim.UserGuide.1ASimpleExample.WritingGenericRequirementsWithAlias.SqlSetUp" class="static"&gt;Sql Set Up&lt;/a&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;a href="PlugIns.JdbcSlim.UserGuide.1ASimpleExample.WritingGenericRequirementsWithAlias.SqlTearDown" class="static"&gt;Sql Tear Down&lt;/a&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+&lt;br/&gt;</content>
+    <relativePageName>1ASimpleExample</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='nl.hsac.fitnesse.fixture'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_1', instruction='import', path='nl.hsac.fitnesse.fixture.slim'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_2', instruction='import', path='nl.hsac.fitnesse.fixture.slim.web'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.web)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.web</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_3', instruction='import', path='nl.hsac.fitnesse.fixture.util'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.util)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_3</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.util</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_4', instruction='import', path='fitnesse.slim.test'}</instruction>
+        <slimResult>pass(fitnesse.slim.test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_4</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.slim.test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_5', instruction='import', path='nl.hsac.fitnesse.fixture.slim.*'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.*)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_5</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.*</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_6', instruction='import', path='six42.fitnesse.jdbcslim.*'}</instruction>
+        <slimResult>pass(six42.fitnesse.jdbcslim.*)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_6</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>six42.fitnesse.jdbcslim.*</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_7', instruction='import', path='six42.fitnesse.jdbcslim.propertydecode.*'}</instruction>
+        <slimResult>pass(six42.fitnesse.jdbcslim.propertydecode.*)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_7</instructionId>
+          <col>0</col>
+          <row>8</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>six42.fitnesse.jdbcslim.propertydecode.*</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_3_0', instruction='import', path='nl.hsac.fitnesse.fixture'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_3_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_3_1', instruction='import', path='nl.hsac.fitnesse.fixture.slim'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_3_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_3_2', instruction='import', path='nl.hsac.fitnesse.fixture.slim.web'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.web)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_3_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.web</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_3_3', instruction='import', path='nl.hsac.fitnesse.fixture.util'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.util)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_3_3</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.util</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_3_4', instruction='import', path='fitnesse.slim.test'}</instruction>
+        <slimResult>pass(fitnesse.slim.test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_3_4</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.slim.test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_3_5', instruction='import', path='nl.hsac.fitnesse.fixture.slim.*'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.*)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_3_5</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.*</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_3_6', instruction='import', path='six42.fitnesse.jdbcslim.*'}</instruction>
+        <slimResult>pass(six42.fitnesse.jdbcslim.*)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_3_6</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>six42.fitnesse.jdbcslim.*</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_3_7', instruction='import', path='six42.fitnesse.jdbcslim.propertydecode.*'}</instruction>
+        <slimResult>pass(six42.fitnesse.jdbcslim.propertydecode.*)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_3_7</instructionId>
+          <col>0</col>
+          <row>8</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>six42.fitnesse.jdbcslim.propertydecode.*</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_4_0', instruction='make', instanceName='scriptTableActor', className='SQLCommand', args=[TransactionDatabase]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_4_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for SQLCommand[1]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_4_1', instruction='call', instanceName='scriptTableActor', methodName='openConnection', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_4_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.openConnection. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_4_2', instruction='call', instanceName='scriptTableActor', methodName='execute', args=[begin transaction]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_4_2</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.execute. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='tableTable_5_0', instruction='make', instanceName='tableTable_5', className='SQLCommand', args=[TransactionDatabase, select ID, NAME from TestData where Name ='%NAME%']}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>tableTable_5_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for SQLCommand[2]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='tableTable_5_1', instruction='call', instanceName='tableTable_5', methodName='doTable', args=[[[ID?, NAME], [$TestID1=, Ben], [$TestID2=, Sarah]]]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>tableTable_5_1</instructionId>
+          <type>TableTableExpectation</type>
+          <evaluationMessage>The instance tableTable_5.doTable. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='tableTable_6_0', instruction='make', instanceName='tableTable_6', className='SQLCommand', args=[TransactionDatabase, select City from TestData where ID ='%ID%']}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>tableTable_6_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for SQLCommand[2]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='tableTable_6_1', instruction='call', instanceName='tableTable_6', methodName='doTable', args=[[[ID, CITY?], [$TestID1, Denver], [$TestID2, Paris]]]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>tableTable_6_1</instructionId>
+          <type>TableTableExpectation</type>
+          <evaluationMessage>The instance tableTable_6.doTable. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='tableTable_7_0', instruction='make', instanceName='tableTable_7', className='SQLCommand', args=[TransactionDatabase, update TestData set City='%NewCITY%' where ID ='%ID%', ]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>tableTable_7_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for SQLCommand[3]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='tableTable_7_1', instruction='call', instanceName='tableTable_7', methodName='doTable', args=[[[ID, NewCITY, Count?], [$TestID1, HongKong, 1], [$TestID2, Tokyo, 1]]]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>tableTable_7_1</instructionId>
+          <type>TableTableExpectation</type>
+          <evaluationMessage>The instance tableTable_7.doTable. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='tableTable_8_0', instruction='make', instanceName='tableTable_8', className='SQLCommand', args=[TransactionDatabase, select City from TestData where ID ='%ID%']}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>tableTable_8_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for SQLCommand[2]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='tableTable_8_1', instruction='call', instanceName='tableTable_8', methodName='doTable', args=[[[ID, CITY?], [$TestID1, HongKong], [$TestID2, Tokyo]]]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>tableTable_8_1</instructionId>
+          <type>TableTableExpectation</type>
+          <evaluationMessage>The instance tableTable_8.doTable. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_9_0', instruction='make', instanceName='scriptTableActor', className='SQLCommand', args=[TransactionDatabase]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_9_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for SQLCommand[1]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_9_1', instruction='call', instanceName='scriptTableActor', methodName='openConnection', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_9_1</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.openConnection. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_9_2', instruction='call', instanceName='scriptTableActor', methodName='execute', args=[rollback]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_9_2</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.execute. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_9_3', instruction='call', instanceName='scriptTableActor', methodName='closeConnection', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>scriptTable_9_3</instructionId>
+          <type>ScriptActionExpectation</type>
+          <evaluationMessage>The instance scriptTableActor.closeConnection. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='tableTable_10_0', instruction='make', instanceName='tableTable_10', className='SQLCommand', args=[TransactionDatabase, select City from TestData where ID ='%ID%']}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>tableTable_10_0</instructionId>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>Could not invoke constructor for SQLCommand[2]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='tableTable_10_1', instruction='call', instanceName='tableTable_10', methodName='doTable', args=[[[ID, CITY?], [$TestID1, Denver], [$TestID2, Paris]]]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>tableTable_10_1</instructionId>
+          <type>TableTableExpectation</type>
+          <evaluationMessage>The instance tableTable_10.doTable. does not exist</evaluationMessage>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp C:\FitNesse_1.0_base\tests\..\tools\plugins\h2-2.1.210.jar;tools/fixtures;tools/fixtures/*.jar;C:\FitNesse_1.0_base\tools\fitnesse-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>2</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>396</totalRunTimeInMillis>
+</testResults>
+

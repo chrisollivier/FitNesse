@@ -1,0 +1,66 @@
+---
+Static
+---
+!include -setup .RootPage.SetUp
+
+!define directoryPath {PocLb22Lyon\Storys\VenteProduitSupportAnonymeAvecContratGenerique\1581_anonymeVenteProduitGroupeAvecSaisieDansLesLimites}
+
+!1 001-auth-ticketingtoken
+!***> 001-auth-ticketingtoken
+
+!2 get data
+!**> data
+!|script   |json fixture                                                |
+|load file |${directoryPath}\Setups\001-auth-ticketingtoken\REQUEST.json|
+|$jsonFile=|json path|Content.Value                                     |
+**!
+
+!2 exec request
+!**> request
+!|script    |json http test                                                                   |
+|methodePost|${link_WS_VAD_AUTH}auth/ticketingtoken|json|$jsonFile|status|status|result|result|
+
+!|script|json fixture   |
+|load   |$result        |
+|$token=|json path|Token|
+
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                  |
+|create |${directoryPath}\Setups\001-auth-ticketingtoken\RESULT.json|Containing|$result|
+**!
+
+
+***!
+
+
+!1 002-datasales-resetdata
+!***> datasales-resetdata
+
+!2 get data
+!**> data
+!|script   |json fixture                                                |
+|load file |${directoryPath}\Setups\002-datasales-resetdata\REQUEST.json|
+|$jsonFile=|json path|Content.Value                                     |
+**!
+
+!2 exec request
+!**> request
+!|script    |json http test                                                                   |
+|methodePost|${link_WS_VAD_DATA}datasales/resetdata|json|$jsonFile|status|status|result|result|
+
+
+**!
+
+!2 register result
+!**> register
+!|script|file fixture                                                                  |
+|create |${directoryPath}\Setups\002-datasales-resetdata\RESULT.json|Containing|$result|
+
+
+**!
+
+
+***!

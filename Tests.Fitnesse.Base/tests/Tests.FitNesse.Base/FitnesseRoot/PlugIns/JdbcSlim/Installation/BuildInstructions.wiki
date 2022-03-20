@@ -1,0 +1,32 @@
+!3 To build !-JdbcSlim-! yourself do the following:
+
+!note git clone https://github.com/six42/jdbcslim.git
+
+!4 build and run all tests, run the command
+
+$ ./gradlew test
+
+NB. On windows call gradlew.bat instead of ./gradlew.
+
+
+!4 start !-FitNesse-! 
+
+$ ./gradlew run
+
+Start your browser at http://localhost:8001 and execute the suite .Plugins.JdbcSlim.UserGuide
+
+
+
+!4 validate that the acceptance test pass from the command line.
+
+$ ./gradlew acceptanceTest
+
+!3 In case you use different versions from the above jars you have to update the pages:
+.PlugIns.JdbcSlim.Installation
+.PlugIns.JdbcSlim.XxTestMoreDrivers.HtwoTest.ScenarioLibrary
+.PlugIns.JdbcSlim.XxTestMoreDrivers.HtwoTest.SuiteSetUp
+
+
+!3 Alternative Build Tools
+!contents -R2 -g -p -f -h
+

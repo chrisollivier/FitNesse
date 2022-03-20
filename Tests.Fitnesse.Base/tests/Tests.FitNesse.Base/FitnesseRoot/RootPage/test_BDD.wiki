@@ -1,0 +1,36 @@
+---
+Test
+---
+!path ../../tools/plugins/*.jar
+#!path ../tools/fixtures/six42/fitnesse/jdbcslim/*.jar
+#!path ../tools/fixtures/*.jar
+
+!|import                |
+|six42.fitnesse.jdbcslim|
+
+|define table type  |
+|SQLCommand|as Table|
+
+!|script|echo script|
+|echo   |${RANDOMNR}|
+
+!|Define Properties|DatabaseSetup              |
+|key               |value                      |
+|jdbcDriver        |com.mysql.jdbc.Driver      |
+|DBURL             |jdbc:mysql://localhost:3306|
+|DBUSER            |root                       |
+|DBPASSWORD        |password                   |
+|CMD               |use sys                    |
+
+
+!|script|SQLCommand |DatabaseSetup |
+|openConnection                    |
+|execute|use sys                   |
+|execute|select * from host_summary|
+|show   |rawResult                 |
+|$result=   |get row               |1|
+
+
+
+
+

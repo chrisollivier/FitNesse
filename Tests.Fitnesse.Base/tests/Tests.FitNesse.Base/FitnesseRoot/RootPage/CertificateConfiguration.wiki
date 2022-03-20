@@ -1,0 +1,21 @@
+!3 Objectif 
+use certificate by FitNesse
+!3 Description  
+how to add certificate to JVM
+!3 Process  
+ 1 get certificate (.cer file for example)
+ 1 in terminal enter following command : 
+{{{
+"<JAVA_HOME>\bin\keytool.exe" -import -alias <anAlias> -file <certificate file> -keystore "<JAVA_HOME>\lib\security\cacerts"
+}}}
+ 1 the password is "changeit"
+where :
+ * <JAVA_HOME> is the java home directory
+ * <anAlias> is an alias (=name) of certificate
+
+!style_error(Restart java process after adding certificate : close all terminals)
+
+!4 cmd line example :
+{{{
+"C:\Program Files\Java\jdk-13.0.1\bin\keytool.exe" -import -alias NonRegression -file "D:\non_regression\FitNesse\ca.nsbf1.dev-Certificat.cer" -keystore "C:\Program Files\Java\jdk-13.0.1\lib\security\cacerts"
+}}}

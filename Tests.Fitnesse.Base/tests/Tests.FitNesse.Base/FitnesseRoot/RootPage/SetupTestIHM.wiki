@@ -1,0 +1,18 @@
+---
+Test
+---
+Attention de vérifier les prérequis nécessaire dans la documentation d'installation. 
+
+!|Import                          |
+|fitnesse.slim.test               |
+|nl.hsac.fitnesse.fixture         |
+|nl.hsac.fitnesse.fixture.slim    |
+|nl.hsac.fitnesse.fixture.slim.web|
+
+Démarage du driver chrome:
+!|script         |selenium driver setup|
+|start driver for|chrome    |
+
+!|library    |
+|echo script |
+|browser test|
