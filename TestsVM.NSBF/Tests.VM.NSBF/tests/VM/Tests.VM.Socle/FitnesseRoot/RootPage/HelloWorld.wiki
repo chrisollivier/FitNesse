@@ -1,0 +1,13 @@
+---
+Test
+---
+!|Import                          |
+|nl.hsac.fitnesse.fixture         |
+|nl.hsac.fitnesse.fixture.slim    |
+|nl.hsac.fitnesse.fixture.slim.web|
+|nl.hsac.fitnesse.fixture.util    |
+|fitnesse.slim.test               |
+|nl.hsac.fitnesse.fixture.slim.*  |
+
+!|script|echo script|
+|echo|Hello World|
