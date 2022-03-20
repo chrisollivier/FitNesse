@@ -1,0 +1,12 @@
+---
+Help: Lists tests failed during last run, so they can be run again (without running all tests that passed).
+Suite
+---
+
+!note This page is automatically generated when running tests. It will be overwritten by the next Suite or Test execution.
+
+Tests failed (first failure was at 2022-02-28T10:49:30.782027500):
+
+!see [[RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.ScenarioErr_bad_accountstatus_CustomerAsAgent][.RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.ScenarioErr_bad_accountstatus_CustomerAsAgent]]
+!see [[RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.ScenarioEverythingOk_CustomerAsAgent][.RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.ScenarioEverythingOk_CustomerAsAgent]]
+!see [[RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.ScenarioEverythingOk_GetClosureReasons][.RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.ScenarioEverythingOk_GetClosureReasons]]

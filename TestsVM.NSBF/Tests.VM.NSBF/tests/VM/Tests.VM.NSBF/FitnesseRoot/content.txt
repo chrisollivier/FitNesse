@@ -1,0 +1,14 @@
+!define TEST_SYSTEM {slim} 
+!path tools/fixtures
+!path tools/fixtures/*.jar
+
+Paramètrage du proxy :
+!define HTTP_PROXY_HOST {fortiproxy.acs-inc.fr} 
+!define HTTPS_PROXY_PORT {8080} 
+!define JAVA_PARAMS {-Dhttp.proxyHost=${HTTP_PROXY_HOST} -Dhttp.proxyPort=${HTTPS_PROXY_PORT} -Dhttps.proxyHost=${HTTP_PROXY_HOST} -Dhttps.proxyPort=${HTTPS_PROXY_PORT} -Dhttps.nonProxyHosts="localhost|127.*|[::1]"} 
+
+#!define COMMAND_PATTERN {java %JAVA_PARAMS -cp %p %m}
+!define COMMAND_PATTERN {java -cp %p %m}
+
+
+!contents

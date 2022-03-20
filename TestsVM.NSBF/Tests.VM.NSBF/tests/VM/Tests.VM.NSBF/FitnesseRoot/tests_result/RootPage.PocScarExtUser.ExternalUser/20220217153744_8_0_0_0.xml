@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20211030</FitNesseVersion>
+  <rootPath>RootPage.PocScarExtUser.ExternalUser</rootPath>
+  <pageHistoryReference>
+    <name>RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.ScenarioErr_bad_accountstatus_CustomerAsAgent</name>
+    <date>2022-02-17T15:37:44+01:00</date>
+    <pageHistoryLink>RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.ScenarioErr_bad_accountstatus_CustomerAsAgent?pageHistory&amp;resultDate=20220217153744</pageHistoryLink>
+    <counts>
+      <right>16</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>19604</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.ScenarioEverythingOk_CustomerAsAgent</name>
+    <date>2022-02-17T15:38:04+01:00</date>
+    <pageHistoryLink>RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.ScenarioEverythingOk_CustomerAsAgent?pageHistory&amp;resultDate=20220217153804</pageHistoryLink>
+    <counts>
+      <right>74</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>6718</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.ScenarioEverythingOk_GetClosureReasons</name>
+    <date>2022-02-17T15:38:11+01:00</date>
+    <pageHistoryLink>RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.ScenarioEverythingOk_GetClosureReasons?pageHistory&amp;resultDate=20220217153811</pageHistoryLink>
+    <counts>
+      <right>13</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>1157</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>RootPage.PocScarExtUser.ExternalUser.Storys.CreateCustomerAccountByAgent.ScenarioEverythingOK_CreationWithEmailProvided</name>
+    <date>2022-02-17T15:38:12+01:00</date>
+    <pageHistoryLink>RootPage.PocScarExtUser.ExternalUser.Storys.CreateCustomerAccountByAgent.ScenarioEverythingOK_CreationWithEmailProvided?pageHistory&amp;resultDate=20220217153812</pageHistoryLink>
+    <counts>
+      <right>70</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>4683</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>RootPage.PocScarExtUser.ExternalUser.Storys.CreateCustomerAccountByAgent.ScenarioEverythingOK_CreationWithoutEmail_Validation_WithForcing</name>
+    <date>2022-02-17T15:38:17+01:00</date>
+    <pageHistoryLink>RootPage.PocScarExtUser.ExternalUser.Storys.CreateCustomerAccountByAgent.ScenarioEverythingOK_CreationWithoutEmail_Validation_WithForcing?pageHistory&amp;resultDate=20220217153817</pageHistoryLink>
+    <counts>
+      <right>32</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>1474</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>RootPage.PocScarExtUser.ExternalUser.Storys.CreateCustomerAccountByAgent.ScenarioEverythingOK_Creation_Validation_WithoutForcing</name>
+    <date>2022-02-17T15:38:18+01:00</date>
+    <pageHistoryLink>RootPage.PocScarExtUser.ExternalUser.Storys.CreateCustomerAccountByAgent.ScenarioEverythingOK_Creation_Validation_WithoutForcing?pageHistory&amp;resultDate=20220217153818</pageHistoryLink>
+    <counts>
+      <right>50</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>2290</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>RootPage.PocScarExtUser.ExternalUser.Storys.CreationCompteClientAsClient.ScenarioEverythingOK_Creation</name>
+    <date>2022-02-17T15:38:21+01:00</date>
+    <pageHistoryLink>RootPage.PocScarExtUser.ExternalUser.Storys.CreationCompteClientAsClient.ScenarioEverythingOK_Creation?pageHistory&amp;resultDate=20220217153821</pageHistoryLink>
+    <counts>
+      <right>57</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>3462</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>RootPage.PocScarExtUser.ExternalUser.Storys.Version</name>
+    <date>2022-02-17T15:38:24+01:00</date>
+    <pageHistoryLink>RootPage.PocScarExtUser.ExternalUser.Storys.Version?pageHistory&amp;resultDate=20220217153824</pageHistoryLink>
+    <counts>
+      <right>2</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>198</runTimeInMillis>
+  </pageHistoryReference>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp ../../../tools/fixtures;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\accessors-smart-2.4.7.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\animal-sniffer-annotations-1.14.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\asm-9.1.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\byte-buddy-1.8.15.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\cglib-nodep-3.3.0.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\checker-compat-qual-2.0.0.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\commons-cli-1.4.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\commons-codec-1.11.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\commons-exec-1.3.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\commons-io-2.6.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\commons-net-3.8.0.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\commons-text-1.9.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\diff-1.1.11.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\error_prone_annotations-2.1.3.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\freemarker-2.3.31.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\galen-core-2.4.4.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\galen-rainbow4j-2.4.4.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\gson-2.8.5.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\guava-25.0-jre.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\httpclient-4.5.13.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\httpclient-win-4.5.13.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\httpcore-4.4.13.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\httpmime-4.5.13.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\j2objc-annotations-1.1.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\jackson-annotations-2.9.0.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\jackson-core-2.9.7.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\jackson-databind-2.9.7.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\jcl-over-slf4j-1.7.25.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\jna-4.5.2.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\jna-platform-4.5.2.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\json-path-2.6.0.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\json-smart-2.4.7.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\jsr305-1.3.9.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\okhttp-3.11.0.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\okio-1.14.0.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\phantomjsdriver-1.4.4.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\rhino-1.7.7.2.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\selenium-api-3.141.59.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\selenium-chrome-driver-3.141.59.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\selenium-edge-driver-3.141.59.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\selenium-firefox-driver-3.141.59.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\selenium-ie-driver-3.141.59.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\selenium-java-3.141.59.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\selenium-opera-driver-3.141.59.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\selenium-remote-driver-3.141.59.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\selenium-safari-driver-3.141.59.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\selenium-support-3.141.59.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\snakeyaml-1.28.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tests\VM\Tests.VM.NSBF\..\..\..\tools\fixtures\snakeyaml-1.29.jar;../../../tools/plugins/ojdbc8.jar;tools/fixtures;tools/fixtures/*.jar;D:\non_regression\TestsVM.NSBF\Tests.VM.NSBF\tools\fitnesse-standalone.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut></stdOut>
+    <stdErr>Got Exception in SQLCommand dbExecute:ORA-06550: Ligne 1, colonne 17 :
+PLS-00103: Symbole "end-of-file" rencontré à la place d'un des symboles suivants :
+
+   := . ( @ % ;
+
+
+Got Exception in SQLCommand dbExecute:ORA-06550: Ligne 1, colonne 17 :
+PLS-00103: Symbole "end-of-file" rencontré à la place d'un des symboles suivants :
+
+   := . ( @ % ;
+
+
+Got Exception in SQLCommand dbExecute:ORA-06550: Ligne 1, colonne 17 :
+PLS-00103: Symbole "end-of-file" rencontré à la place d'un des symboles suivants :
+
+   := . ( @ % ;
+
+
+</stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>8</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>40381</totalRunTimeInMillis>
+</suiteResults>
+

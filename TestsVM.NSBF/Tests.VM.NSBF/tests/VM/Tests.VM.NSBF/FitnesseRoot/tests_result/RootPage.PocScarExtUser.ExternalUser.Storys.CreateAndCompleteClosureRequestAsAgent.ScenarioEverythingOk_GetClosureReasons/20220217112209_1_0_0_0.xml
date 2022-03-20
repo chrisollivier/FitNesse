@@ -1,0 +1,2462 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20211030</FitNesseVersion>
+  <rootPath>RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.ScenarioEverythingOk_GetClosureReasons</rootPath>
+  <result>
+    <counts>
+      <right>13</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2022-02-17T11:22:09+01:00</date>
+    <runTimeInMillis>773</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.SetUp"&gt;.RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.SetUp&lt;/a&gt; &lt;a href="RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RootPage.SetUP"&gt;.RootPage.SetUP&lt;/a&gt; &lt;a href="RootPage.SetUP?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RootPage.configuration"&gt;.RootPage.configuration&lt;/a&gt; &lt;a href="RootPage.configuration?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;h1 id="0"&gt;Configuration&lt;/h1&gt;
+Cette page répresente toutes les configurations appliqué aux différents tests présent sur ce serveur &lt;span class="fitnesse"&gt;FitNesse&lt;/span&gt;.&lt;br/&gt;&lt;br/&gt;&lt;h2 id="1"&gt;Lien des différentes Apis et Ihms regroupé par application&lt;/h2&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="2"&gt;WS_VAD_AUTH&lt;/h4&gt;
+&lt;span class="meta"&gt;variable defined: link_WS_VAD_AUTH=https://sbil-api-t.klb21.dev/WS_VAD_AUTH/&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="3"&gt;WS_VAD&lt;/h4&gt;
+&lt;span class="meta"&gt;variable defined: link_WS_VAD=https://sbil-api-t.klb21.dev/WS_VAD/&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="4"&gt;WS_VAD_DATA&lt;/h4&gt;
+&lt;span class="meta"&gt;variable defined: link_WS_VAD_DATA=https://sbil-api-t.klb21.dev/WS_VAD_DATA/&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="5"&gt;blank Object&lt;/h4&gt;
+&lt;span class="meta"&gt;variable defined: data=!-{"data":{}} -!&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h4 id="6"&gt;API Key&lt;/h4&gt;
+&lt;span class="meta"&gt;variable defined: ApiKey=ApiKey-42988533d95d019203b7f68fd49b3962769f6a00bce1523ea0&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h3 id="7"&gt;Configuration technique pour &lt;span class="fitnesse"&gt;FitNesse&lt;/span&gt; :&lt;/h3&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Configuration&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: domaine=sbil-api-t.nsbf1.dev&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;table class="toolchainTable importTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;Import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.web&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.util&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;fitnesse.slim.test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;nl.hsac.fitnesse.fixture.slim.*&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;six42.fitnesse.jdbcslim&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table class="toolchainTable libraryTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;library&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;echo script&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h1 id="8"&gt;Scénario utile :&lt;/h1&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;utile&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;h3 id="9"&gt;Scénario ChoixIHM :&lt;/h3&gt;
+Necessite SetupTestIHM !&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;ChoixIHM&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;ChoixIHM&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;Cle&lt;/td&gt;
+		&lt;td&gt;cle&lt;/td&gt;
+		&lt;td&gt;resultChoix?&lt;/td&gt;
+		&lt;td&gt;resultChoix&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;open&lt;/td&gt;
+		&lt;td colspan="6"&gt;http://localhost:3000/&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;enter&lt;/td&gt;
+		&lt;td&gt;@cle&lt;/td&gt;
+		&lt;td&gt;as&lt;/td&gt;
+		&lt;td colspan="4"&gt;id=cle&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;enter&lt;/td&gt;
+		&lt;td&gt;@json&lt;/td&gt;
+		&lt;td&gt;as&lt;/td&gt;
+		&lt;td colspan="4"&gt;id=data&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;click&lt;/td&gt;
+		&lt;td colspan="6"&gt;Send Data&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;wait&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+		&lt;td colspan="5"&gt;seconds&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;$resultChoix=&lt;/td&gt;
+		&lt;td&gt;value of&lt;/td&gt;
+		&lt;td colspan="5"&gt;id=result&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;BDD&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable decisionTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="2"&gt;define table type&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;SQLCommand&lt;/td&gt;
+		&lt;td&gt;as Table&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h1 id="10"&gt;Post Methode&lt;/h1&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Methodes&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;h3 id="11"&gt;Scénario Post :&lt;/h3&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Post default&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodePost&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Content-Type&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;post&lt;/td&gt;
+		&lt;td&gt;@json&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td colspan="6"&gt;@url&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;h3 id="12"&gt;Scénario Get :&lt;/h3&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h3 id="13"&gt;Scénario Post With Error :&lt;/h3&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Post With Error&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodePostWithError&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Content-Type&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;post&lt;/td&gt;
+		&lt;td&gt;@json&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td&gt;@url&lt;/td&gt;
+		&lt;td colspan="4"&gt;false&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h3 id="14"&gt;Scénario Get With Api Key :&lt;/h3&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Post Api key&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodePostWithApiKey&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;set store cookies&lt;/td&gt;
+		&lt;td colspan="10"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Content-Type&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=@key&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;post&lt;/td&gt;
+		&lt;td&gt;@json&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td colspan="8"&gt;@url&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="10"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="10"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="9"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="10"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h1 id="15"&gt;Get Methode&lt;/h1&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Methodes&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;h3 id="16"&gt;Scénario Get :&lt;/h3&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Get default&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodeGet&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;map&lt;/td&gt;
+		&lt;td&gt;map&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=ApiKey-&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;get from&lt;/td&gt;
+		&lt;td&gt;@url&lt;/td&gt;
+		&lt;td&gt;template&lt;/td&gt;
+		&lt;td colspan="6"&gt;@map&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h3 id="17"&gt;Scénario Put :&lt;/h3&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h3 id="18"&gt;Scénario Get With Api Key :&lt;/h3&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Get Api key&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodeGetWithApiKey&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;map&lt;/td&gt;
+		&lt;td&gt;map&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;set store cookies&lt;/td&gt;
+		&lt;td colspan="10"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=@key&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;get from&lt;/td&gt;
+		&lt;td&gt;@url&lt;/td&gt;
+		&lt;td&gt;template&lt;/td&gt;
+		&lt;td colspan="8"&gt;@map&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="10"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="10"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="9"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="10"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h1 id="19"&gt;Put Methode&lt;/h1&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Methodes&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;h3 id="20"&gt;Scénario Put :&lt;/h3&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Put default&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodePut&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=ApiKey-&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;put&lt;/td&gt;
+		&lt;td&gt;@json&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td colspan="6"&gt;@url&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;h3 id="21"&gt;Scénario Delete :&lt;/h3&gt;
+=======&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h3 id="22"&gt;Scénario Put With Api Key :&lt;/h3&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Put Api key&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodePutWithApiKey&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;set store cookies&lt;/td&gt;
+		&lt;td colspan="10"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=@key&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;put&lt;/td&gt;
+		&lt;td&gt;@json&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td colspan="8"&gt;@url&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="10"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="10"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="9"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="10"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h1 id="23"&gt;Delete Methode&lt;/h1&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Methodes&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;h3 id="24"&gt;Scénario Delete :&lt;/h3&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Delete default&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodeDelete&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;body&lt;/td&gt;
+		&lt;td&gt;body&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=ApiKey-&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;delete&lt;/td&gt;
+		&lt;td&gt;@url&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td colspan="6"&gt;@body&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h3 id="25"&gt;Scénario Delete With Api Key :&lt;/h3&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Delete Api key&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodeDeleteWithApiKey&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;body&lt;/td&gt;
+		&lt;td&gt;body&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;set store cookies&lt;/td&gt;
+		&lt;td colspan="10"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Content-Type&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=@key&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;delete&lt;/td&gt;
+		&lt;td&gt;@url&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td colspan="8"&gt;@body&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="10"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="10"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="10"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result=&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="9"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h3 id="26"&gt;Scénario Delete With Api Key AND no result :&lt;/h3&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Delete Api key&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodeDeleteWithApiKeyNoRes&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;body&lt;/td&gt;
+		&lt;td&gt;body&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;set store cookies&lt;/td&gt;
+		&lt;td colspan="8"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Content-Type&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=@key&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;delete&lt;/td&gt;
+		&lt;td&gt;@url&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td colspan="6"&gt;@body&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status=&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;span class="meta"&gt;variable defined: path=EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\&lt;/span&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h1 id="27"&gt;001-GetNetworkID&lt;/h1&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;getNetworkID&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;h2 id="28"&gt;exec request&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;request&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="7"&gt;&lt;span class="pass"&gt;json http test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="scenario closed"&gt;
+		&lt;td class="pass"&gt;methodeGet&lt;/td&gt;
+		&lt;td class="pass"&gt;https://sbil-api-t.nsbf1.dev/SCONFGATEWAY.API/NetworkOperator/Networks&lt;/td&gt;
+		&lt;td class="pass"&gt;map&lt;/td&gt;
+		&lt;td class="pass"&gt;""&lt;/td&gt;
+		&lt;td class="pass"&gt;status&lt;/td&gt;
+		&lt;td class="pass"&gt;status&lt;/td&gt;
+		&lt;td class="pass"&gt;result&lt;/td&gt;
+		&lt;td class="pass"&gt;result&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="scenario-detail closed-detail"&gt;&lt;td colspan="8"&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodeGet&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;map&lt;/td&gt;
+		&lt;td&gt;map&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=ApiKey-&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;get from&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;https://sbil-api-t.nsbf1.dev/SCONFGATEWAY.API/NetworkOperator/Networks&lt;/td&gt;
+		&lt;td&gt;template&lt;/td&gt;
+		&lt;td colspan="6"&gt;""&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;td&gt;&lt;pre&gt;{
+    &amp;quot;resourceType&amp;quot;: &amp;quot;List&amp;quot;,
+    &amp;quot;rels&amp;quot;: [],
+    &amp;quot;data&amp;quot;: [
+        {
+            &amp;quot;id&amp;quot;: &amp;quot;10&amp;quot;,
+            &amp;quot;name&amp;quot;: &amp;quot;IDFM&amp;quot;,
+            &amp;quot;acronym&amp;quot;: &amp;quot;IDFM&amp;quot;,
+            &amp;quot;description&amp;quot;: &amp;quot;10 - IDFM&amp;quot;,
+            &amp;quot;isLocal&amp;quot;: true,
+            &amp;quot;type&amp;quot;: &amp;quot;L&amp;quot;,
+            &amp;quot;creationDate&amp;quot;: &amp;quot;2021-06-01T14:38:06&amp;quot;
+        }
+    ]
+}&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;td&gt;https://sbil-api-t.nsbf1.dev/SCONFGATEWAY.API/NetworkOperator/Networks&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result&amp;lt;-[{"resourceType":"List","links":null,"rels":[],"data":[{"id":"10","name":"IDFM","acronym":"IDFM","description":"10 - IDFM","isLocal":true,"type":"L","role":null,"creationDate":"2021-06-01T14:38:06","relatedNetworks":null}],"errors":null}]&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status&amp;lt;-[200]&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor6"&gt;
+		&lt;td&gt;$idNetWork&amp;lt;-[10]&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="6"&gt;data.[0].id&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h2 id="29"&gt;check status&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;check&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;echo script&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;echo&lt;/td&gt;
+		&lt;td&gt;$status-&gt;[200]&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;200&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h2 id="30"&gt;register result&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;register&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;file fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;create&lt;/td&gt;
+		&lt;td&gt;EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\SCONFGATEWAY.API\RESULT.json&lt;/td&gt;
+		&lt;td&gt;Containing&lt;/td&gt;
+		&lt;td&gt;$result-&gt;[{"resourceType":"List","links":null,"rels":[],"data":[{"id":"10","name":"IDFM","acronym":"IDFM","description":"10 - IDFM","isLocal":true,"type":"L","role":null,"creationDate":"2021-06-01T14:38:06","relatedNetworks":null}],"errors":null}]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h1 id="31"&gt;002-auth&lt;/h1&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;auth-ticketingtoken&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;h2 id="32"&gt;get data&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;data&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;json fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;load file&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\FRAMEWORK.AUTHENTICATION.API\AUTH_ADMIN\REQUEST.json&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$jsonFile&amp;lt;-[{"login":"UserAdmin","password":"UserAdmin","preferredCulture":"fr-FR"}]&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h2 id="33"&gt;exec request&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;request&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="7"&gt;&lt;span class="pass"&gt;json http test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="scenario closed"&gt;
+		&lt;td class="pass"&gt;methodePost&lt;/td&gt;
+		&lt;td class="pass"&gt;https://sbil-api-t.nsbf1.dev/AUTH.API/v2/auth&lt;/td&gt;
+		&lt;td class="pass"&gt;json&lt;/td&gt;
+		&lt;td class="pass"&gt;$jsonFile-&gt;[{"login":"UserAdmin","password":"UserAdmin","preferredCulture":"fr-FR"}]&lt;/td&gt;
+		&lt;td class="pass"&gt;status&lt;/td&gt;
+		&lt;td class="pass"&gt;status&lt;/td&gt;
+		&lt;td class="pass"&gt;result&lt;/td&gt;
+		&lt;td class="pass"&gt;result&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="scenario-detail closed-detail"&gt;&lt;td colspan="8"&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodePost&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Content-Type&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="6"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;post&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;$jsonFile-&gt;[{"login":"UserAdmin","password":"UserAdmin","preferredCulture":"fr-FR"}]&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td colspan="6"&gt;https://sbil-api-t.nsbf1.dev/AUTH.API/v2/auth&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;request&lt;/td&gt;
+	&lt;td&gt;&lt;pre&gt;{
+    &amp;quot;login&amp;quot;: &amp;quot;UserAdmin&amp;quot;,
+    &amp;quot;password&amp;quot;: &amp;quot;UserAdmin&amp;quot;,
+    &amp;quot;preferredCulture&amp;quot;: &amp;quot;fr-FR&amp;quot;
+}&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="8"&gt;response&lt;/td&gt;
+	&lt;td&gt;&lt;pre&gt;{
+    &amp;quot;rels&amp;quot;: [],
+    &amp;quot;data&amp;quot;: {
+        &amp;quot;id&amp;quot;: &amp;quot;USERADMIN&amp;quot;,
+        &amp;quot;token&amp;quot;: &amp;quot;82a49893-ced5-42c4-b0e3-ffde2c31c785&amp;quot;,
+        &amp;quot;apps&amp;quot;: [
+            {
+                &amp;quot;id&amp;quot;: &amp;quot;APPLICATION&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;APPLICATION API&amp;quot;,
+                &amp;quot;supportedCultures&amp;quot;: []
+            },
+            {
+                &amp;quot;id&amp;quot;: &amp;quot;STAFFMANAGEMENT&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;STAFFMANAGEMENT GUI&amp;quot;,
+                &amp;quot;url&amp;quot;: &amp;quot;/STAFF_MANAGEMENT.GUI&amp;quot;,
+                &amp;quot;supportedCultures&amp;quot;: []
+            },
+            {
+                &amp;quot;id&amp;quot;: &amp;quot;VALIDATION&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;VALIDATION API&amp;quot;,
+                &amp;quot;supportedCultures&amp;quot;: []
+            },
+            {
+                &amp;quot;id&amp;quot;: &amp;quot;EXTERNUSER&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;EXTERNUSER API&amp;quot;,
+                &amp;quot;supportedCultures&amp;quot;: []
+            },
+            {
+                &amp;quot;id&amp;quot;: &amp;quot;EXTERNUSERORCHEST&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;EXTERNUSERORCHESTRATOR API&amp;quot;,
+                &amp;quot;supportedCultures&amp;quot;: []
+            },
+            {
+                &amp;quot;id&amp;quot;: &amp;quot;FILEIMPEXP&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;FileImportExport API&amp;quot;,
+                &amp;quot;supportedCultures&amp;quot;: []
+            },
+            {
+                &amp;quot;id&amp;quot;: &amp;quot;TOPOLOGY&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;TOPOLOGY API&amp;quot;,
+                &amp;quot;supportedCultures&amp;quot;: []
+            },
+            {
+                &amp;quot;id&amp;quot;: &amp;quot;MSGBROKER&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;MSGBROKER API&amp;quot;,
+                &amp;quot;supportedCultures&amp;quot;: []
+            },
+            {
+                &amp;quot;id&amp;quot;: &amp;quot;USER&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;USER&amp;quot;,
+                &amp;quot;url&amp;quot;: &amp;quot;/USER.HTML&amp;quot;,
+                &amp;quot;supportedCultures&amp;quot;: []
+            },
+            {
+                &amp;quot;id&amp;quot;: &amp;quot;SCARONLINE&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;SCARONLINE&amp;quot;,
+                &amp;quot;url&amp;quot;: &amp;quot;/WS_SCARONLINE_IHM_REST.API&amp;quot;,
+                &amp;quot;supportedCultures&amp;quot;: []
+            },
+            {
+                &amp;quot;id&amp;quot;: &amp;quot;SCONFGATEWAY&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;SCONFGATEWAY API&amp;quot;,
+                &amp;quot;supportedCultures&amp;quot;: []
+            },
+            {
+                &amp;quot;id&amp;quot;: &amp;quot;STAFFUSERORCHEST&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;STAFFUSERORCHESTRATOR API&amp;quot;,
+                &amp;quot;supportedCultures&amp;quot;: []
+            },
+            {
+                &amp;quot;id&amp;quot;: &amp;quot;TOPOLOGYMANAGEMENT&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;TOPOLOGY MANAGEMENT&amp;quot;,
+                &amp;quot;url&amp;quot;: &amp;quot;/TOPOLOGY.GUI&amp;quot;,
+                &amp;quot;supportedCultures&amp;quot;: []
+            },
+            {
+                &amp;quot;id&amp;quot;: &amp;quot;STAFFUSER&amp;quot;,
+                &amp;quot;name&amp;quot;: &amp;quot;STAFFUSER API&amp;quot;,
+                &amp;quot;supportedCultures&amp;quot;: []
+            }
+        ],
+        &amp;quot;preferredCulture&amp;quot;: &amp;quot;fr-FR&amp;quot;
+    },
+    &amp;quot;errors&amp;quot;: []
+}&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result&amp;lt;-[{"resourceType":null,"links":null,"rels":[],"data":{"id":"USERADMIN","token":"82a49893-ced5-42c4-b0e3-ffde2c31c785","userAccountCode":null,"apps":[{"id":"APPLICATION","name":"APPLICATION API","url":null,"supportedCultures":[]},{"id":"STAFFMANAGEMENT","name":"STAFFMANAGEMENT GUI","url":"/STAFF_MANAGEMENT.GUI","supportedCultures":[]},{"id":"VALIDATION","name":"VALIDATION API","url":null,"supportedCultures":[]},{"id":"EXTERNUSER","name":"EXTERNUSER API","url":null,"supportedCultures":[]},{"id":"EXTERNUSERORCHEST","name":"EXTERNUSERORCHESTRATOR API","url":null,"supportedCultures":[]},{"id":"FILEIMPEXP","name":"FileImportExport API","url":null,"supportedCultures":[]},{"id":"TOPOLOGY","name":"TOPOLOGY API","url":null,"supportedCultures":[]},{"id":"MSGBROKER","name":"MSGBROKER API","url":null,"supportedCultures":[]},{"id":"USER","name":"USER","url":"/USER.HTML","supportedCultures":[]},{"id":"SCARONLINE","name":"SCARONLINE","url":"/WS_SCARONLINE_IHM_REST.API","supportedCultures":[]},{"id":"SCONFGATEWAY","name":"SCONFGATEWAY API","url":null,"supportedCultures":[]},{"id":"STAFFUSERORCHEST","name":"STAFFUSERORCHESTRATOR API","url":null,"supportedCultures":[]},{"id":"TOPOLOGYMANAGEMENT","name":"TOPOLOGY MANAGEMENT","url":"/TOPOLOGY.GUI","supportedCultures":[]},{"id":"STAFFUSER","name":"STAFFUSER API","url":null,"supportedCultures":[]}],"preferredCulture":"fr-FR","preferredCultureByApp":null,"connectionMessage":null},"errors":[]}]&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="7"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status&amp;lt;-[200]&lt;/td&gt;
+		&lt;td colspan="8"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;$token&amp;lt;-[82a49893-ced5-42c4-b0e3-ffde2c31c785]&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="6"&gt;data.token&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h2 id="34"&gt;check status&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;check&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;echo script&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;echo&lt;/td&gt;
+		&lt;td&gt;$status-&gt;[200]&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;200&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h2 id="35"&gt;register result&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;register&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;file fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;create&lt;/td&gt;
+		&lt;td&gt;EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\FRAMEWORK.AUTHENTICATION.API\AUTH_ADMIN\RESULT.json&lt;/td&gt;
+		&lt;td&gt;Containing&lt;/td&gt;
+		&lt;td&gt;$result-&gt;[{"resourceType":null,"links":null,"rels":[],"data":{"id":"USERADMIN","token":"82a49893-ced5-42c4-b0e3-ffde2c31c785","userAccountCode":null,"apps":[{"id":"APPLICATION","name":"APPLICATION API","url":null,"supportedCultures":[]},{"id":"STAFFMANAGEMENT","name":"STAFFMANAGEMENT GUI","url":"/STAFF_MANAGEMENT.GUI","supportedCultures":[]},{"id":"VALIDATION","name":"VALIDATION API","url":null,"supportedCultures":[]},{"id":"EXTERNUSER","name":"EXTERNUSER API","url":null,"supportedCultures":[]},{"id":"EXTERNUSERORCHEST","name":"EXTERNUSERORCHESTRATOR API","url":null,"supportedCultures":[]},{"id":"FILEIMPEXP","name":"FileImportExport API","url":null,"supportedCultures":[]},{"id":"TOPOLOGY","name":"TOPOLOGY API","url":null,"supportedCultures":[]},{"id":"MSGBROKER","name":"MSGBROKER API","url":null,"supportedCultures":[]},{"id":"USER","name":"USER","url":"/USER.HTML","supportedCultures":[]},{"id":"SCARONLINE","name":"SCARONLINE","url":"/WS_SCARONLINE_IHM_REST.API","supportedCultures":[]},{"id":"SCONFGATEWAY","name":"SCONFGATEWAY API","url":null,"supportedCultures":[]},{"id":"STAFFUSERORCHEST","name":"STAFFUSERORCHESTRATOR API","url":null,"supportedCultures":[]},{"id":"TOPOLOGYMANAGEMENT","name":"TOPOLOGY MANAGEMENT","url":"/TOPOLOGY.GUI","supportedCultures":[]},{"id":"STAFFUSER","name":"STAFFUSER API","url":null,"supportedCultures":[]}],"preferredCulture":"fr-FR","preferredCultureByApp":null,"connectionMessage":null},"errors":[]}]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h1 id="36"&gt;003-CreateExterneCostumer&lt;/h1&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;createExterneCostumer&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;h2 id="37"&gt;get data&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;data&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;json fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;load file&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\EXTERNUSERORCHESTRATOR.API\CreateCustomerAccountByAgent\REQUEST.json&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$jsonFile&amp;lt;-[{"dateOfBirth":"1995-10-10T08:53:05.247Z","firstName":"Jean","lastName":"Michel"}]&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h2 id="38"&gt;exec request&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;request&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="9"&gt;&lt;span class="pass"&gt;json http test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="scenario closed"&gt;
+		&lt;td class="pass"&gt;methodePostWithApiKey&lt;/td&gt;
+		&lt;td class="pass"&gt;https://sbil-api-t.nsbf1.dev/EXTERNUSERORCHESTRATOR.API/Activation/Customer/ByAgent/$idNetWork-&gt;[10]/TI&lt;/td&gt;
+		&lt;td class="pass"&gt;key&lt;/td&gt;
+		&lt;td class="pass"&gt;$token-&gt;[82a49893-ced5-42c4-b0e3-ffde2c31c785]&lt;/td&gt;
+		&lt;td class="pass"&gt;json&lt;/td&gt;
+		&lt;td class="pass"&gt;$jsonFile-&gt;[{"dateOfBirth":"1995-10-10T08:53:05.247Z","firstName":"Jean","lastName":"Michel"}]&lt;/td&gt;
+		&lt;td class="pass"&gt;status&lt;/td&gt;
+		&lt;td class="pass"&gt;status&lt;/td&gt;
+		&lt;td class="pass"&gt;result&lt;/td&gt;
+		&lt;td class="pass"&gt;result&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="scenario-detail closed-detail"&gt;&lt;td colspan="10"&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodePostWithApiKey&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;json&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;set store cookies&lt;/td&gt;
+		&lt;td colspan="10"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Content-Type&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=$token-&gt;[82a49893-ced5-42c4-b0e3-ffde2c31c785]&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;post&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;$jsonFile-&gt;[{"dateOfBirth":"1995-10-10T08:53:05.247Z","firstName":"Jean","lastName":"Michel"}]&lt;/td&gt;
+		&lt;td&gt;to&lt;/td&gt;
+		&lt;td colspan="8"&gt;https://sbil-api-t.nsbf1.dev/EXTERNUSERORCHESTRATOR.API/Activation/Customer/ByAgent/$idNetWork-&gt;[10]/TI&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="10"&gt;request&lt;/td&gt;
+	&lt;td&gt;&lt;pre&gt;{
+    &amp;quot;dateOfBirth&amp;quot;: &amp;quot;1995-10-10T08:53:05.247Z&amp;quot;,
+    &amp;quot;firstName&amp;quot;: &amp;quot;Jean&amp;quot;,
+    &amp;quot;lastName&amp;quot;: &amp;quot;Michel&amp;quot;
+}&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="10"&gt;response&lt;/td&gt;
+	&lt;td&gt;&lt;pre&gt;{
+    &amp;quot;resourceType&amp;quot;: &amp;quot;UserAccountCode&amp;quot;,
+    &amp;quot;rels&amp;quot;: [],
+    &amp;quot;data&amp;quot;: &amp;quot;TI202202171100001210&amp;quot;
+}&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result&amp;lt;-[{"resourceType":"UserAccountCode","links":null,"rels":[],"data":"TI202202171100001210","errors":null}]&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="9"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status&amp;lt;-[200]&lt;/td&gt;
+		&lt;td colspan="10"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h2 id="39"&gt;check status&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;check&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;echo script&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;echo&lt;/td&gt;
+		&lt;td&gt;$status-&gt;[200]&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;200&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h2 id="40"&gt;register result&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;register&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;file fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;create&lt;/td&gt;
+		&lt;td&gt;EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\EXTERNUSERORCHESTRATOR.API\CreateCustomerAccountByAgent\RESULT.json&lt;/td&gt;
+		&lt;td&gt;Containing&lt;/td&gt;
+		&lt;td&gt;$result-&gt;[{"resourceType":"UserAccountCode","links":null,"rels":[],"data":"TI202202171100001210","errors":null}]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h1 id="41"&gt;001-GetClosureReasonsListAsync&lt;/h1&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;get-Closure-Reasons-List-Async&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;h2 id="42"&gt;exec request&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;request&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="9"&gt;&lt;span class="pass"&gt;json http test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="scenario closed"&gt;
+		&lt;td class="pass"&gt;methodeGetWithApiKey&lt;/td&gt;
+		&lt;td class="pass"&gt;https://sbil-api-t.nsbf1.dev/EXTERNUSERORCHESTRATOR.API/Closure/ReasonsList&lt;/td&gt;
+		&lt;td class="pass"&gt;key&lt;/td&gt;
+		&lt;td class="pass"&gt;$token-&gt;[82a49893-ced5-42c4-b0e3-ffde2c31c785]&lt;/td&gt;
+		&lt;td class="pass"&gt;map&lt;/td&gt;
+		&lt;td class="pass"&gt;""&lt;/td&gt;
+		&lt;td class="pass"&gt;status&lt;/td&gt;
+		&lt;td class="pass"&gt;status&lt;/td&gt;
+		&lt;td class="pass"&gt;result&lt;/td&gt;
+		&lt;td class="pass"&gt;result&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="scenario-detail closed-detail"&gt;&lt;td colspan="10"&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodeGetWithApiKey&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;map&lt;/td&gt;
+		&lt;td&gt;map&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result?&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;set store cookies&lt;/td&gt;
+		&lt;td colspan="10"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=$token-&gt;[82a49893-ced5-42c4-b0e3-ffde2c31c785]&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;get from&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;https://sbil-api-t.nsbf1.dev/EXTERNUSERORCHESTRATOR.API/Closure/ReasonsList&lt;/td&gt;
+		&lt;td&gt;template&lt;/td&gt;
+		&lt;td colspan="8"&gt;""&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="10"&gt;response&lt;/td&gt;
+	&lt;td&gt;&lt;pre&gt;{
+    &amp;quot;resourceType&amp;quot;: &amp;quot;ClosureReasonsListDTO&amp;quot;,
+    &amp;quot;rels&amp;quot;: [],
+    &amp;quot;data&amp;quot;: {
+        &amp;quot;closureReasonsList&amp;quot;: [
+            {
+                &amp;quot;idReason&amp;quot;: 1,
+                &amp;quot;reasonTitle&amp;quot;: &amp;quot;No longer needed&amp;quot;,
+                &amp;quot;reasonDescription&amp;quot;: &amp;quot;I do not need my account anymore&amp;quot;
+            },
+            {
+                &amp;quot;idReason&amp;quot;: 2,
+                &amp;quot;reasonTitle&amp;quot;: &amp;quot;Poor service quality&amp;quot;,
+                &amp;quot;reasonDescription&amp;quot;: &amp;quot;Poor service quality&amp;quot;
+            },
+            {
+                &amp;quot;idReason&amp;quot;: 3,
+                &amp;quot;reasonTitle&amp;quot;: &amp;quot;Services are too expensive&amp;quot;,
+                &amp;quot;reasonDescription&amp;quot;: &amp;quot;Services are too expensive&amp;quot;
+            },
+            {
+                &amp;quot;idReason&amp;quot;: 4,
+                &amp;quot;reasonTitle&amp;quot;: &amp;quot;Account closed by batch&amp;quot;,
+                &amp;quot;reasonDescription&amp;quot;: &amp;quot;Account closed by batch&amp;quot;
+            }
+        ]
+    }
+}&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="10"&gt;request&lt;/td&gt;
+	&lt;td&gt;https://sbil-api-t.nsbf1.dev/EXTERNUSERORCHESTRATOR.API/Closure/ReasonsList&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result&amp;lt;-[{"resourceType":"ClosureReasonsListDTO","links":null,"rels":[],"data":{"closureReasonsList":[{"idReason":1,"reasonTitle":"No longer needed","reasonDescription":"I do not need my account anymore"},{"idReason":2,"reasonTitle":"Poor service quality","reasonDescription":"Poor service quality"},{"idReason":3,"reasonTitle":"Services are too expensive","reasonDescription":"Services are too expensive"},{"idReason":4,"reasonTitle":"Account closed by batch","reasonDescription":"Account closed by batch"}]},"errors":null}]&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="9"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status&amp;lt;-[200]&lt;/td&gt;
+		&lt;td colspan="10"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h2 id="43"&gt;check status&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;check&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;echo script&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;echo&lt;/td&gt;
+		&lt;td&gt;$status-&gt;[200]&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;200&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h2 id="44"&gt;register result&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;register&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;file fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;create&lt;/td&gt;
+		&lt;td&gt;EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\EXTERNUSERORCHESTRATOR.API\GetClosureReasonsListAsync\RESULT.json&lt;/td&gt;
+		&lt;td&gt;Containing&lt;/td&gt;
+		&lt;td&gt;$result-&gt;[{"resourceType":"ClosureReasonsListDTO","links":null,"rels":[],"data":{"closureReasonsList":[{"idReason":1,"reasonTitle":"No longer needed","reasonDescription":"I do not need my account anymore"},{"idReason":2,"reasonTitle":"Poor service quality","reasonDescription":"Poor service quality"},{"idReason":3,"reasonTitle":"Services are too expensive","reasonDescription":"Services are too expensive"},{"idReason":4,"reasonTitle":"Account closed by batch","reasonDescription":"Account closed by batch"}]},"errors":null}]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;div class="collapsible closed teardown"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.TearDown"&gt;.RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.TearDown&lt;/a&gt; &lt;a href="RootPage.PocScarExtUser.ExternalUser.Storys.CreateAndCompleteClosureRequestAsAgent.TearDown?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;br/&gt;&lt;h1 id="45"&gt;001-delete-user&lt;/h1&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;delete-user&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;h2 id="46"&gt;get data&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;data&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;json fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor4"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;load file&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="2"&gt;EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\EXTERNUSERORCHESTRATOR.API\CreateCustomerAccountByAgent\RESULT.json&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;$userAccountCode&amp;lt;-[TI202202171100001210]&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td&gt;data&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h2 id="47"&gt;exec request&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;request&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="9"&gt;&lt;span class="pass"&gt;json http test&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="scenario closed"&gt;
+		&lt;td class="pass"&gt;methodeDeleteWithApiKey&lt;/td&gt;
+		&lt;td class="pass"&gt;https://sbil-api-t.nsbf1.dev/EXTERNUSER.API/Activation/ExternUser/$userAccountCode-&gt;[TI202202171100001210]&lt;/td&gt;
+		&lt;td class="pass"&gt;key&lt;/td&gt;
+		&lt;td class="pass"&gt;ApiKey-42988533d95d019203b7f68fd49b3962769f6a00bce1523ea0&lt;/td&gt;
+		&lt;td class="pass"&gt;body&lt;/td&gt;
+		&lt;td class="pass"&gt;""&lt;/td&gt;
+		&lt;td class="pass"&gt;status?&lt;/td&gt;
+		&lt;td class="pass"&gt;status&lt;/td&gt;
+		&lt;td class="pass"&gt;result&lt;/td&gt;
+		&lt;td class="pass"&gt;result&lt;/td&gt;
+	&lt;/tr&gt;&lt;tr class="scenario-detail closed-detail"&gt;&lt;td colspan="10"&gt;&lt;table class="toolchainTable scenarioTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td&gt;methodeDeleteWithApiKey&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;key&lt;/td&gt;
+		&lt;td&gt;body&lt;/td&gt;
+		&lt;td&gt;body&lt;/td&gt;
+		&lt;td&gt;status?&lt;/td&gt;
+		&lt;td&gt;status&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+		&lt;td&gt;result&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor2"&gt;
+		&lt;td&gt;set store cookies&lt;/td&gt;
+		&lt;td colspan="10"&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Content-Type&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;application/json&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Accept&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor5"&gt;
+		&lt;td&gt;set value&lt;/td&gt;
+		&lt;td&gt;XAuthToken=ApiKey-42988533d95d019203b7f68fd49b3962769f6a00bce1523ea0&lt;/td&gt;
+		&lt;td&gt;for header&lt;/td&gt;
+		&lt;td colspan="8"&gt;Cookie&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;delete&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;https://sbil-api-t.nsbf1.dev/EXTERNUSER.API/Activation/ExternUser/$userAccountCode-&gt;[TI202202171100001210]&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td colspan="8"&gt;""&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="10"&gt;response&lt;/td&gt;
+	&lt;td&gt;&lt;pre&gt;{
+    &amp;quot;rels&amp;quot;: [],
+    &amp;quot;data&amp;quot;: true
+}&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor9"&gt;
+		&lt;td&gt;show&lt;/td&gt;
+		&lt;td colspan="10"&gt;request&lt;/td&gt;
+	&lt;td&gt;""&lt;/td&gt;&lt;/tr&gt;
+	&lt;tr class="slimRowColor3"&gt;
+		&lt;td&gt;$status&amp;lt;-[200]&lt;/td&gt;
+		&lt;td colspan="10"&gt;response status&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;$result&amp;lt;-[{"resourceType":null,"links":null,"rels":[],"data":true,"errors":null}]&lt;/td&gt;
+		&lt;td&gt;json path&lt;/td&gt;
+		&lt;td colspan="9"&gt;$&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h2 id="48"&gt;check status&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;check&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;echo script&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;echo&lt;/td&gt;
+		&lt;td&gt;$status-&gt;[200]&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;200&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;h2 id="49"&gt;register result&lt;/h2&gt;
+&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;register&lt;/p&gt;
+	&lt;div&gt;&lt;table class="toolchainTable scriptTable"&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;file fixture&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor8"&gt;
+		&lt;td&gt;create&lt;/td&gt;
+		&lt;td&gt;EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\EXTERNUSER.API\RemoveExternUserAccountByUserAccountCode\RESULT.json&lt;/td&gt;
+		&lt;td&gt;Containing&lt;/td&gt;
+		&lt;td&gt;$result-&gt;[{"resourceType":null,"links":null,"rels":[],"data":true,"errors":null}]&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <relativePageName>ScenarioEverythingOk_GetClosureReasons</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='nl.hsac.fitnesse.fixture'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_1', instruction='import', path='nl.hsac.fitnesse.fixture.slim'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_2', instruction='import', path='nl.hsac.fitnesse.fixture.slim.web'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.web)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.web</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_3', instruction='import', path='nl.hsac.fitnesse.fixture.util'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.util)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_3</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.util</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_4', instruction='import', path='fitnesse.slim.test'}</instruction>
+        <slimResult>pass(fitnesse.slim.test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_4</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>fitnesse.slim.test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_5', instruction='import', path='nl.hsac.fitnesse.fixture.slim.*'}</instruction>
+        <slimResult>pass(nl.hsac.fitnesse.fixture.slim.*)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_5</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>nl.hsac.fitnesse.fixture.slim.*</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='import_0_6', instruction='import', path='six42.fitnesse.jdbcslim'}</instruction>
+        <slimResult>pass(six42.fitnesse.jdbcslim)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>import_0_6</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>ImportExpectation</type>
+          <evaluationMessage>six42.fitnesse.jdbcslim</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='library_1_0', instruction='make', instanceName='library1', className='EchoScript', args=[]}</instruction>
+        <slimResult>pass(echo script)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>library_1_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>echo script</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_13_0', instruction='make', instanceName='scriptTableActor', className='JsonHttpTest', args=[]}</instruction>
+        <slimResult>pass(json http test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_13_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>json http test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_13_1/scriptTable_6_0', instruction='call', instanceName='scriptTableActor', methodName='setValueForHeader', args=[application/json, Accept]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_13_1/scriptTable_6_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_13_1/scriptTable_6_1', instruction='call', instanceName='scriptTableActor', methodName='setValueForHeader', args=[XAuthToken=ApiKey-, Cookie]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_13_1/scriptTable_6_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_13_1/scriptTable_6_2', instruction='call', instanceName='scriptTableActor', methodName='getFromTemplate', args=[https://sbil-api-t.nsbf1.dev/SCONFGATEWAY.API/NetworkOperator/Networks, ""]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_13_1/scriptTable_6_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_13_1/scriptTable_6_3', instruction='call', instanceName='scriptTableActor', methodName='response', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_13_1/scriptTable_6_3</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_13_1/scriptTable_6_4', instruction='call', instanceName='scriptTableActor', methodName='request', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_13_1/scriptTable_6_4</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_13_1/scriptTable_6_5', instruction='callAndAssign', symbolName='result', instanceName='scriptTableActor', methodName='jsonPath', args=[$]}</instruction>
+        <slimResult>$result&lt;-[{"resourceType":"List","links":null,"rels":[],"data":[{"id":"10","name":"IDFM","acronym":"IDFM","description":"10 - IDFM","isLocal":true,"type":"L","role":null,"creationDate":"2021-06-01T14:38:06","relatedNetworks":null}],"errors":null}]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_13_1/scriptTable_6_5</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$result&lt;-[{"resourceType":"List","links":null,"rels":[],"data":[{"id":"10","name":"IDFM","acronym":"IDFM","description":"10 - IDFM","isLocal":true,"type":"L","role":null,"creationDate":"2021-06-01T14:38:06","relatedNetworks":null}],"errors":null}]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_13_1/scriptTable_6_6', instruction='callAndAssign', symbolName='status', instanceName='scriptTableActor', methodName='responseStatus', args=[]}</instruction>
+        <slimResult>$status&lt;-[200]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_13_1/scriptTable_6_6</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$status&lt;-[200]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_13_2', instruction='callAndAssign', symbolName='idNetWork', instanceName='scriptTableActor', methodName='jsonPath', args=[data.[0].id]}</instruction>
+        <slimResult>$idNetWork&lt;-[10]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_13_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$idNetWork&lt;-[10]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_14_0', instruction='make', instanceName='scriptTableActor', className='EchoScript', args=[]}</instruction>
+        <slimResult>pass(echo script)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_14_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>echo script</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_14_1', instruction='call', instanceName='scriptTableActor', methodName='echo', args=[$status]}</instruction>
+        <slimResult>pass(200)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_14_1</instructionId>
+          <col>3</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>200</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_15_0', instruction='make', instanceName='scriptTableActor', className='FileFixture', args=[]}</instruction>
+        <slimResult>pass(file fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_15_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>file fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_15_1', instruction='call', instanceName='scriptTableActor', methodName='createContaining', args=[EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\SCONFGATEWAY.API\RESULT.json, $result]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_15_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_16_0', instruction='make', instanceName='scriptTableActor', className='JsonFixture', args=[]}</instruction>
+        <slimResult>pass(json fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_16_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>json fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_16_1', instruction='call', instanceName='scriptTableActor', methodName='loadFile', args=[EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\FRAMEWORK.AUTHENTICATION.API\AUTH_ADMIN\REQUEST.json]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_16_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_16_2', instruction='callAndAssign', symbolName='jsonFile', instanceName='scriptTableActor', methodName='jsonPath', args=[$]}</instruction>
+        <slimResult>$jsonFile&lt;-[{"login":"UserAdmin","password":"UserAdmin","preferredCulture":"fr-FR"}]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_16_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$jsonFile&lt;-[{"login":"UserAdmin","password":"UserAdmin","preferredCulture":"fr-FR"}]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_17_0', instruction='make', instanceName='scriptTableActor', className='JsonHttpTest', args=[]}</instruction>
+        <slimResult>pass(json http test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_17_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>json http test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_17_1/scriptTable_3_0', instruction='call', instanceName='scriptTableActor', methodName='setValueForHeader', args=[application/json, Content-Type]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_17_1/scriptTable_3_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_17_1/scriptTable_3_1', instruction='call', instanceName='scriptTableActor', methodName='setValueForHeader', args=[application/json, Accept]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_17_1/scriptTable_3_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_17_1/scriptTable_3_2', instruction='call', instanceName='scriptTableActor', methodName='postTo', args=[$jsonFile, https://sbil-api-t.nsbf1.dev/AUTH.API/v2/auth]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_17_1/scriptTable_3_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_17_1/scriptTable_3_3', instruction='call', instanceName='scriptTableActor', methodName='request', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_17_1/scriptTable_3_3</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_17_1/scriptTable_3_4', instruction='call', instanceName='scriptTableActor', methodName='response', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_17_1/scriptTable_3_4</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_17_1/scriptTable_3_5', instruction='callAndAssign', symbolName='result', instanceName='scriptTableActor', methodName='jsonPath', args=[$]}</instruction>
+        <slimResult>$result&lt;-[{"resourceType":null,"links":null,"rels":[],"data":{"id":"USERADMIN","token":"82a49893-ced5-42c4-b0e3-ffde2c31c785","userAccountCode":null,"apps":[{"id":"APPLICATION","name":"APPLICATION API","url":null,"supportedCultures":[]},{"id":"STAFFMANAGEMENT","name":"STAFFMANAGEMENT GUI","url":"/STAFF_MANAGEMENT.GUI","supportedCultures":[]},{"id":"VALIDATION","name":"VALIDATION API","url":null,"supportedCultures":[]},{"id":"EXTERNUSER","name":"EXTERNUSER API","url":null,"supportedCultures":[]},{"id":"EXTERNUSERORCHEST","name":"EXTERNUSERORCHESTRATOR API","url":null,"supportedCultures":[]},{"id":"FILEIMPEXP","name":"FileImportExport API","url":null,"supportedCultures":[]},{"id":"TOPOLOGY","name":"TOPOLOGY API","url":null,"supportedCultures":[]},{"id":"MSGBROKER","name":"MSGBROKER API","url":null,"supportedCultures":[]},{"id":"USER","name":"USER","url":"/USER.HTML","supportedCultures":[]},{"id":"SCARONLINE","name":"SCARONLINE","url":"/WS_SCARONLINE_IHM_REST.API","supportedCultures":[]},{"id":"SCONFGATEWAY","name":"SCONFGATEWAY API","url":null,"supportedCultures":[]},{"id":"STAFFUSERORCHEST","name":"STAFFUSERORCHESTRATOR API","url":null,"supportedCultures":[]},{"id":"TOPOLOGYMANAGEMENT","name":"TOPOLOGY MANAGEMENT","url":"/TOPOLOGY.GUI","supportedCultures":[]},{"id":"STAFFUSER","name":"STAFFUSER API","url":null,"supportedCultures":[]}],"preferredCulture":"fr-FR","preferredCultureByApp":null,"connectionMessage":null},"errors":[]}]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_17_1/scriptTable_3_5</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$result&lt;-[{"resourceType":null,"links":null,"rels":[],"data":{"id":"USERADMIN","token":"82a49893-ced5-42c4-b0e3-ffde2c31c785","userAccountCode":null,"apps":[{"id":"APPLICATION","name":"APPLICATION API","url":null,"supportedCultures":[]},{"id":"STAFFMANAGEMENT","name":"STAFFMANAGEMENT GUI","url":"/STAFF_MANAGEMENT.GUI","supportedCultures":[]},{"id":"VALIDATION","name":"VALIDATION API","url":null,"supportedCultures":[]},{"id":"EXTERNUSER","name":"EXTERNUSER API","url":null,"supportedCultures":[]},{"id":"EXTERNUSERORCHEST","name":"EXTERNUSERORCHESTRATOR API","url":null,"supportedCultures":[]},{"id":"FILEIMPEXP","name":"FileImportExport API","url":null,"supportedCultures":[]},{"id":"TOPOLOGY","name":"TOPOLOGY API","url":null,"supportedCultures":[]},{"id":"MSGBROKER","name":"MSGBROKER API","url":null,"supportedCultures":[]},{"id":"USER","name":"USER","url":"/USER.HTML","supportedCultures":[]},{"id":"SCARONLINE","name":"SCARONLINE","url":"/WS_SCARONLINE_IHM_REST.API","supportedCultures":[]},{"id":"SCONFGATEWAY","name":"SCONFGATEWAY API","url":null,"supportedCultures":[]},{"id":"STAFFUSERORCHEST","name":"STAFFUSERORCHESTRATOR API","url":null,"supportedCultures":[]},{"id":"TOPOLOGYMANAGEMENT","name":"TOPOLOGY MANAGEMENT","url":"/TOPOLOGY.GUI","supportedCultures":[]},{"id":"STAFFUSER","name":"STAFFUSER API","url":null,"supportedCultures":[]}],"preferredCulture":"fr-FR","preferredCultureByApp":null,"connectionMessage":null},"errors":[]}]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_17_1/scriptTable_3_6', instruction='callAndAssign', symbolName='status', instanceName='scriptTableActor', methodName='responseStatus', args=[]}</instruction>
+        <slimResult>$status&lt;-[200]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_17_1/scriptTable_3_6</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$status&lt;-[200]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_17_2', instruction='callAndAssign', symbolName='token', instanceName='scriptTableActor', methodName='jsonPath', args=[data.token]}</instruction>
+        <slimResult>$token&lt;-[82a49893-ced5-42c4-b0e3-ffde2c31c785]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_17_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$token&lt;-[82a49893-ced5-42c4-b0e3-ffde2c31c785]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_18_0', instruction='make', instanceName='scriptTableActor', className='EchoScript', args=[]}</instruction>
+        <slimResult>pass(echo script)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_18_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>echo script</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_18_1', instruction='call', instanceName='scriptTableActor', methodName='echo', args=[$status]}</instruction>
+        <slimResult>pass(200)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_18_1</instructionId>
+          <col>3</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>200</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_19_0', instruction='make', instanceName='scriptTableActor', className='FileFixture', args=[]}</instruction>
+        <slimResult>pass(file fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_19_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>file fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_19_1', instruction='call', instanceName='scriptTableActor', methodName='createContaining', args=[EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\FRAMEWORK.AUTHENTICATION.API\AUTH_ADMIN\RESULT.json, $result]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_19_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_20_0', instruction='make', instanceName='scriptTableActor', className='JsonFixture', args=[]}</instruction>
+        <slimResult>pass(json fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_20_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>json fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_20_1', instruction='call', instanceName='scriptTableActor', methodName='loadFile', args=[EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\EXTERNUSERORCHESTRATOR.API\CreateCustomerAccountByAgent\REQUEST.json]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_20_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_20_2', instruction='callAndAssign', symbolName='jsonFile', instanceName='scriptTableActor', methodName='jsonPath', args=[$]}</instruction>
+        <slimResult>$jsonFile&lt;-[{"dateOfBirth":"1995-10-10T08:53:05.247Z","firstName":"Jean","lastName":"Michel"}]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_20_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$jsonFile&lt;-[{"dateOfBirth":"1995-10-10T08:53:05.247Z","firstName":"Jean","lastName":"Michel"}]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_21_0', instruction='make', instanceName='scriptTableActor', className='JsonHttpTest', args=[]}</instruction>
+        <slimResult>pass(json http test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_21_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>json http test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_21_1/scriptTable_5_0', instruction='call', instanceName='scriptTableActor', methodName='setStoreCookies', args=[true]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_21_1/scriptTable_5_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_21_1/scriptTable_5_1', instruction='call', instanceName='scriptTableActor', methodName='setValueForHeader', args=[application/json, Content-Type]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_21_1/scriptTable_5_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_21_1/scriptTable_5_2', instruction='call', instanceName='scriptTableActor', methodName='setValueForHeader', args=[application/json, Accept]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_21_1/scriptTable_5_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_21_1/scriptTable_5_3', instruction='call', instanceName='scriptTableActor', methodName='setValueForHeader', args=[XAuthToken=$token, Cookie]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_21_1/scriptTable_5_3</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_21_1/scriptTable_5_4', instruction='call', instanceName='scriptTableActor', methodName='postTo', args=[$jsonFile, https://sbil-api-t.nsbf1.dev/EXTERNUSERORCHESTRATOR.API/Activation/Customer/ByAgent/$idNetWork/TI]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_21_1/scriptTable_5_4</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_21_1/scriptTable_5_5', instruction='call', instanceName='scriptTableActor', methodName='request', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_21_1/scriptTable_5_5</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_21_1/scriptTable_5_6', instruction='call', instanceName='scriptTableActor', methodName='response', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_21_1/scriptTable_5_6</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_21_1/scriptTable_5_7', instruction='callAndAssign', symbolName='result', instanceName='scriptTableActor', methodName='jsonPath', args=[$]}</instruction>
+        <slimResult>$result&lt;-[{"resourceType":"UserAccountCode","links":null,"rels":[],"data":"TI202202171100001210","errors":null}]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_21_1/scriptTable_5_7</instructionId>
+          <col>0</col>
+          <row>8</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$result&lt;-[{"resourceType":"UserAccountCode","links":null,"rels":[],"data":"TI202202171100001210","errors":null}]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_21_1/scriptTable_5_8', instruction='callAndAssign', symbolName='status', instanceName='scriptTableActor', methodName='responseStatus', args=[]}</instruction>
+        <slimResult>$status&lt;-[200]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_21_1/scriptTable_5_8</instructionId>
+          <col>0</col>
+          <row>9</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$status&lt;-[200]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_22_0', instruction='make', instanceName='scriptTableActor', className='EchoScript', args=[]}</instruction>
+        <slimResult>pass(echo script)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_22_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>echo script</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_22_1', instruction='call', instanceName='scriptTableActor', methodName='echo', args=[$status]}</instruction>
+        <slimResult>pass(200)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_22_1</instructionId>
+          <col>3</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>200</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_23_0', instruction='make', instanceName='scriptTableActor', className='FileFixture', args=[]}</instruction>
+        <slimResult>pass(file fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_23_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>file fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_23_1', instruction='call', instanceName='scriptTableActor', methodName='createContaining', args=[EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\EXTERNUSERORCHESTRATOR.API\CreateCustomerAccountByAgent\RESULT.json, $result]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_23_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_24_0', instruction='make', instanceName='scriptTableActor', className='JsonHttpTest', args=[]}</instruction>
+        <slimResult>pass(json http test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_24_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>json http test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_24_1/scriptTable_7_0', instruction='call', instanceName='scriptTableActor', methodName='setStoreCookies', args=[true]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_24_1/scriptTable_7_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_24_1/scriptTable_7_1', instruction='call', instanceName='scriptTableActor', methodName='setValueForHeader', args=[application/json, Accept]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_24_1/scriptTable_7_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_24_1/scriptTable_7_2', instruction='call', instanceName='scriptTableActor', methodName='setValueForHeader', args=[XAuthToken=$token, Cookie]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_24_1/scriptTable_7_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_24_1/scriptTable_7_3', instruction='call', instanceName='scriptTableActor', methodName='getFromTemplate', args=[https://sbil-api-t.nsbf1.dev/EXTERNUSERORCHESTRATOR.API/Closure/ReasonsList, ""]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_24_1/scriptTable_7_3</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_24_1/scriptTable_7_4', instruction='call', instanceName='scriptTableActor', methodName='response', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_24_1/scriptTable_7_4</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_24_1/scriptTable_7_5', instruction='call', instanceName='scriptTableActor', methodName='request', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_24_1/scriptTable_7_5</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_24_1/scriptTable_7_6', instruction='callAndAssign', symbolName='result', instanceName='scriptTableActor', methodName='jsonPath', args=[$]}</instruction>
+        <slimResult>$result&lt;-[{"resourceType":"ClosureReasonsListDTO","links":null,"rels":[],"data":{"closureReasonsList":[{"idReason":1,"reasonTitle":"No longer needed","reasonDescription":"I do not need my account anymore"},{"idReason":2,"reasonTitle":"Poor service quality","reasonDescription":"Poor service quality"},{"idReason":3,"reasonTitle":"Services are too expensive","reasonDescription":"Services are too expensive"},{"idReason":4,"reasonTitle":"Account closed by batch","reasonDescription":"Account closed by batch"}]},"errors":null}]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_24_1/scriptTable_7_6</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$result&lt;-[{"resourceType":"ClosureReasonsListDTO","links":null,"rels":[],"data":{"closureReasonsList":[{"idReason":1,"reasonTitle":"No longer needed","reasonDescription":"I do not need my account anymore"},{"idReason":2,"reasonTitle":"Poor service quality","reasonDescription":"Poor service quality"},{"idReason":3,"reasonTitle":"Services are too expensive","reasonDescription":"Services are too expensive"},{"idReason":4,"reasonTitle":"Account closed by batch","reasonDescription":"Account closed by batch"}]},"errors":null}]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_24_1/scriptTable_7_7', instruction='callAndAssign', symbolName='status', instanceName='scriptTableActor', methodName='responseStatus', args=[]}</instruction>
+        <slimResult>$status&lt;-[200]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_24_1/scriptTable_7_7</instructionId>
+          <col>0</col>
+          <row>8</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$status&lt;-[200]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_25_0', instruction='make', instanceName='scriptTableActor', className='EchoScript', args=[]}</instruction>
+        <slimResult>pass(echo script)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_25_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>echo script</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_25_1', instruction='call', instanceName='scriptTableActor', methodName='echo', args=[$status]}</instruction>
+        <slimResult>pass(200)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_25_1</instructionId>
+          <col>3</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>200</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_26_0', instruction='make', instanceName='scriptTableActor', className='FileFixture', args=[]}</instruction>
+        <slimResult>pass(file fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_26_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>file fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_26_1', instruction='call', instanceName='scriptTableActor', methodName='createContaining', args=[EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\EXTERNUSERORCHESTRATOR.API\GetClosureReasonsListAsync\RESULT.json, $result]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_26_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_27_0', instruction='make', instanceName='scriptTableActor', className='JsonFixture', args=[]}</instruction>
+        <slimResult>pass(json fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_27_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>json fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_27_1', instruction='call', instanceName='scriptTableActor', methodName='loadFile', args=[EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\EXTERNUSERORCHESTRATOR.API\CreateCustomerAccountByAgent\RESULT.json]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_27_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_27_2', instruction='callAndAssign', symbolName='userAccountCode', instanceName='scriptTableActor', methodName='jsonPath', args=[data]}</instruction>
+        <slimResult>$userAccountCode&lt;-[TI202202171100001210]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_27_2</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$userAccountCode&lt;-[TI202202171100001210]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_28_0', instruction='make', instanceName='scriptTableActor', className='JsonHttpTest', args=[]}</instruction>
+        <slimResult>pass(json http test)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_28_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>json http test</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_28_1/scriptTable_11_0', instruction='call', instanceName='scriptTableActor', methodName='setStoreCookies', args=[true]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_28_1/scriptTable_11_0</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_28_1/scriptTable_11_1', instruction='call', instanceName='scriptTableActor', methodName='setValueForHeader', args=[application/json, Content-Type]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_28_1/scriptTable_11_1</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_28_1/scriptTable_11_2', instruction='call', instanceName='scriptTableActor', methodName='setValueForHeader', args=[application/json, Accept]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_28_1/scriptTable_11_2</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_28_1/scriptTable_11_3', instruction='call', instanceName='scriptTableActor', methodName='setValueForHeader', args=[XAuthToken=ApiKey-42988533d95d019203b7f68fd49b3962769f6a00bce1523ea0, Cookie]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_28_1/scriptTable_11_3</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_28_1/scriptTable_11_4', instruction='call', instanceName='scriptTableActor', methodName='deleteWith', args=[https://sbil-api-t.nsbf1.dev/EXTERNUSER.API/Activation/ExternUser/$userAccountCode, ""]}</instruction>
+        <slimResult>pass()</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_28_1/scriptTable_11_4</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_28_1/scriptTable_11_5', instruction='call', instanceName='scriptTableActor', methodName='response', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_28_1/scriptTable_11_5</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_28_1/scriptTable_11_6', instruction='call', instanceName='scriptTableActor', methodName='request', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_28_1/scriptTable_11_6</instructionId>
+          <col>0</col>
+          <row>7</row>
+          <type>ShowActionExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_28_1/scriptTable_11_7', instruction='callAndAssign', symbolName='status', instanceName='scriptTableActor', methodName='responseStatus', args=[]}</instruction>
+        <slimResult>$status&lt;-[200]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_28_1/scriptTable_11_7</instructionId>
+          <col>0</col>
+          <row>8</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$status&lt;-[200]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_28_1/scriptTable_11_8', instruction='callAndAssign', symbolName='result', instanceName='scriptTableActor', methodName='jsonPath', args=[$]}</instruction>
+        <slimResult>$result&lt;-[{"resourceType":null,"links":null,"rels":[],"data":true,"errors":null}]</slimResult>
+        <expectation>
+          <instructionId>scriptTable_28_1/scriptTable_11_8</instructionId>
+          <col>0</col>
+          <row>9</row>
+          <type>SymbolAssignmentExpectation</type>
+          <evaluationMessage>$result&lt;-[{"resourceType":null,"links":null,"rels":[],"data":true,"errors":null}]</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_29_0', instruction='make', instanceName='scriptTableActor', className='EchoScript', args=[]}</instruction>
+        <slimResult>pass(echo script)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_29_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>echo script</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_29_1', instruction='call', instanceName='scriptTableActor', methodName='echo', args=[$status]}</instruction>
+        <slimResult>pass(200)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_29_1</instructionId>
+          <col>3</col>
+          <row>1</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>200</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_30_0', instruction='make', instanceName='scriptTableActor', className='FileFixture', args=[]}</instruction>
+        <slimResult>pass(file fixture)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>scriptTable_30_0</instructionId>
+          <col>1</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>file fixture</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='scriptTable_30_1', instruction='call', instanceName='scriptTableActor', methodName='createContaining', args=[EXTERNEUSER\CreateAndCompleteClosureRequestAsAgent\EXTERNUSER.API\RemoveExternUserAccountByUserAccountCode\RESULT.json, $result]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>scriptTable_30_1</instructionId>
+          <col>0</col>
+          <row>1</row>
+          <type>ScriptActionExpectation</type>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>773</totalRunTimeInMillis>
+</testResults>
+
